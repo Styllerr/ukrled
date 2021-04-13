@@ -1,0 +1,20 @@
+html {
+    box-sizing: border-box;
+    background-color: #d4d4d4;
+}
+body {
+    max-width: 1920px;
+    margin: 0 auto;
+}
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+a,
+a:visited,
+a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
