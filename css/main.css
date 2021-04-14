@@ -504,6 +504,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 32px 10px 41px;
 }
 
 .header__navigation {
@@ -515,6 +516,15 @@ body {
   justify-content: space-around;
 }
 
+.navigation__list .navigation__item-link {
+  font-family: "Geometria";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 25px;
+  color: #ffffff;
+}
+
 .navigation__item {
   display: inline-block;
   list-style: none;
@@ -523,6 +533,57 @@ body {
 .phone__icon {
   width: 23px;
   height: 23px;
+  padding: 7px 0;
   background: url(/image/svg/header-phone-icon.svg) no-repeat;
+}
+
+.phone__number {
+  display: inline-block;
+  font-family: "Geometria";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 31px;
+  color: #ffffff;
+  margin-left: 27px;
+}
+
+.product {
+  position: relative;
+}
+
+.product__navigation {
+  position: absolute;
+  top: 2rem;
+  left: 10px;
+  width: max-content;
+  padding: 0;
+  background-color: #ffffff;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.5s;
+}
+
+.product__navigation_show, .product__navigation:hover {
+  padding: 0.5rem;
+  height: auto;
+}
+
+.product:hover > ul {
+  padding: 0.5rem;
+  height: auto;
+}
+
+.product__item {
+  list-style: none;
+}
+
+.product__item > .product__item-link {
+  font-family: "Geometria";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 147.5%;
+  text-align: center;
 }
 /*# sourceMappingURL=main.css.map */
