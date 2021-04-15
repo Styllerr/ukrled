@@ -1,6 +1,7 @@
 .site-header {
-    background: url(/image/svg/background-blue.svg) no-repeat;
+    background: url(/image/svg/background-header.svg) no-repeat;
     background-size: cover;
+    
 }
 .header {
     &-wrapper {
@@ -9,7 +10,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 32px 10px 41px;
+        padding: 5px;
     }
     &__navigation {
         flex-grow: 2;
@@ -20,8 +21,6 @@
         display: flex;
         justify-content: space-around;
         & .navigation__item-link {
-            font-family: "Geometria";
-            font-style: normal;
             font-weight: 500;
             font-size: 20px;
             line-height: 25px;
@@ -45,7 +44,6 @@
         // width: 0;
         // height: 0;
         // overflow: hidden;
-        font-family: "Geometria";
         font-style: normal;
         font-weight: 500;
         font-size: 25px;
@@ -59,13 +57,13 @@
     &__navigation {
         position: absolute;
         top: 2rem;
-        left: 10px;
+        left: -2.2rem;
         width: max-content;
         padding: 0;
         background-color: $white;
         height: 0;
         overflow: hidden;
-        transition: height 0.5s;
+        transition: 0.5s;
         &_show,
         &:hover {
             padding: 0.5rem;
@@ -81,12 +79,13 @@
     &__item {
         list-style: none;
         & > .product__item-link {
-            font-family: "Geometria";
-            font-style: normal;
             font-weight: normal;
             font-size: 17px;
             line-height: 147.5%;
             text-align: center;
+        }
+        &:hover {
+            background-color: #F2F2F2;
         }
     }
 }

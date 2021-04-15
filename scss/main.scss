@@ -1,7 +1,7 @@
+@import "base/typography", "base/base";
+
 @import "abstracts/variables", "abstracts/mixins", "abstracts/placeholders";
 
 @import "vendors/normalize";
 
-@import "base/typography", "base/base";
-
-@import 'layout/index', 'layout/site-header';
+@import 'layout/index-carousel', 'layout/site-header', 'layout/index-proposition';

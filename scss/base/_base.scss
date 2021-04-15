@@ -1,8 +1,10 @@
 html {
     box-sizing: border-box;
     background-color: #d4d4d4;
+    font-family: "Geometria";
+    font-style: normal;
 }
-body {
+html > body {
     max-width: 1920px;
     margin: 0 auto;
 }

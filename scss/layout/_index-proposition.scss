@@ -1,0 +1,70 @@
+.proposition {
+    background: url(/image/svg/) no-repeat;
+    background-size: cover;
+    &__wrapper {
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+    &__caption {
+        width: 100%;
+        font-weight: 500;
+        font-size: 39px;
+        line-height: 147.5%;
+        text-align: center;
+        color: #000000;
+    }
+    &__subcaption {
+        width: 100%;
+        font-weight: normal;
+        font-size: 32px;
+        line-height: 147.5%;
+        text-align: center;
+        color: #000000;
+    }
+    &__text {
+        max-width: 1142px;
+        margin: 0 auto;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 147.5%;
+        text-align: center;
+        color: #000000;
+    }
+    &__card {
+        background: url(/image/svg/index-card-bg.svg) no-repeat;
+        background-size: contain;
+        background-position-y: bottom;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        width: 442px;
+        height: auto;
+        padding: 0 2.625rem 1.75rem;
+
+        &-wrapper {
+            display: flex; 
+            flex-wrap: wrap;
+            justify-content: space-around; 
+            gap: 1.5rem;
+        }
+        &-img {
+            height: 325px;
+        }
+        &-caption {
+            width: 100%;
+            font-weight: 500;
+            font-size: 34px;
+            line-height: 147.5%;
+            color: #ffffff;
+        }
+        &-discription {
+            font-weight: normal;
+            font-size: 21px;
+            line-height: 147.5%;
+            color: #ffffff;
+            margin: 0;
+        }
+    }
+}
+
