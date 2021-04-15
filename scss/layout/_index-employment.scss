@@ -1,0 +1,32 @@
+.employment {
+    background: url(/image/png/background03.png) no-repeat;
+    background-size: cover;
+    &__wrapper {
+        max-width: 1050px;
+        margin: 0 auto;
+        padding: 4.89rem 0.5rem;
+    }
+    &__caption {
+        width: 100%;
+        text-align: center;
+        font-weight: 500;
+        font-size: 39px;
+        line-height: 147.5%;
+        color: #ffffff;
+    }
+    &__list-1st {
+        width: 49%;
+        display: inline-block;
+        margin-right: 5rem;
+    }
+    &__list-2nd {
+        width: 42%;
+        display: inline-block;
+    }
+    &__list-item {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 147.5%;
+        color: #ffffff;
+    }
+}
