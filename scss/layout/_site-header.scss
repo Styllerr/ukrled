@@ -1,7 +1,6 @@
 .site-header {
     background: url(/image/svg/background-header.svg) no-repeat;
     background-size: cover;
-    
 }
 .header {
     &-wrapper {
@@ -21,6 +20,8 @@
         display: flex;
         justify-content: space-around;
         & .navigation__item-link {
+            font-family: "Geometria";
+            font-style: normal;
             font-weight: 500;
             font-size: 20px;
             line-height: 25px;
@@ -44,6 +45,8 @@
         // width: 0;
         // height: 0;
         // overflow: hidden;
+        font-family: "Geometria";
+        font-style: normal;
         font-style: normal;
         font-weight: 500;
         font-size: 25px;
@@ -68,24 +71,24 @@
         &:hover {
             padding: 0.5rem;
             height: auto;
-
         }
     }
-    &:hover > ul{
+    &:hover > ul {
         padding: 0.5rem;
         height: auto;
-
     }
     &__item {
         list-style: none;
         & > .product__item-link {
+            font-family: "Geometria";
+            font-style: normal;
             font-weight: normal;
             font-size: 17px;
             line-height: 147.5%;
             text-align: center;
         }
         &:hover {
-            background-color: #F2F2F2;
+            background-color: #f2f2f2;
         }
     }
 }

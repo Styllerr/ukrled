@@ -4,11 +4,13 @@
     &__wrapper {
         max-width: 1050px;
         margin: 0 auto;
-        padding: 4.89rem 0.5rem;
+        padding: 5.5rem 0.5rem;
     }
     &__caption {
         width: 100%;
         text-align: center;
+        font-family: "Geometria";
+        font-style: normal;
         font-weight: 500;
         font-size: 39px;
         line-height: 147.5%;
@@ -24,6 +26,8 @@
         display: inline-block;
     }
     &__list-item {
+        font-family: "Geometria";
+        font-style: normal;
         font-weight: 500;
         font-size: 24px;
         line-height: 147.5%;

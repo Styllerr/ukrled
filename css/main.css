@@ -447,6 +447,8 @@ template {
   display: inline-block;
   max-width: 620px;
   width: 49%;
+  font-family: "Geometria";
+  font-style: normal;
   font-weight: normal;
   font-size: 32px;
   line-height: 127.49%;
@@ -454,6 +456,8 @@ template {
 }
 
 .index-carousel__caption > h2 {
+  font-family: "Geometria";
+  font-style: normal;
   font-weight: bold;
   font-size: 59px;
   line-height: 127.49%;
@@ -504,6 +508,8 @@ template {
 }
 
 .navigation__list .navigation__item-link {
+  font-family: "Geometria";
+  font-style: normal;
   font-weight: 500;
   font-size: 20px;
   line-height: 25px;
@@ -524,6 +530,8 @@ template {
 
 .phone__number {
   display: inline-block;
+  font-family: "Geometria";
+  font-style: normal;
   font-style: normal;
   font-weight: 500;
   font-size: 25px;
@@ -563,6 +571,8 @@ template {
 }
 
 .product__item > .product__item-link {
+  font-family: "Geometria";
+  font-style: normal;
   font-weight: normal;
   font-size: 17px;
   line-height: 147.5%;
@@ -570,7 +580,7 @@ template {
 }
 
 .product__item:hover {
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
 }
 
 .proposition {
@@ -586,6 +596,8 @@ template {
 
 .proposition__caption {
   width: 100%;
+  font-family: "Geometria";
+  font-style: normal;
   font-weight: 500;
   font-size: 39px;
   line-height: 147.5%;
@@ -595,6 +607,8 @@ template {
 
 .proposition__subcaption {
   width: 100%;
+  font-family: "Geometria";
+  font-style: normal;
   font-weight: normal;
   font-size: 32px;
   line-height: 147.5%;
@@ -605,6 +619,8 @@ template {
 .proposition__text {
   max-width: 1142px;
   margin: 0 auto;
+  font-family: "Geometria";
+  font-style: normal;
   font-weight: normal;
   font-size: 24px;
   line-height: 147.5%;
@@ -653,13 +669,17 @@ template {
 
 .proposition__card-caption {
   width: 100%;
+  font-family: "Geometria";
+  font-style: normal;
   font-weight: 500;
   font-size: 34px;
   line-height: 147.5%;
   color: #ffffff;
 }
 
-.proposition__card-discription {
+.proposition__card-description {
+  font-family: "Geometria";
+  font-style: normal;
   font-weight: normal;
   font-size: 21px;
   line-height: 147.5%;
@@ -671,6 +691,8 @@ template {
   width: 442px;
   height: 110px;
   background: linear-gradient(0deg, #3831b7, #3831b7), #01013d;
+  font-family: "Geometria";
+  font-style: normal;
   font-weight: normal;
   font-size: 32px;
   line-height: 147.5%;
@@ -691,12 +713,14 @@ template {
 .employment__wrapper {
   max-width: 1050px;
   margin: 0 auto;
-  padding: 4.89rem 0.5rem;
+  padding: 5.5rem 0.5rem;
 }
 
 .employment__caption {
   width: 100%;
   text-align: center;
+  font-family: "Geometria";
+  font-style: normal;
   font-weight: 500;
   font-size: 39px;
   line-height: 147.5%;
@@ -715,9 +739,238 @@ template {
 }
 
 .employment__list-item {
+  font-family: "Geometria";
+  font-style: normal;
   font-weight: 500;
   font-size: 24px;
   line-height: 147.5%;
   color: #ffffff;
+}
+
+.portfolio {
+  background: white url(/image/png/background04.png) no-repeat;
+}
+
+.portfolio__wrapper {
+  max-width: 1370px;
+  margin: 0 auto;
+  padding: 5rem 0.5rem 0;
+}
+
+.portfolio__caption {
+  font-family: "Geometria";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 39px;
+  line-height: 147.5%;
+  text-align: center;
+  color: #000000;
+}
+
+.portfolio__slide-text-block {
+  display: inline-block;
+  width: 40%;
+}
+
+.portfolio__slide-caption {
+  max-width: 436px;
+  font-family: "Geometria";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 147.5%;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.portfolio__slide-description {
+  max-width: 436px;
+  font-family: "Geometria";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 147.5%;
+  color: #000000;
+}
+
+div.carousel-item {
+  padding: 0 80px;
+}
+
+button.carousel-control-next {
+  justify-content: flex-end;
+}
+
+span.carousel-control-next-icon {
+  width: 2.3rem;
+  height: 4.5rem;
+  background: url(/image/svg/index-next-btn.svg) no-repeat;
+  background-size: cover;
+}
+
+button.carousel-control-prev {
+  justify-content: flex-start;
+}
+
+span.carousel-control-prev-icon {
+  width: 2.3rem;
+  height: 4.5rem;
+  background: url(/image/svg/index-prev-btn.svg) no-repeat;
+  background-size: cover;
+}
+
+section.news {
+  font-family: "Geometria";
+  font-style: normal;
+}
+
+.news {
+  background: url(/image/svg/background04.svg) no-repeat;
+  background-position-x: right;
+}
+
+.news__wrapper {
+  max-width: 1370px;
+  margin: 0 auto;
+  padding: 2.5rem 0.5rem 0;
+}
+
+.news__caption {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 3.125rem;
+}
+
+.news-card {
+  width: 32%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.news-card__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  justify-content: space-between;
+}
+
+.news-card__img {
+  width: 100%;
+  height: auto;
+}
+
+.news-card__caption {
+  width: 100%;
+  font-family: "Geometria";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 23px;
+  line-height: 147.5%;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.news-card__description {
+  font-family: "Geometria";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 147.5%;
+  color: #000000;
+}
+
+a.news-card__link {
+  font-family: "Geometria";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 23px;
+  line-height: 147.5%;
+  text-decoration-line: underline;
+  color: #0a02a7;
+}
+
+a.news__button {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 442px;
+  height: 110px;
+  background: linear-gradient(0deg, #3831b7, #3831b7), #01013d;
+  font-family: "Geometria";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 147.5%;
+  color: #ffffff;
+}
+
+.news__button-wrapper {
+  width: 100%;
+  margin: 3.125rem 0 7rem;
+}
+
+.contact {
+  background: url(/image/png/background05.png) no-repeat;
+  background-size: cover;
+}
+
+.contact__wrapper {
+  max-width: 1370px;
+  margin: 0 auto;
+  padding: 7rem 0.5rem 0;
+  display: flex;
+}
+
+.contact__caption-block {
+  width: 49%;
+}
+
+.contact__caption {
+  width: 100%;
+  font-family: "Geometria";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 147.5%;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.contact__form-block {
+  width: 49%;
+  padding: 8.31256rem 7.5rem;
+  background-color: white;
+}
+
+.contact__name-lable {
+  position: relative;
+  width: 100%;
+  font-family: "Geometria";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 147.5%;
+  text-align: left;
+  padding-left: 2.25rem;
+  color: #000000;
+}
+
+.contact__name-lable::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 2rem;
+  height: 2rem;
+  background: url(/image/svg/index-name-icon.svg) no-repeat;
+}
+
+.contact__name-input {
+  width: 100%;
+  margin-top: 3rem;
+  border: none;
+  border-bottom: 1px solid black;
 }
 /*# sourceMappingURL=main.css.map */

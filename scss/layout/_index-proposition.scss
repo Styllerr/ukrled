@@ -8,6 +8,8 @@
     }
     &__caption {
         width: 100%;
+        font-family: "Geometria";
+        font-style: normal;
         font-weight: 500;
         font-size: 39px;
         line-height: 147.5%;
@@ -16,6 +18,8 @@
     }
     &__subcaption {
         width: 100%;
+        font-family: "Geometria";
+        font-style: normal;
         font-weight: normal;
         font-size: 32px;
         line-height: 147.5%;
@@ -25,6 +29,8 @@
     &__text {
         max-width: 1142px;
         margin: 0 auto;
+        font-family: "Geometria";
+        font-style: normal;
         font-weight: normal;
         font-size: 24px;
         line-height: 147.5%;
@@ -67,12 +73,16 @@
         }
         &-caption {
             width: 100%;
+            font-family: "Geometria";
+            font-style: normal;
             font-weight: 500;
             font-size: 34px;
             line-height: 147.5%;
             color: #ffffff;
         }
-        &-discription {
+        &-description {
+            font-family: "Geometria";
+            font-style: normal;
             font-weight: normal;
             font-size: 21px;
             line-height: 147.5%;
@@ -83,6 +93,8 @@
             width: 442px;
             height: 110px;
             background: linear-gradient(0deg, #3831b7, #3831b7), #01013d;
+            font-family: "Geometria";
+            font-style: normal;
             font-weight: normal;
             font-size: 32px;
             line-height: 147.5%;

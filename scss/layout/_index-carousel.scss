@@ -17,11 +17,15 @@
     display: inline-block;
     max-width: 620px;
     width: 49%;
+    font-family: "Geometria";
+    font-style: normal;
     font-weight: normal;
     font-size: 32px;
     line-height: 127.49%;
     color: #ffffff;
     & > h2 {
+        font-family: "Geometria";
+        font-style: normal;
         font-weight: bold;
         font-size: 59px;
         line-height: 127.49%;
@@ -47,17 +51,3 @@
         background-size: contain;
     }
 }
-// .carousel-indicators {
-//     gap: 10px;
-//     & > button {
-//         width: 39px;
-//         height: 39px;
-//         background: url(/image/svg/carousel-selector.svg) no-repeat;
-//         border: none;
-//         opacity: 1;
-//     }
-//     & .active {
-//         background: url(/image/svg/carousel-selector-active.svg) no-repeat;
-        
-//     }
-// }

@@ -1,0 +1,55 @@
+.contact {
+    background: url(/image/png/background05.png) no-repeat;
+    background-size: cover;
+    &__wrapper {
+        max-width: 1370px;
+        margin: 0 auto;
+        padding: 7rem 0.5rem 0;
+        display: flex;
+    }
+    &__caption-block {
+        width: 49%;
+    }
+    &__caption {
+        width: 100%;
+        font-family: "Geometria";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 147.5%;
+        text-transform: uppercase;
+        color: #ffffff;
+    }
+    &__form-block {
+        width: 49%;
+        padding: 8.31256rem 7.5rem;
+        background-color: white;
+    }
+    &__name-lable {
+        position: relative;
+        width: 100%;
+        font-family: "Geometria";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 25px;
+        line-height: 147.5%;
+        text-align: left;
+        padding-left: 2.25rem;
+        color: #000000;
+        &::before {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            width: 2rem;
+            height: 2rem;
+            background: url(/image/svg/index-name-icon.svg) no-repeat;
+        }
+    }
+    &__name-input {
+        width: 100%;
+        margin-top: 3rem;
+        border: none;
+        border-bottom: 1px solid black;
+    }
+}
