@@ -6,15 +6,89 @@
         margin: 0 auto;
         display: flex;
         justify-content: space-between;
-        padding: 5.625rem 0.5rem
+        padding: 5.625rem 0.5rem;
+        & a {
+            display: inline-block;
+        }
     }
     &__map-conteiner {
         width: 49%;
         height: auto;
     }
     &__address-wrapper {
-        width: 49%;
-        
+        padding-top: 4rem;
+        width: 40%;
     }
-
+    &__title {
+        margin-bottom: 2.8rem;
+        font-family: "Geometria";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 39px;
+        line-height: 147.5%;
+        color: #000000;
+    }
+    &__address,
+    &__email {
+        position: relative;
+        padding-left: 3rem;
+        margin-bottom: 3.125rem;
+        font-family: "Geometria";
+        font-style: normal;
+        font-weight: normal;
+        font-size: 27px;
+        line-height: 147.5%;
+        color: #000000;
+        &::before {
+            position: absolute;
+            content: "";
+            width: 34px;
+            left: 0;
+        }
+    }
+    &__address::before {
+        bottom: 6px;
+        height: 45px;
+        background: url(/image/svg/index-address-icon.svg) no-repeat;
+        background-size: contain;
+    }
+    &__email::before {
+        top: 6px;
+        height: 28px;
+        background: url(/image/svg/index-email-icon.svg) no-repeat;
+        background-size: contain;
+    }
+    &__subtitle {
+        font-family: "Geometria";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 27px;
+        line-height: 147.5%;
+        color: #000000;
+        margin-bottom: 1.8rem;
+    }
+    &__phone-number {
+        &1,
+        &2 {
+            position: relative;
+            padding-left: 3rem;
+            font-family: "Geometria";
+            font-style: normal;
+            font-weight: normal;
+            font-size: 27px;
+            line-height: 147.5%;
+            color: #000000;
+            margin-bottom: 2rem;
+            &::before {
+                position: absolute;
+                content: "";
+                width: 30px;
+                height: 33px;
+                left: 0;
+                bottom: 4px;
+                background: url(/image/svg/index-phone-icon-blue.svg) no-repeat;
+                background-size: contain;
+            }
+        }
+    }
 }

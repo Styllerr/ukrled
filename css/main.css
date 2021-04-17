@@ -1,5 +1,5 @@
 @font-face {
-  font-family: 'Geometria';
+  font-family: "Geometria";
   src: url("../fonts/Geometria-Thin.eot");
   src: local("Geometria Thin"), local("Geometria-Thin"), url("../fonts/Geometria-Thin.eot?#iefix") format("embedded-opentype"), url("../fonts/Geometria-Thin.woff2") format("woff2"), url("../fonts/Geometria-Thin.woff") format("woff"), url("../fonts/Geometria-Thin.ttf") format("truetype");
   font-weight: 100;
@@ -7,7 +7,7 @@
 }
 
 @font-face {
-  font-family: 'Geometria';
+  font-family: "Geometria";
   src: url("../fonts/Geometria-ExtraLight.eot");
   src: local("Geometria ExtraLight"), local("Geometria-ExtraLight"), url("../fonts/Geometria-ExtraLight.eot?#iefix") format("embedded-opentype"), url("../fonts/Geometria-ExtraLight.woff2") format("woff2"), url("../fonts/Geometria-ExtraLight.woff") format("woff"), url("../fonts/Geometria-ExtraLight.ttf") format("truetype");
   font-weight: 200;
@@ -15,7 +15,7 @@
 }
 
 @font-face {
-  font-family: 'Geometria';
+  font-family: "Geometria";
   src: url("../fonts/Geometria-Light.eot");
   src: local("Geometria Light"), local("Geometria-Light"), url("../fonts/Geometria-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Geometria-Light.woff2") format("woff2"), url("../fonts/Geometria-Light.woff") format("woff"), url("../fonts/Geometria-Light.ttf") format("truetype");
   font-weight: 300;
@@ -23,7 +23,7 @@
 }
 
 @font-face {
-  font-family: 'Geometria';
+  font-family: "Geometria";
   src: url("../fonts/Geometria-Regular.eot");
   src: local("Geometria Regular"), local("Geometria-Regular"), url("../fonts/Geometria-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Geometria-Regular.woff2") format("woff2"), url("../fonts/Geometria-Regular.woff") format("woff"), url("../fonts/Geometria-Regular.ttf") format("truetype");
   font-weight: normal;
@@ -31,7 +31,7 @@
 }
 
 @font-face {
-  font-family: 'Geometria';
+  font-family: "Geometria";
   src: url("../fonts/Geometria-Medium.eot");
   src: local("Geometria Medium"), local("Geometria-Medium"), url("../fonts/Geometria-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Geometria-Medium.woff2") format("woff2"), url("../fonts/Geometria-Medium.woff") format("woff"), url("../fonts/Geometria-Medium.ttf") format("truetype");
   font-weight: 500;
@@ -39,7 +39,7 @@
 }
 
 @font-face {
-  font-family: 'Geometria';
+  font-family: "Geometria";
   src: url("../fonts/Geometria-Bold.eot");
   src: local("Geometria Bold"), local("Geometria-Bold"), url("../fonts/Geometria-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Geometria-Bold.woff2") format("woff2"), url("../fonts/Geometria-Bold.woff") format("woff"), url("../fonts/Geometria-Bold.ttf") format("truetype");
   font-weight: bold;
@@ -47,7 +47,7 @@
 }
 
 @font-face {
-  font-family: 'Geometria';
+  font-family: "Geometria";
   src: url("../fonts/Geometria-ExtraBold.eot");
   src: local("Geometria ExtraBold"), local("Geometria-ExtraBold"), url("../fonts/Geometria-ExtraBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Geometria-ExtraBold.woff2") format("woff2"), url("../fonts/Geometria-ExtraBold.woff") format("woff"), url("../fonts/Geometria-ExtraBold.ttf") format("truetype");
   font-weight: 800;
@@ -55,10 +55,18 @@
 }
 
 @font-face {
-  font-family: 'Geometria';
+  font-family: "Geometria";
   src: url("../fonts/Geometria-Heavy.eot");
   src: local("Geometria Heavy"), local("Geometria-Heavy"), url("../fonts/Geometria-Heavy.eot?#iefix") format("embedded-opentype"), url("../fonts/Geometria-Heavy.woff2") format("woff2"), url("../fonts/Geometria-Heavy.woff") format("woff"), url("../fonts/Geometria-Heavy.ttf") format("truetype");
   font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/gilroy-regular.eot");
+  src: url("../fonts/gilroy-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/gilroy-regular.woff2") format("woff2"), url("../fonts/gilroy-regular.woff") format("woff"), url("../fonts/gilroy-regular.ttf") format("truetype"), url("../fonts/gilroy-regular.svg#gilroy-regular") format("svg");
+  font-weight: normal;
   font-style: normal;
 }
 
@@ -426,70 +434,13 @@ template {
   display: none;
 }
 
-.carousel {
-  padding: 50px 0;
-}
-
-.carusel-section {
-  background: url(/image/svg/background01.svg) no-repeat;
-  background-size: cover;
-  padding-bottom: 40px;
-}
-
-.index-carousel__slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 150px;
-}
-
-.index-carousel__caption {
-  display: inline-block;
-  max-width: 620px;
-  width: 49%;
-  font-family: "Geometria";
-  font-style: normal;
-  font-weight: normal;
-  font-size: 32px;
-  line-height: 127.49%;
-  color: #ffffff;
-}
-
-.index-carousel__caption > h2 {
-  font-family: "Geometria";
-  font-style: normal;
-  font-weight: bold;
-  font-size: 59px;
-  line-height: 127.49%;
-}
-
-.index-carousel__image-01 {
-  height: 500px;
-  width: 660px;
-  background: url(/image/svg/optim.svg) no-repeat;
-  background-size: contain;
-}
-
-.index-carousel__image-02 {
-  height: 500px;
-  width: 660px;
-  background: url(/image/svg/optim02.svg) no-repeat;
-  background-size: contain;
-}
-
-.index-carousel__image-03 {
-  height: 500px;
-  width: 660px;
-  background: url(/image/svg/index-slide03.svg) no-repeat;
-  background-size: contain;
-}
-
 .site-header {
-  background: url(/image/svg/background-header.svg) no-repeat;
-  background-size: cover;
+  padding: 0.4rem 0;
+  background: linear-gradient(90deg, #0101ed -0.94%, #1d0167 55.95%, #200041 103.05%), #c4c4c4;
 }
 
-.header-wrapper {
+.header-wrapper,
+.footer-wrapper {
   max-width: 1400px;
   margin: 0 auto;
   display: flex;
@@ -498,13 +449,15 @@ template {
   padding: 5px;
 }
 
-.header__navigation {
+.header__navigation,
+.footer__navigation {
   flex-grow: 2;
 }
 
 .navigation__list {
   display: flex;
   justify-content: space-around;
+  margin: 0;
 }
 
 .navigation__list .navigation__item-link {
@@ -581,6 +534,95 @@ template {
 
 .product__item:hover {
   background-color: #f2f2f2;
+}
+
+.site-footer {
+  width: 1920px;
+  height: 105px;
+  background: linear-gradient(90deg, #0101ed -0.94%, #1d0167 55.95%, #200041 103.05%), #c4c4c4;
+}
+
+.footer__designed-logo-wrapper {
+  text-align: center;
+}
+
+.designed-logo {
+  position: relative;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 17px;
+  color: #ffffff;
+}
+
+.designed-logo::after {
+  position: absolute;
+  content: "";
+  width: 37px;
+  height: 23px;
+  top: -0.5rem;
+  right: -3rem;
+  background: url(/image/svg/designed-logo.svg) no-repeat;
+  background-size: cover;
+}
+
+.carousel {
+  padding: 50px 0;
+}
+
+.carousel-section {
+  background: url(/image/png/background01.png) no-repeat;
+  background-size: cover;
+  padding-bottom: 40px;
+}
+
+.index-carousel__slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 150px;
+}
+
+.index-carousel__caption {
+  display: inline-block;
+  max-width: 620px;
+  width: 49%;
+  font-family: "Geometria";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 127.49%;
+  color: #ffffff;
+}
+
+.index-carousel__caption > h2 {
+  font-family: "Geometria";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 59px;
+  line-height: 127.49%;
+}
+
+.index-carousel__image-01 {
+  height: 500px;
+  width: 660px;
+  background: url(/image/svg/optim.svg) no-repeat;
+  background-size: contain;
+}
+
+.index-carousel__image-02 {
+  height: 500px;
+  width: 660px;
+  background: url(/image/svg/optim02.svg) no-repeat;
+  background-size: contain;
+}
+
+.index-carousel__image-03 {
+  height: 500px;
+  width: 660px;
+  background: url(/image/svg/index-slide03.svg) no-repeat;
+  background-size: contain;
 }
 
 .proposition {
@@ -1033,12 +1075,93 @@ a.news__button {
   padding: 5.625rem 0.5rem;
 }
 
+.contacts__wrapper a {
+  display: inline-block;
+}
+
 .contacts__map-conteiner {
   width: 49%;
   height: auto;
 }
 
 .contacts__address-wrapper {
-  width: 49%;
+  padding-top: 4rem;
+  width: 40%;
+}
+
+.contacts__title {
+  margin-bottom: 2.8rem;
+  font-family: "Geometria";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 39px;
+  line-height: 147.5%;
+  color: #000000;
+}
+
+.contacts__address, .contacts__email {
+  position: relative;
+  padding-left: 3rem;
+  margin-bottom: 3.125rem;
+  font-family: "Geometria";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 27px;
+  line-height: 147.5%;
+  color: #000000;
+}
+
+.contacts__address::before, .contacts__email::before {
+  position: absolute;
+  content: "";
+  width: 34px;
+  left: 0;
+}
+
+.contacts__address::before {
+  bottom: 6px;
+  height: 45px;
+  background: url(/image/svg/index-address-icon.svg) no-repeat;
+  background-size: contain;
+}
+
+.contacts__email::before {
+  top: 6px;
+  height: 28px;
+  background: url(/image/svg/index-email-icon.svg) no-repeat;
+  background-size: contain;
+}
+
+.contacts__subtitle {
+  font-family: "Geometria";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 27px;
+  line-height: 147.5%;
+  color: #000000;
+  margin-bottom: 1.8rem;
+}
+
+.contacts__phone-number1, .contacts__phone-number2 {
+  position: relative;
+  padding-left: 3rem;
+  font-family: "Geometria";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 27px;
+  line-height: 147.5%;
+  color: #000000;
+  margin-bottom: 2rem;
+}
+
+.contacts__phone-number1::before, .contacts__phone-number2::before {
+  position: absolute;
+  content: "";
+  width: 30px;
+  height: 33px;
+  left: 0;
+  bottom: 4px;
+  background: url(/image/svg/index-phone-icon-blue.svg) no-repeat;
+  background-size: contain;
 }
 /*# sourceMappingURL=main.css.map */

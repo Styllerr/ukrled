@@ -1,8 +1,15 @@
 .site-header {
-    background: url(/image/svg/background-header.svg) no-repeat;
-    background-size: cover;
+    padding: 0.4rem 0;
+    background: linear-gradient(
+            90deg,
+            #0101ed -0.94%,
+            #1d0167 55.95%,
+            #200041 103.05%
+        ),
+        #c4c4c4;
 }
-.header {
+.header,
+.footer {
     &-wrapper {
         max-width: 1400px;
         margin: 0 auto;
@@ -19,6 +26,7 @@
     &__list {
         display: flex;
         justify-content: space-around;
+        margin: 0;
         & .navigation__item-link {
             font-family: "Geometria";
             font-style: normal;

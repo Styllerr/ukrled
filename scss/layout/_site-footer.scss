@@ -1,0 +1,34 @@
+.site-footer {
+    width: 1920px;
+    height: 105px;
+
+    background: linear-gradient(
+            90deg,
+            #0101ed -0.94%,
+            #1d0167 55.95%,
+            #200041 103.05%
+        ),
+        #c4c4c4;
+}
+.footer__designed-logo-wrapper {
+    text-align: center;
+}
+.designed-logo {
+    position: relative;
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 17px;
+    color: #ffffff;
+    &::after {
+        position: absolute;
+        content: "";
+        width: 37px;
+        height: 23px;
+        top: -0.5rem;
+        right: -3rem;
+        background: url(/image/svg/designed-logo.svg) no-repeat;
+        background-size: cover;
+    }
+}
