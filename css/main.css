@@ -507,6 +507,7 @@ template {
   height: 0;
   overflow: hidden;
   transition: 0.5s;
+  z-index: 1;
 }
 
 .product__navigation_show, .product__navigation:hover {
@@ -537,8 +538,8 @@ template {
 }
 
 .site-footer {
-  width: 1920px;
-  height: 105px;
+  max-width: 1920px;
+  padding-bottom: 2.125rem;
   background: linear-gradient(90deg, #0101ed -0.94%, #1d0167 55.95%, #200041 103.05%), #c4c4c4;
 }
 
@@ -607,21 +608,21 @@ template {
 .index-carousel__image-01 {
   height: 500px;
   width: 660px;
-  background: url(/image/svg/optim.svg) no-repeat;
+  background: url(/image/png/index-slide01-01.png) no-repeat;
   background-size: contain;
 }
 
 .index-carousel__image-02 {
   height: 500px;
   width: 660px;
-  background: url(/image/svg/optim02.svg) no-repeat;
+  background: url(/image/png/index-slide01-02.png) no-repeat;
   background-size: contain;
 }
 
 .index-carousel__image-03 {
   height: 500px;
   width: 660px;
-  background: url(/image/svg/index-slide03.svg) no-repeat;
+  background: url(/image/png/index-slide01-03.png) no-repeat;
   background-size: contain;
 }
 
