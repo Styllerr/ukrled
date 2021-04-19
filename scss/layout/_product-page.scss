@@ -1,5 +1,5 @@
 .product {
-    &-top-img {
+    &__top-img {
         width: 100%;
         height: auto;
     }
@@ -12,6 +12,8 @@
         }
     }
     &__title {
+        text-align: center;
+        margin: 0 auto;
         font-weight: 500;
         font-size: 39px;
         line-height: 147.5%;
@@ -52,8 +54,6 @@
         margin: 0 auto;
         &-caption {
             max-width: 931px;
-            text-align: center;
-            margin: 0 auto;
         }
     }
 }
@@ -92,7 +92,6 @@
 .product__item {
     position: relative;
     padding: 4.625rem 0 3.5625rem 6.75rem;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.24);
     font-weight: normal;
     font-size: 24px;
     line-height: 147.5%;
@@ -112,4 +111,56 @@ ol > li:before {
     font-size: 162px;
     line-height: 147.5%;
     color: #c7f3fd;
+}
+.media {
+    max-width: 1366px;
+    margin: 5.625rem auto;
+    &__slide-wrapper {
+        padding: 0 0.5rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.25rem;
+    }
+    &__slide {
+        width: 100%;
+        height: auto;
+    }
+    &__video-wrapper {
+        margin: 0 auto;
+        max-width: 1160px;
+        height: 497px;
+    }
+}
+.table-characteristics {
+    max-width: 1370px;
+    margin: 0 auto;
+    padding: 5.625rem 0.5rem 0;
+}
+table {
+    border-collapse: collapse;
+}
+th {
+    padding: 2.25rem 0;
+    background-color: #f2f2f2;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 147.5%;
+    text-align: center;
+    color: #000000;
+}
+th,
+td {
+    width: 14.9%;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    &:first-child {
+        width: 25.4%;
+    }
+}
+td {
+    padding: 1.4375rem 0.5rem;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 130.5%;
+    text-align: center;
+    color: #000000;
 }

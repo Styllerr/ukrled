@@ -1,4 +1,4 @@
-.product-top-img {
+.product__top-img {
   width: 100%;
   height: auto;
 }
@@ -14,6 +14,8 @@
 }
 
 .product__title {
+  text-align: center;
+  margin: 0 auto;
   font-weight: 500;
   font-size: 39px;
   line-height: 147.5%;
@@ -63,8 +65,6 @@
 
 .product__about-price-caption {
   max-width: 931px;
-  text-align: center;
-  margin: 0 auto;
 }
 
 .purchase-block {
@@ -106,7 +106,6 @@
 .product__item {
   position: relative;
   padding: 4.625rem 0 3.5625rem 6.75rem;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.24);
   font-weight: normal;
   font-size: 24px;
   line-height: 147.5%;
@@ -130,6 +129,69 @@ ol > li:before {
   color: #c7f3fd;
 }
 
+.media {
+  max-width: 1366px;
+  margin: 5.625rem auto;
+}
+
+.media__slide-wrapper {
+  padding: 0 0.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.media__slide {
+  width: 100%;
+  height: auto;
+}
+
+.media__video-wrapper {
+  margin: 0 auto;
+  max-width: 1160px;
+  height: 497px;
+}
+
+.table-characteristics {
+  max-width: 1370px;
+  margin: 0 auto;
+  padding: 5.625rem 0.5rem 0;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th {
+  padding: 2.25rem 0;
+  background-color: #f2f2f2;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 147.5%;
+  text-align: center;
+  color: #000000;
+}
+
+th,
+td {
+  width: 14.9%;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+th:first-child,
+td:first-child {
+  width: 25.4%;
+}
+
+td {
+  padding: 1.4375rem 0.5rem;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 130.5%;
+  text-align: center;
+  color: #000000;
+}
+
 .street-main {
   background-color: white;
   font-family: "Geometria";
@@ -150,9 +212,86 @@ ol > li:before {
   gap: 1rem;
 }
 
-.about-price__description {
-  text-align: center;
+.about-price__description,
+.alternative__description {
   margin: 3.125rem 0 0;
+  text-align: center;
   font-weight: 500;
+}
+
+.alternative {
+  max-width: 1112px;
+  margin: 0 auto;
+  padding: 5.625rem 0.5rem 0;
+}
+
+.alternative__caption {
+  max-width: 728px;
+}
+
+.alternative__description {
+  max-width: 1034px;
+  margin: 3.125rem auto 0;
+}
+
+.alternative__bottom-text {
+  text-align: center;
+  max-width: 959px;
+  margin: 3.125rem auto 0;
+  font-weight: 500;
+  font-size: 29px;
+}
+
+.assembly {
+  max-width: 977px;
+  margin: 0 auto;
+  padding: 5.625rem 0.5rem 0;
+  text-align: center;
+}
+
+.assembly__caption {
+  max-width: 728px;
+}
+
+.assembly__description {
+  max-width: 651px;
+  margin: 3.125rem auto;
+}
+
+.assembly__type-list {
+  margin: 3.625rem auto;
+  max-width: 807px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.assembly__type-item {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 147.5%;
+  color: #000000;
+}
+
+.advantages {
+  max-width: 931px;
+  margin: 0 auto;
+  padding: 5.625rem 0.5rem 0;
+}
+
+.advantages__caption {
+  margin: 0 auto;
+  max-width: 878px;
+}
+
+.advantages__description {
+  margin: 0 auto;
+  max-width: 747px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.advantages__item {
+  font-size: 24px;
+  line-height: 32px;
 }
 /*# sourceMappingURL=streetled.css.map */
