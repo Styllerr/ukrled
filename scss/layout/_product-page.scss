@@ -10,10 +10,13 @@
             justify-content: space-between;
             align-items: center;
         }
+        & > h1 {
+            text-align: left;
+        }
     }
     &__title {
         text-align: center;
-        margin: 0 auto;
+        margin: 0 auto 1.5rem;
         font-weight: 500;
         font-size: 39px;
         line-height: 147.5%;
@@ -57,6 +60,9 @@
         }
     }
 }
+.use-list-wrapper-indoor > ul:last-child {
+    width: 550px;
+}
 .purchase-block {
     display: grid;
     max-width: 47%;
@@ -89,7 +95,7 @@
         align-self: center;
     }
 }
-.product__item {
+.product__ordered-item {
     position: relative;
     padding: 4.625rem 0 3.5625rem 6.75rem;
     font-weight: normal;
@@ -97,6 +103,7 @@
     line-height: 147.5%;
     color: #000000;
 }
+
 ol {
     list-style: none;
     counter-reset: li;

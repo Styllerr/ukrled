@@ -1,10 +1,12 @@
-.street-main {
+.street-main,
+.indoor-main {
     background-color: white;
     font-family: "Geometria";
     font-style: normal;
 }
 .product {
-    &__street-led {
+    &__street-led,
+    &__indoor {
         max-width: 1370px;
         margin: 0 auto;
         padding: 5.3125rem 0.5rem 0;
@@ -24,7 +26,12 @@
         margin: 3.125rem 0 0;
         text-align: center;
         font-weight: 500;
+
     }
+}
+.about-price__description-indoor {
+    max-width: 627px;
+    margin: 0 auto;
 }
 .alternative {
     max-width: 1112px;
@@ -142,3 +149,4 @@ div.accordion-body {
     line-height: 47px;
     color: #000000;
 }
+
