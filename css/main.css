@@ -1368,6 +1368,23 @@ td {
   color: #000000;
 }
 
+.features {
+  max-width: 1245px;
+  margin: 0 auto;
+  padding: 5.625rem 0.5rem 0;
+}
+
+.features__caption {
+  max-width: 728px;
+}
+
+.features__description {
+  max-width: 729px;
+  margin: 3.125rem auto 0;
+  font-weight: 500;
+  text-align: center;
+}
+
 .street-main,
 .indoor-main {
   background-color: white;
