@@ -60,8 +60,11 @@
         }
     }
 }
-.use-list-wrapper-indoor > ul:last-child {
-    width: 550px;
+.use-list-wrapper-indoor {
+    max-width: 1251px;
+    & > ul:last-child {
+        width: 550px;
+    }
 }
 .purchase-block {
     display: grid;
@@ -184,5 +187,50 @@ td {
         font-weight: 500;
         text-align: center;
     }
-
+    &__use-list {
+        width: 48%;
+        &-wrapper {
+            max-width: 1245px;
+        }
+    }
 }
+.advertising {
+    margin: 0 auto;
+    &__caption {
+        max-width: 728px;
+    }
+    &__description {
+        max-width: 977px;
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+.get-benefits {
+    margin: 0 auto;
+    padding: 5.625rem 0.5rem    ;
+    &__caption {
+        margin: 0 auto;
+        max-width: 747px;
+    }
+    &__description {
+        margin: 0 auto;
+        max-width: 729px;
+        margin: 3.125rem auto;
+        font-weight: 500;
+        text-align: center;
+    }
+    &__list-wrapper {
+        margin: 0 auto;
+        max-width: 846px;
+    }
+    &__use-list {
+        width: 100%;
+        & > li {
+            font-weight: normal;
+            font-size: 24px;
+            line-height: 32px;
+        }
+    }
+}
+
+

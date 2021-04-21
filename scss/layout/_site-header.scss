@@ -39,6 +39,7 @@
     &__item {
         display: inline-block;
         list-style: none;
+        padding: 0.5rem;
     }
 }
 .phone {
@@ -76,11 +77,11 @@
         overflow: hidden;
         transition: 0.5s;
         z-index: 1;
-        &_show,
-        &:hover {
-            padding: 0.5rem;
-            height: auto;
-        }
+        // &_show,
+        // &:hover {
+        //     padding: 0.5rem;
+        //     height: auto;
+        // }
     }
     &:hover > ul {
         padding: 0.5rem;
@@ -88,6 +89,7 @@
     }
     &__item {
         list-style: none;
+        padding: 0.25rem 0;
         & > .product__item-link {
             font-family: "Geometria";
             font-style: normal;

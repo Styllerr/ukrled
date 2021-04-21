@@ -472,6 +472,7 @@ template {
 .navigation__item {
   display: inline-block;
   list-style: none;
+  padding: 0.5rem;
 }
 
 .phone__icon {
@@ -510,11 +511,6 @@ template {
   z-index: 1;
 }
 
-.product__navigation_show, .product__navigation:hover {
-  padding: 0.5rem;
-  height: auto;
-}
-
 .product:hover > ul {
   padding: 0.5rem;
   height: auto;
@@ -522,6 +518,7 @@ template {
 
 .product__item {
   list-style: none;
+  padding: 0.25rem 0;
 }
 
 .product__item > .product__item-link {
@@ -1239,6 +1236,10 @@ a.news__button {
   max-width: 931px;
 }
 
+.use-list-wrapper-indoor {
+  max-width: 1251px;
+}
+
 .use-list-wrapper-indoor > ul:last-child {
   width: 550px;
 }
@@ -1385,6 +1386,61 @@ td {
   text-align: center;
 }
 
+.features__use-list {
+  width: 48%;
+}
+
+.features__use-list-wrapper {
+  max-width: 1245px;
+}
+
+.advertising {
+  margin: 0 auto;
+}
+
+.advertising__caption {
+  max-width: 728px;
+}
+
+.advertising__description {
+  max-width: 977px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.get-benefits {
+  margin: 0 auto;
+  padding: 5.625rem 0.5rem;
+}
+
+.get-benefits__caption {
+  margin: 0 auto;
+  max-width: 747px;
+}
+
+.get-benefits__description {
+  margin: 0 auto;
+  max-width: 729px;
+  margin: 3.125rem auto;
+  font-weight: 500;
+  text-align: center;
+}
+
+.get-benefits__list-wrapper {
+  margin: 0 auto;
+  max-width: 846px;
+}
+
+.get-benefits__use-list {
+  width: 100%;
+}
+
+.get-benefits__use-list > li {
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 32px;
+}
+
 .street-main,
 .indoor-main {
   background-color: white;
@@ -1399,7 +1455,6 @@ td {
 }
 
 .product__use-list-wrapper {
-  max-width: 1095px;
   margin: 4.125rem auto 3.125rem;
   display: flex;
   justify-content: space-between;
