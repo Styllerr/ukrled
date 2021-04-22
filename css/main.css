@@ -1163,6 +1163,14 @@ a.news__button {
   background-size: contain;
 }
 
+.street-main,
+.indoor-main,
+.signboard-main {
+  background-color: white;
+  font-family: "Geometria";
+  font-style: normal;
+}
+
 .product__top-img {
   width: 100%;
   height: auto;
@@ -1208,6 +1216,10 @@ a.news__button {
   margin: 0 auto;
 }
 
+.product__use-list {
+  width: 48%;
+}
+
 .product__use-item {
   font-weight: 500;
   font-size: 25px;
@@ -1242,6 +1254,10 @@ a.news__button {
 
 .use-list-wrapper-indoor > ul:last-child {
   width: 550px;
+}
+
+.use-list-wrapper-signboard {
+  max-width: 1251px;
 }
 
 .purchase-block {
@@ -1441,14 +1457,69 @@ td {
   line-height: 32px;
 }
 
-.street-main,
-.indoor-main {
-  background-color: white;
-  font-family: "Geometria";
-  font-style: normal;
+.use-comment-text-signboard {
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 147.5%;
 }
 
-.product__street-led, .product__indoor {
+h3.signboard-subtitle {
+  margin: -2.5rem auto 0;
+  max-width: 554px;
+  font-size: 24px;
+  line-height: 147.5%;
+}
+
+div.signboard-subtitle__list-wrapper {
+  margin: 0 auto;
+  max-width: 807px;
+  font-size: 24px;
+}
+
+div.signboard-subtitle__list-wrapper > ul {
+  width: 39%;
+}
+
+.signboard-subtitle__use-comment {
+  margin: 0 auto;
+  max-width: 601px;
+  padding-top: 1.25rem;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 147.5%;
+}
+
+.about-price__comment {
+  margin: 0 auto;
+  max-width: 999px;
+}
+
+.about-price__comment-text {
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 147.5%;
+  text-align: center;
+}
+
+.order {
+  max-width: 977px;
+  margin: 5.625rem auto;
+  text-align: center;
+}
+
+.order__caption {
+  font-weight: 500;
+  font-size: 39px;
+  line-height: 147.5%;
+}
+
+.order__text {
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.product__street-led, .product__indoor, .product__signboard {
   max-width: 1370px;
   margin: 0 auto;
   padding: 5.3125rem 0.5rem 0;

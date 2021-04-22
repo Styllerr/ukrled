@@ -1,3 +1,10 @@
+.street-main,
+.indoor-main,
+.signboard-main {
+    background-color: white;
+    font-family: "Geometria";
+    font-style: normal;
+}
 .product {
     &__top-img {
         width: 100%;
@@ -35,6 +42,9 @@
             text-align: center;
             margin: 0 auto;
         }
+        &-list {
+            width: 48%;
+        }
         &-item {
             font-weight: 500;
             font-size: 25px;
@@ -65,6 +75,9 @@
     & > ul:last-child {
         width: 550px;
     }
+}
+.use-list-wrapper-signboard {
+    max-width: 1251px;
 }
 .purchase-block {
     display: grid;
@@ -207,7 +220,7 @@ td {
 }
 .get-benefits {
     margin: 0 auto;
-    padding: 5.625rem 0.5rem    ;
+    padding: 5.625rem 0.5rem;
     &__caption {
         margin: 0 auto;
         max-width: 747px;
@@ -232,5 +245,58 @@ td {
         }
     }
 }
-
+.use-comment-text-signboard {
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 147.5%;
+}
+h3.signboard-subtitle {
+    margin: -2.5rem auto 0;
+    max-width: 554px;
+    font-size: 24px;
+    line-height: 147.5%;
+}
+div.signboard-subtitle {
+    &__list-wrapper {
+        margin: 0 auto;
+        max-width: 807px;
+        font-size: 24px;
+        & > ul {
+            width: 39%;
+        }
+    }
+}
+.signboard-subtitle__use-comment {
+    margin: 0 auto;
+    max-width: 601px;
+    padding-top: 1.25rem;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 147.5%;
+}
+.about-price__comment {
+    margin: 0 auto;
+    max-width: 999px;
+    &-text {
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 147.5%;
+        text-align: center;
+    }
+}
+.order {
+    max-width: 977px;
+    margin: 5.625rem auto;
+    text-align: center;
+    &__caption {
+        font-weight: 500;
+        font-size: 39px;
+        line-height: 147.5%;
+    }
+    &__text {
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 29px;
+    }
+}
 
