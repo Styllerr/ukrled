@@ -1165,7 +1165,8 @@ a.news__button {
 
 .street-main,
 .indoor-main,
-.signboard-main {
+.signboard-main,
+.ticker-main {
   background-color: white;
   font-family: "Geometria";
   font-style: normal;
@@ -1228,20 +1229,28 @@ a.news__button {
 
 .product__use-comment {
   max-width: 959px;
-  margin: 0 auto 5.625rem;
+  margin: 0 auto;
   text-align: center;
 }
 
 .product__use-comment-text {
+  margin: 0;
   font-weight: 500;
   font-size: 29px;
   line-height: 147.5%;
   color: #000000;
 }
 
+.product__use-list-wrapper {
+  margin: 4.125rem auto 3.125rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
 .product__about-price {
   max-width: 1112px;
-  margin: 0 auto;
+  margin: 5.625rem auto 0;
 }
 
 .product__about-price-caption {
@@ -1324,7 +1333,7 @@ ol > li:before {
 
 .media {
   max-width: 1366px;
-  margin: 5.625rem auto;
+  margin: 5.625rem auto 0;
 }
 
 .media__slide-wrapper {
@@ -1464,7 +1473,7 @@ td {
 }
 
 h3.signboard-subtitle {
-  margin: -2.5rem auto 0;
+  margin: 3.125rem auto 0;
   max-width: 554px;
   font-size: 24px;
   line-height: 147.5%;
@@ -1478,6 +1487,16 @@ div.signboard-subtitle__list-wrapper {
 
 div.signboard-subtitle__list-wrapper > ul {
   width: 39%;
+}
+
+.signboard__about {
+  margin-top: 0;
+}
+
+.signboard__about > .product__title,
+.signboard__about .product__description {
+  margin: 3.125rem auto 0;
+  max-width: 729px;
 }
 
 .signboard-subtitle__use-comment {
@@ -1519,17 +1538,65 @@ div.signboard-subtitle__list-wrapper > ul {
   line-height: 29px;
 }
 
-.product__street-led, .product__indoor, .product__signboard {
+.stock-ticker {
+  max-width: 1218px;
+  margin: 0 auto;
+  padding-top: 4rem;
+}
+
+.stock-ticker__description {
+  text-align: center;
+}
+
+.stock-ticker__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.stock-ticker__list-item {
+  width: 48%;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 147.5%;
+}
+
+.ticker__about > .product__description {
+  font-weight: 400;
+  max-width: 943px;
+  margin: 0 auto;
+}
+
+.ticker__table > table {
+  margin: 0 auto;
+}
+
+.ticker__table th:first-child,
+.ticker__table td:first-child {
+  width: 20.3%;
+}
+
+.ticker__table th,
+.ticker__table td {
+  width: 11.38%;
+  padding: 2rem 0.25rem;
+}
+
+.ticker__table-description {
+  margin: 3.125rem auto 0;
+  max-width: 702px;
+}
+
+.ticker__table-description-text {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 130.5%;
+  text-align: center;
+}
+
+.product__street-led, .product__indoor, .product__signboard, .product__ticker {
   max-width: 1370px;
   margin: 0 auto;
   padding: 5.3125rem 0.5rem 0;
-}
-
-.product__use-list-wrapper {
-  margin: 4.125rem auto 3.125rem;
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
 }
 
 .about-price__description,

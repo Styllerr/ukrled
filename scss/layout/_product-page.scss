@@ -1,6 +1,7 @@
 .street-main,
 .indoor-main,
-.signboard-main {
+.signboard-main,
+.ticker-main {
     background-color: white;
     font-family: "Geometria";
     font-style: normal;
@@ -52,9 +53,10 @@
         }
         &-comment {
             max-width: 959px;
-            margin: 0 auto 5.625rem;
+            margin: 0 auto;
             text-align: center;
             &-text {
+                margin: 0;
                 font-weight: 500;
                 font-size: 29px;
                 line-height: 147.5%;
@@ -62,9 +64,15 @@
             }
         }
     }
+    &__use-list-wrapper {
+        margin: 4.125rem auto 3.125rem;
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+    }
     &__about-price {
         max-width: 1112px;
-        margin: 0 auto;
+        margin: 5.625rem auto 0;
         &-caption {
             max-width: 931px;
         }
@@ -137,7 +145,7 @@ ol > li:before {
 }
 .media {
     max-width: 1366px;
-    margin: 5.625rem auto;
+    margin: 5.625rem auto 0;
     &__slide-wrapper {
         padding: 0 0.5rem;
         display: grid;
@@ -251,7 +259,7 @@ td {
     line-height: 147.5%;
 }
 h3.signboard-subtitle {
-    margin: -2.5rem auto 0;
+    margin: 3.125rem auto 0;
     max-width: 554px;
     font-size: 24px;
     line-height: 147.5%;
@@ -263,6 +271,16 @@ div.signboard-subtitle {
         font-size: 24px;
         & > ul {
             width: 39%;
+        }
+    }
+}
+.signboard {
+    &__about {
+        margin-top: 0;
+        & > .product__title,
+        .product__description {
+            margin: 3.125rem auto 0;
+            max-width: 729px;
         }
     }
 }
@@ -299,4 +317,52 @@ div.signboard-subtitle {
         line-height: 29px;
     }
 }
-
+.stock-ticker {
+    max-width: 1218px;
+    margin: 0 auto;
+    padding-top: 4rem;
+    &__description {
+        text-align: center;
+    }
+    &__list {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__list-item {
+        width: 48%;
+        font-weight: 500;
+        font-size: 25px;
+        line-height: 147.5%;
+    }
+}
+.ticker__about {
+    & > .product__description {
+        font-weight: 400;
+        max-width: 943px;
+        margin: 0 auto;
+    }
+}
+.ticker__table {
+    & > table {
+        margin: 0 auto;
+    }
+    & th:first-child,
+    td:first-child {
+        width: 20.3%;
+    }
+    & th,
+    td {
+        width: 11.38%;
+        padding: 2rem 0.25rem;
+    }
+    &-description {
+        margin: 3.125rem auto 0;
+        max-width: 702px;
+        &-text {
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 130.5%;
+            text-align: center;
+        }
+    }
+}

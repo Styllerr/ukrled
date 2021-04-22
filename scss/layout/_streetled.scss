@@ -1,18 +1,13 @@
 .product {
     &__street-led,
     &__indoor,
-    &__signboard {
+    &__signboard,
+    &__ticker {
         max-width: 1370px;
         margin: 0 auto;
         padding: 5.3125rem 0.5rem 0;
     }
-    &__use-list-wrapper {
-        // max-width: 1095px;
-        margin: 4.125rem auto 3.125rem;
-        display: flex;
-        justify-content: space-between;
-        gap: 1rem;
-    }
+    
 }
 
 .about-price,
