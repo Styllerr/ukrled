@@ -1166,7 +1166,10 @@ a.news__button {
 .street-main,
 .indoor-main,
 .signboard-main,
-.ticker-main {
+.ticker-main,
+.exchange-main,
+.sports-main,
+.pharmacy-main {
   background-color: white;
   font-family: "Geometria";
   font-style: normal;
@@ -1546,6 +1549,7 @@ div.signboard-subtitle__list-wrapper > ul {
 
 .stock-ticker__description {
   text-align: center;
+  margin: 3.125rem 0;
 }
 
 .stock-ticker__list {
@@ -1639,7 +1643,130 @@ div.signboard-subtitle__list-wrapper > ul {
   text-align: center;
 }
 
-.product__street-led, .product__indoor, .product__signboard, .product__ticker {
+.exchange__about {
+  max-width: 960px;
+  padding: 0 0.5rem 0;
+  margin: 5.625rem auto 0;
+}
+
+.exchange__about-caption {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 130.5%;
+  text-align: center;
+}
+
+.exchange__description {
+  max-width: 556px;
+  margin: 0 auto;
+}
+
+.exchange__list {
+  display: flex;
+  justify-content: space-between;
+  margin: 3.125rem 0;
+}
+
+.exchange__list-item {
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 147.5%;
+  text-align: center;
+}
+
+.exchange__about-price {
+  padding-bottom: 5.625rem;
+}
+
+.exchange__about-price > .about-price__description {
+  max-width: 763px;
+  margin: 0 auto;
+}
+
+.exchange__complect {
+  text-align: center;
+  margin: 3.125rem auto;
+  max-width: 900px;
+}
+
+.exchange-alternative ul {
+  margin: 0;
+}
+
+.exchange-alternative > .alternative__description {
+  max-width: 600px;
+  font-weight: 400;
+}
+
+.sports__about {
+  padding: 5.625rem 0.5rem 0;
+  margin: 0 auto;
+  max-width: 1140px;
+}
+
+.sports__about-caption {
+  font-size: 24px;
+}
+
+.sports__list {
+  margin: 3.125rem 0 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.sports__list-item {
+  width: 40%;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 147.5%;
+}
+
+.sports-advantages {
+  padding: 5.625rem 0.5rem 0;
+}
+
+.sports-advantages__list {
+  width: 45%;
+  margin: 0;
+}
+
+.sports-advantages__list-wrapper {
+  margin-top: 3.125rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sports-advantages__item {
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 147.5%;
+}
+
+.sports__conclusion {
+  padding: 5.625rem 0.5rem;
+  max-width: 1220px;
+  margin: 0 auto;
+}
+
+.sports__conclusion-caption {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.sports__conclusion-description {
+  line-height: 147.5%;
+  max-width: 831px;
+  margin: 3.125rem auto 0;
+  text-align: center;
+}
+
+.pharmacy__about-price {
+  max-width: 958px;
+  margin: 0 auto;
+}
+
+.product__street-led, .product__indoor, .product__signboard, .product__ticker, .product__exchange, .product__sports {
   max-width: 1370px;
   margin: 0 auto;
   padding: 5.3125rem 0.5rem 0;

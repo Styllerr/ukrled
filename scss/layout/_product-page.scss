@@ -1,7 +1,10 @@
 .street-main,
 .indoor-main,
 .signboard-main,
-.ticker-main {
+.ticker-main,
+.exchange-main,
+.sports-main,
+.pharmacy-main {
     background-color: white;
     font-family: "Geometria";
     font-style: normal;
@@ -323,6 +326,7 @@ div.signboard-subtitle {
     padding-top: 4rem;
     &__description {
         text-align: center;
+        margin: 3.125rem 0;
     }
     &__list {
         display: flex;
@@ -406,3 +410,117 @@ div.signboard-subtitle {
         text-align: center;
     }
 }
+.exchange {
+    &__about {
+        max-width: 960px;
+        padding: 0 0.5rem 0;
+        margin: 5.625rem auto 0;
+    }
+    &__about-caption {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 130.5%;
+        text-align: center;
+    }
+    &__description {
+        max-width: 556px;
+        margin: 0 auto;
+    }
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        margin: 3.125rem 0;
+        &-item {
+            font-weight: 500;
+            font-size: 25px;
+            line-height: 147.5%;
+            text-align: center;
+        }
+    }
+    &__about-price {
+        padding-bottom: 5.625rem;
+        & > .about-price__description {
+            max-width: 763px;
+            margin: 0 auto;
+        }
+    }
+    &__complect {
+        text-align: center;
+        margin: 3.125rem auto;
+        max-width: 900px;
+    }
+}
+.exchange-alternative {
+    & ul {
+        margin: 0;
+    }
+    & > .alternative__description {
+        max-width: 600px;
+        font-weight: 400;
+    }
+}
+.sports {
+    &__about {
+        padding: 5.625rem 0.5rem 0;
+        margin: 0 auto;
+        max-width: 1140px;
+        &-caption {
+            font-size: 24px;
+        }
+    }
+    &__list {
+        margin: 3.125rem 0 0;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        &-item {
+            width: 40%;
+            font-weight: 500;
+            font-size: 25px;
+            line-height: 147.5%;
+        }
+    }
+    &-advantages {
+        padding: 5.625rem 0.5rem 0;
+        &__list {
+            width: 45%;
+            margin: 0;
+            &-wrapper {
+                margin-top: 3.125rem;
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+        &__item {
+            font-weight: 500;
+            font-size: 25px;
+            line-height: 147.5%;
+        }
+    }
+    &__conclusion {
+        padding: 5.625rem 0.5rem;
+        max-width: 1220px;
+        margin: 0 auto;
+        &-caption {
+            max-width: 1120px;
+            margin: 0 auto;
+        }
+        &-description {
+            line-height: 147.5%;
+            max-width: 831px;
+            margin: 3.125rem auto 0;
+            text-align: center;
+        }
+    }
+}
+.pharmacy {
+    &__about-price {
+        max-width: 958px;
+        margin: 0 auto;
+    }
+}
+
+
+
+
+
