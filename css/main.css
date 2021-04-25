@@ -1761,9 +1761,67 @@ div.signboard-subtitle__list-wrapper > ul {
   text-align: center;
 }
 
-.pharmacy__about-price {
+.pharmacy-props {
   max-width: 958px;
   margin: 0 auto;
+  padding: 5.625rem 0.5rem 0;
+}
+
+.pharmacy-props__subtitle {
+  max-width: 426px;
+  margin: 3.125rem auto;
+  font-size: 24px;
+}
+
+.pharmacy-props__list {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.pharmacy-props__item {
+  width: fit-content;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 147.5%;
+}
+
+.pharmacy-props__description {
+  line-height: 147.5%;
+  text-align: center;
+  margin: 3.125rem 0;
+}
+
+.pharmacy-advantages {
+  max-width: 1171px;
+  margin: 0 auto;
+  padding: 5.625rem 0.5rem;
+}
+
+.pharmacy-advantages__caption {
+  margin: 0;
+}
+
+.pharmacy-advantages__list-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 3.125rem 0 0;
+}
+
+.pharmacy-advantages__list {
+  width: 45%;
+  margin: 0;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 147.5%;
+}
+
+.pharmacy-advantages__description {
+  max-width: 855px;
+  line-height: 147.5%;
+  text-align: center;
+  margin: 3.125rem auto 0;
 }
 
 .product__street-led, .product__indoor, .product__signboard, .product__ticker, .product__exchange, .product__sports {

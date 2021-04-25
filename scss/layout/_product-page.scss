@@ -513,12 +513,61 @@ div.signboard-subtitle {
         }
     }
 }
-.pharmacy {
-    &__about-price {
+.pharmacy-props {
         max-width: 958px;
         margin: 0 auto;
+        padding: 5.625rem 0.5rem 0;
+    &__subtitle {
+        max-width: 426px;
+        margin: 3.125rem auto;
+        font-size: 24px;
+    }
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+    }
+    &__item {
+        width: fit-content;
+        font-weight: 500;
+        font-size: 25px;
+        line-height: 147.5%;
+    }
+    &__description {
+        line-height: 147.5%;
+        text-align: center;
+        margin: 3.125rem 0;
     }
 }
+.pharmacy-advantages {
+    max-width: 1171px;
+    margin: 0 auto;
+    padding: 5.625rem 0.5rem;
+    &__caption {
+        margin: 0;
+    }
+    &__list-wrapper {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 3.125rem 0 0;
+    }
+    &__list {
+        width: 45%;
+        margin: 0;
+        font-weight: 500;
+        font-size: 25px;
+        line-height: 147.5%;
+    }
+    &__description {
+        max-width: 855px;
+        line-height: 147.5%;
+        text-align: center;
+        margin: 3.125rem auto 0;
+    }
+}
+
+
 
 
 
