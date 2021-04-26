@@ -1169,7 +1169,8 @@ a.news__button {
 .ticker-main,
 .exchange-main,
 .sports-main,
-.pharmacy-main {
+.pharmacy-main,
+.rent-main {
   background-color: white;
   font-family: "Geometria";
   font-style: normal;
@@ -1824,7 +1825,61 @@ div.signboard-subtitle__list-wrapper > ul {
   margin: 3.125rem auto 0;
 }
 
-.product__street-led, .product__indoor, .product__signboard, .product__ticker, .product__exchange, .product__sports {
+.rent-about {
+  max-width: 1182px;
+  margin: 0 auto;
+  padding: 5.625rem 0.5rem 0;
+}
+
+.rent-about__caption {
+  font-size: 24px;
+  line-height: 130.5%;
+}
+
+.rent-about__list-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rent-about__list {
+  width: 45%;
+  margin: 3.125rem 0;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 147.5%;
+}
+
+.rent-price {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 5.625rem 0.5rem;
+}
+
+.rent-price__caption {
+  max-width: 562px;
+  margin: 0 auto;
+}
+
+.rent-price__list-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rent-price__list {
+  width: 45%;
+  margin: 3.125rem 0;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 147.5%;
+}
+
+.rent-price__text {
+  max-width: 855px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.product__street-led, .product__indoor, .product__signboard, .product__ticker, .product__exchange, .product__sports, .product__pharmacy, .product__rent {
   max-width: 1370px;
   margin: 0 auto;
   padding: 5.3125rem 0.5rem 0;

@@ -4,7 +4,8 @@
 .ticker-main,
 .exchange-main,
 .sports-main,
-.pharmacy-main {
+.pharmacy-main,
+.rent-main {
     background-color: white;
     font-family: "Geometria";
     font-style: normal;
@@ -514,9 +515,9 @@ div.signboard-subtitle {
     }
 }
 .pharmacy-props {
-        max-width: 958px;
-        margin: 0 auto;
-        padding: 5.625rem 0.5rem 0;
+    max-width: 958px;
+    margin: 0 auto;
+    padding: 5.625rem 0.5rem 0;
     &__subtitle {
         max-width: 426px;
         margin: 3.125rem auto;
@@ -566,10 +567,52 @@ div.signboard-subtitle {
         margin: 3.125rem auto 0;
     }
 }
-
-
-
-
-
+.rent {
+    &-about {
+        max-width: 1182px;
+        margin: 0 auto;
+        padding: 5.625rem 0.5rem 0;
+        &__caption {
+            font-size: 24px;
+            line-height: 130.5%;
+        }
+        &__list-wrapper {
+            display: flex;
+            justify-content: space-between;
+        }
+        &__list {
+            width: 45%;
+            margin: 3.125rem 0;
+            font-weight: 500;
+            font-size: 25px;
+            line-height: 147.5%;
+        }
+    }
+    &-price {
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: 5.625rem 0.5rem;
+        &__caption {
+            max-width: 562px;
+            margin: 0 auto;
+        }
+        &__list-wrapper {
+            display: flex;
+            justify-content: space-between;
+        }
+        &__list {
+            width: 45%;
+            margin: 3.125rem 0;
+            font-weight: 500;
+            font-size: 25px;
+            line-height: 147.5%;
+        }
+        &__text {
+            max-width: 855px;
+            margin: 0 auto;
+            text-align: center;
+        }
+    }
+}
 
 
