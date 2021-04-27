@@ -129,3 +129,71 @@
     max-width: 48%;
     text-align: center;
 }
+.submit-block {
+    width: 100%;
+
+    &__title {
+        text-align: center;
+        font-family: "Geometria";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 147.5%;
+    }
+    &__previos {
+        text-align: center;
+        cursor: pointer;
+        font-family: "Geometria";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 147.5%;
+        text-decoration-line: underline;
+        color: #3831b7;
+    }
+}
+.contact-date {
+    display: flex;
+    flex-wrap: wrap;
+    &__label-wrapper {
+        text-align: center;
+        width: 49%;
+    }
+    &__label {
+        position: relative;
+        font-family: "Geometria";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 25px;
+        line-height: 147.5%;
+        & + input {
+            width: 100%;
+            padding: 1rem;
+            font-family: "Geometria";
+            font-style: normal;
+            font-weight: normal;
+            font-size: 22px;
+            line-height: 147.5%;
+            border: none;
+            border-bottom: 1px solid #3831b7;
+        }
+        &[for="submit-name"]::before {
+            position: absolute;
+            top: 0;
+            left: -40px;
+            content: "";
+            width: 39px;
+            height: 39px;
+            background: url(/image/svg/index-name-icon.svg) no-repeat;
+        }
+        &[for="submit-phone"]::before {
+            position: absolute;
+            top: 0;
+            left: -40px;
+            content: "";
+            width: 39px;
+            height: 39px;
+            background: url(/image/svg/index-phone-icon.svg) no-repeat;
+        }
+    }
+}

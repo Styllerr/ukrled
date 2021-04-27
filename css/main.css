@@ -2176,4 +2176,80 @@ div.accordion-body {
   max-width: 48%;
   text-align: center;
 }
+
+.submit-block {
+  width: 100%;
+}
+
+.submit-block__title {
+  text-align: center;
+  font-family: "Geometria";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 147.5%;
+}
+
+.submit-block__previos {
+  text-align: center;
+  cursor: pointer;
+  font-family: "Geometria";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 147.5%;
+  text-decoration-line: underline;
+  color: #3831b7;
+}
+
+.contact-date {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contact-date__label-wrapper {
+  text-align: center;
+  width: 49%;
+}
+
+.contact-date__label {
+  position: relative;
+  font-family: "Geometria";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 147.5%;
+}
+
+.contact-date__label + input {
+  width: 100%;
+  padding: 1rem;
+  font-family: "Geometria";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 147.5%;
+  border: none;
+  border-bottom: 1px solid #3831b7;
+}
+
+.contact-date__label[for="submit-name"]::before {
+  position: absolute;
+  top: 0;
+  left: -40px;
+  content: "";
+  width: 39px;
+  height: 39px;
+  background: url(/image/svg/index-name-icon.svg) no-repeat;
+}
+
+.contact-date__label[for="submit-phone"]::before {
+  position: absolute;
+  top: 0;
+  left: -40px;
+  content: "";
+  width: 39px;
+  height: 39px;
+  background: url(/image/svg/index-phone-icon.svg) no-repeat;
+}
 /*# sourceMappingURL=main.css.map */
