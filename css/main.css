@@ -2036,9 +2036,12 @@ div.accordion-body {
   color: #000000;
 }
 
-.modal-background {
+.body__modal {
   position: relative;
-  width: 100vw;
+}
+
+.modal-background {
+  width: 100%;
   height: 100vh;
   background-color: rgba(202, 202, 202, 0.5);
 }
@@ -2160,6 +2163,20 @@ div.accordion-body {
   color: #ffffff;
 }
 
+.modal__submit {
+  width: 445px;
+  height: 88px;
+  background: #3831b7;
+  font-family: "Geometria";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 147.5%;
+  text-align: center;
+  color: #ffffff;
+  margin: 2rem auto 0;
+}
+
 .check-dist-wrapper {
   display: flex;
   justify-content: space-between;
@@ -2222,7 +2239,7 @@ div.accordion-body {
 }
 
 .contact-date__label + input {
-  width: 100%;
+  width: 90%;
   padding: 1rem;
   font-family: "Geometria";
   font-style: normal;
