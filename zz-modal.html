@@ -18,7 +18,7 @@
         <form action="#" class="modal__form">
             <h2>Комфортное расстояние просмотра</h2>
             <h2>Размер</h2>
-            <div class="check-dist-wrapper">
+            <div class="check-dist-wrapper check-wrapper">
                 <input id="check-dist-5m" type="radio" name="distance" class="modal__check-dist">
                 <label for="check-dist-5m" class="modal__label-dist">от 5 м</label>
                 <input id="check-dist-8m" type="radio" name="distance" class="modal__check-dist" checked>
@@ -30,7 +30,7 @@
                 <input id="check-dist-3m" type="radio" name="distance" class="modal__check-dist">
                 <label for="check-dist-3m" class="modal__label-dist">от 3 м</label>
             </div>
-            <div class="check-size-wrapper">
+            <div class="check-size-wrapper check-wrapper">
                 <input id="large" type="radio" name="size" class="modal__check-size" checked>
                 <label for="large" class="modal__label-size">320х160 мм</label>
                 <input id="medium" type="radio" name="size" class="modal__check-size">
@@ -39,7 +39,7 @@
                 <label for="small" class="modal__label-size">192х192 мм</label>
             </div>
             <button class="modal__request-price">Узнать цену</button>
-            <div class="form-submit-block submit-block">
+            <div class="form-submit-block submit-block modal-hidden">
                 <h2 class="submit-block__title">Цена LED-экрана <span>20000</span> грн</h2>
                 <p class="submit-block__previos">Изменить размер</p>
                 <div class="submit-block__contact-date contact-date">
@@ -55,8 +55,8 @@
                     </div>
 
                 </div>
-                <input type="submit" class="modal__submit" value="Оставить заявку">
             </div>
+            <input type="submit" class="modal__submit modal-hidden" value="Оставить заявку">
         </form>
     </div>
 </body>

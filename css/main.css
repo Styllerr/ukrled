@@ -2177,20 +2177,24 @@ div.accordion-body {
   margin: 2rem auto 0;
 }
 
-.check-dist-wrapper {
+.modal-hidden {
+  display: none;
+}
+
+.check-wrapper {
   display: flex;
-  justify-content: space-between;
-  flex-direction: row-reverse;
   flex-wrap: wrap;
   max-width: 48%;
 }
 
+.check-dist-wrapper {
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+
 .check-size-wrapper {
-  display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: flex-end;
-  max-width: 48%;
   text-align: center;
 }
 
