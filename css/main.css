@@ -2284,6 +2284,10 @@ div.accordion-body {
   padding-right: 30%;
 }
 
+.blog__caption {
+  margin: 0;
+}
+
 .blog-card {
   width: 48%;
 }
