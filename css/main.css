@@ -1170,7 +1170,8 @@ a.news__button {
 .exchange-main,
 .sports-main,
 .pharmacy-main,
-.rent-main {
+.rent-main,
+.blog-main {
   background-color: white;
   font-family: "Geometria";
   font-style: normal;
@@ -2274,10 +2275,6 @@ div.accordion-body {
   background: url(/image/svg/index-phone-icon.svg) no-repeat;
 }
 
-.blog-body {
-  background-color: white;
-}
-
 .blog__wrapper {
   max-width: 907px;
   margin: 0 auto;
@@ -2289,5 +2286,23 @@ div.accordion-body {
 
 .blog-card {
   width: 48%;
+}
+
+.blog-aside__link {
+  display: inline-block;
+  max-width: 305px;
+}
+
+.blog-aside__card {
+  width: 100%;
+}
+
+.blog-aside__img {
+  width: 287px;
+  height: 192px;
+}
+
+.blog-aside__caption {
+  font-size: 19px;
 }
 /*# sourceMappingURL=main.css.map */
