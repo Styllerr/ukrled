@@ -2275,21 +2275,33 @@ div.accordion-body {
   background: url(/image/svg/index-phone-icon.svg) no-repeat;
 }
 
+.blog-main {
+  padding: 5.625rem 0.5rem 0;
+}
+
 .blog__wrapper {
-  max-width: 907px;
+  width: 1360px;
   margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .blog__article {
-  padding-right: 30%;
+  max-width: 69%;
 }
 
 .blog__caption {
-  margin: 0;
+  width: 100%;
+  margin: 0 0 3.125rem;
 }
 
 .blog-card {
   width: 48%;
+}
+
+.blog-aside {
+  width: 29%;
 }
 
 .blog-aside__link {
