@@ -1,0 +1,16 @@
+.blog-body {
+    background-color: white;
+}
+.blog {
+    &__wrapper {
+        max-width: 907px;
+        margin: 0 auto;
+    }
+    &__article {
+        padding-right: 30%;
+    }
+    &-card {
+        width: 48%;
+    }
+
+}

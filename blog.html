@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./css/main.css">
     <title>Блог</title>
 </head>
-<body>
+<body class="blog-body">
     <header class="site-header">
         <div class="header-wrapper">
             <a href="./" class="logo-wrapper">
@@ -52,11 +52,11 @@
         </div>
     </header>
     <main class="blog-main">
-        <section class="news">
-            <div class="news__wrapper">
+        <article class="news blog__article">
+            <div class="blog__wrapper">
                 <h2 class="news__caption">Новости</h2>
                 <div class="news-card__wrapper">
-                    <div class="news-card">
+                    <div class="news-card blog-card">
                         <div class="card-top-wrap">
                             <img src="./image/png/index-news01.png" alt="First News" class="news-card__img">
                             <h3 class="news-card__caption">Oт закупки в китае к собственному производству</h3>
@@ -68,7 +68,7 @@
                             <a href="#" class="news-card__link">Подробнее</a>
                         </div>
                     </div>
-                    <div class="news-card">
+                    <div class="news-card blog-card">
                         <div class="card-top-wrap">
                             <img src="./image/png/index-news02.png" alt="Second News" class="news-card__img">
                             <h3 class="news-card__caption">Чума на вашу всю рекламу: как изменился мир маркетинга после
@@ -80,7 +80,7 @@
                             <a href="#" class="news-card__link">Подробнее</a>
                         </div>
                     </div>
-                    <div class="news-card">
+                    <div class="news-card blog-card">
                         <div class="card-top-wrap">
                             <img src="./image/png/index-news03.png" alt="Third News" class="news-card__img">
                             <h3 class="news-card__caption">Можно ли использовать led-экраны в кинотеатрах</h3>
@@ -93,10 +93,7 @@
                     </div>
                 </div>
             </div>
-            <div class="news__button-wrapper">
-                <a href="#" class="news__button">Больше статей</a>
-            </div>
-        </section>
+        </article>
     </main>
     <footer class="site-footer">
         <div class="footer-wrapper">

@@ -2273,4 +2273,21 @@ div.accordion-body {
   height: 39px;
   background: url(/image/svg/index-phone-icon.svg) no-repeat;
 }
+
+.blog-body {
+  background-color: white;
+}
+
+.blog__wrapper {
+  max-width: 907px;
+  margin: 0 auto;
+}
+
+.blog__article {
+  padding-right: 30%;
+}
+
+.blog-card {
+  width: 48%;
+}
 /*# sourceMappingURL=main.css.map */
