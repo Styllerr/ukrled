@@ -33,52 +33,6 @@
         padding: 6rem 7.5rem;
         background-color: white;
     }
-    &__name-lable,
-    &__phone-lable {
-        position: relative;
-        width: 100%;
-        font-family: "Geometria";
-        font-style: normal;
-        font-weight: 500;
-        font-size: 25px;
-        line-height: 147.5%;
-        text-align: left;
-        padding-left: 2.25rem;
-        color: #000000;
-        &::before {
-            position: absolute;
-            content: "";
-            top: 0;
-            left: 0;
-            width: 2rem;
-            height: 2rem;
-        }
-    }
-    &__name-input,
-    &__phone-input {
-        width: 100%;
-        margin-top: 0.3125rem;
-        border: none;
-        border-bottom: 1px solid #3831b7;
-        font-family: Geometria;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 22px;
-        line-height: 147.5%;
-        color: rgba(0, 0, 0, 0.68);
-        padding: 1.5rem;
-    }
-    &__name-lable {
-        &::before {
-            background: url(/image/svg/index-name-icon.svg) no-repeat;
-        }
-    }
-    &__phone-lable {
-        margin-top: 2rem;
-        &::before {
-            background: url(/image/svg/index-phone-icon.svg) no-repeat;
-        }
-    }
     &__submit-wrapper {
         margin-top: 3.3125rem;
         text-align: center;
@@ -86,13 +40,66 @@
     &__submit {
         width: 100%;
         height: 88px;
-        background: #3831b7;
-        font-family: Geometria;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 25px;
-        line-height: 147.5%;
-        text-align: center;
-        color: #ffffff;
     }
+}
+.form-submit {
+    background: #3831b7;
+    font-family: "Geometria";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 147.5%;
+    text-align: center;
+    color: #ffffff;
+}
+.form-label {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    font-family: "Geometria";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 147.5%;
+    text-align: left;
+    padding-left: 2.4rem;
+    color: #000000;
+    &::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 2.5rem;
+        height: 2rem;
+    }
+}
+.form-input {
+    border: none;
+    border-bottom: 1px solid #3831b7;
+    font-family: Geometria;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 147.5%;
+    color: rgba(0, 0, 0, 0.68);
+    padding: 1.5rem;
+    width: 100%;
+    margin-top: 0.3125rem;
+}
+
+.name-label {
+    &::before {
+        background: url(/image/svg/form-name-icon.svg) no-repeat;
+    }
+}
+.phone-label {
+    margin-top: 2rem;
+    height: 72px;
+    &::before {
+        background: url(/image/svg/form-phone-icon.svg) no-repeat;
+    }
+}
+#subscrible-phone,
+#subscrible-coment {
+    padding-top: 0;
 }

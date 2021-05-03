@@ -134,8 +134,9 @@
                     </div>
                 </div>
             </article>
-            <!-- <aside class="blog-aside">
+            <aside class="blog-aside">
                 <div class="blog-aside__wrapper">
+                    <span class="blog-aside__search-wrapper"></span>
                     <input type="search" class="blog-aside__search" placeholder="Поиск...">
                     <h2 class="blog-aside__title">Популярные запросы</h2>
                     <a href="#" class="blog-aside__link">
@@ -151,8 +152,34 @@
                             </div>
                         </div>
                     </a>
+                    <a href="#" class="blog-aside__link">
+                        <div class="news-card blog-aside__card">
+                            <div class="card-top-wrap">
+                                <img src="./image/png/index-news04.png" alt="Third News" class="blog-aside__img">
+                                <h3 class="news-card__caption blog-aside__caption">Тренды led рынка</h3>
+                                <p class="news-card__description blog-aside__description">2020 год оказался удачным
+                                    для...</p>
+                            </div>
+                            <div class="card-bottom-wrap">
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#" class="blog-aside__link">
+                        <div class="news-card blog-aside__card">
+                            <div class="card-top-wrap">
+                                <img src="./image/png/index-news07.png" alt="Third News" class="blog-aside__img">
+                                <h3 class="news-card__caption blog-aside__caption">3d led изображения</h3>
+                                <p class="news-card__description blog-aside__description">Реклама с течением времени
+                                    становится...</p>
+                            </div>
+                            <div class="card-bottom-wrap">
+                            </div>
+                        </div>
+                    </a>
+                    <p class="blog-aside__subtext">Хотите быть в курсе новостей и акций? Жмите "Подписаться"</p>
+                    <button class="blog-aside__subscrible">Подписаться</button>
                 </div>
-            </aside> -->
+            </aside>
         </div>
 
     </main>
@@ -180,6 +207,33 @@
             <span class="designed-logo">designed by</span>
         </div>
     </footer>
+    <div class="subscrible__conteiner subscrible__conteiner_hidden">
+        <div class="subscrible__wrapper">
+            <form action="#" class="subscrible__form">
+                <div class="modal__cross"></div>
+                <div class="input-wrapper">
+                    <label for="subscrible-name" class="form-label name-label">Как к вам обращаться</label>
+                    <input id="subscrible-name" class="form-input name-input" type="text" name="name">
+                </div>
+                <div class="input-wrapper">
+                    <label for="subscrible-email" class="form-label email-label">E-mail</label>
+                    <input id="subscrible-email" class="form-input email-input" type="email" name="email">
+                </div>
+                <div class="input-wrapper">
+                    <label for="subscrible-phone" class="form-label phone-label">Ваш номер телефона</label>
+                    <input id="subscrible-phone" class="form-input phone-input" type="tel" name="phone" placeholder="+380___ -___-___">
+                </div>
+                <div class="input-wrapper">
+                    <label for="subscrible-coment" class="form-label coment-label">Комментарий или сообщение&nbsp;*</label>
+                    <input id="subscrible-coment" class="form-input coment-input" type="text" name="coment">
+                </div>
+                <div class="subscrible__btn-wrapper">
+                    <button type="submit" class="subscrible__submit form-submit">Отправить</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="./script/blog-script.js"></script>
 </body>
 
 </html>

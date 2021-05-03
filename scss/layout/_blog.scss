@@ -1,20 +1,22 @@
 .blog {
+    &-body {
+        position: relative;
+    }
     &-main {
-        padding: 5.625rem 0.5rem 0;
+        padding: 5.625rem 0.5rem;
+        background: white url(/image/svg/blog-background.svg) no-repeat;
+        background-position-x: right;
     }
     &__wrapper {
-        width: 1360px;
+        max-width: 1360px;
         margin: 0 auto;
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
     }
-    // &__conteiner {
-    //     max-width: 907px;
-    //     margin: 0 auto;
-    // }
     &__article {
         max-width: 69%;
+        background: none;
     }
     &__caption {
         width: 100%;
@@ -27,6 +29,10 @@
 .blog {
     &-aside {
         width: 29%;
+        padding: 0 1rem;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
         &__link {
             display: inline-block;
             max-width: 308px;
@@ -41,5 +47,101 @@
         &__caption {
             font-size: 19px;
         }
+        &__search {
+            max-width: 346px;
+            width: 100%;
+            height: 66px;
+            padding: 1.5rem;
+            padding-left: 4rem;
+            background: #f2f2f2;
+            &-wrapper {
+                position: relative;
+                &::before {
+                    cursor: pointer;
+                    position: absolute;
+                    top: -6px;
+                    left: 14px;
+                    content: "";
+                    width: 30px;
+                    height: 30px;
+                    background: url(/image/svg/search-icon.svg) no-repeat;
+                }
+            }
+        }
+        &__subtext {
+            font-weight: 500;
+            font-size: 25px;
+            line-height: 31px;
+        }
+        &__subscrible {
+            cursor: pointer;
+            width: 100%;
+            height: 88px;
+            font-weight: 500;
+            font-size: 25px;
+            line-height: 147.5%;
+            color: white;
+            background: #3831b7;
+        }
+    }
+}
+.subscrible {
+    &__conteiner {
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: rgba(202, 202, 202, 0.5);
+        width: 100%;
+        height: 100vh;
+        &_hidden {
+            display: none;
+        }
+    }
+    &__wrapper {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__form {
+        position: relative;
+        padding: 6.25rem 8.125rem;
+        background: white;
+        box-shadow: 0px 4px 94px rgba(0, 0, 0, 0.15);
+        max-width: 1218px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0 1.5rem;
+    }
+    &__btn-wrapper {
+        width: 100%;
+        text-align: center;
+        margin-top: 3.125rem;
+    }
+    &__submit {
+        width: 36.54%;
+        height: 88px;
+        cursor: pointer;
+        transition: 0.3s;
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}
+.input-wrapper {
+    flex-basis: 48%;
+}
+.coment-label {
+    margin-top: 2rem;
+    height: 72px;
+    &::before {
+        background: url(/image/svg/form-coment-icon.svg) no-repeat;
+    }
+}
+.email-label {
+    &::before {
+        background: url(/image/svg/form-email-icon.svg) no-repeat;
     }
 }
