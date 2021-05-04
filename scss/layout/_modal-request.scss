@@ -1,0 +1,137 @@
+.modal {
+    &__cross {
+        width: 29px;
+        height: 29px;
+        position: absolute;
+        top: 2.5rem;
+        right: 2.5rem;
+        cursor: pointer;
+        &:before,
+        &:after {
+            content: "";
+            position: absolute;
+            z-index: 1;
+            background: black;
+        }
+        &:before {
+            top: -5px;
+            left: 12px;
+            width: 2px;
+            height: 140%;
+            transform: rotate(45deg);
+        }
+        &:after {
+            top: -5px;
+            left: 12px;
+            height: 140%;
+            width: 2px;
+            transform: rotate(-45deg);
+        }
+    }
+}
+.request {
+    &__form {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 1093px;
+        box-shadow: 0px 10px 55px rgba(0, 0, 0, 0.19);
+        padding: 6.5rem 4.6rem;
+        background-color: white;
+    }
+    &__title {
+        width: 100%;
+        text-align: center;
+        font-family: "Geometria";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 39px;
+        line-height: 147.5%;
+    }
+    &__check-dist,
+    &__check-size {
+        display: none;
+    }
+    &__label {
+        position: relative;
+        font-family: "Geometria";
+        font-style: normal;
+        font-weight: normal;
+        font-size: 27px;
+        line-height: 147.5%;
+        padding-left: 4.0625rem;
+        margin-bottom: 2.3125rem;
+        &::before {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            width: 39px;
+            height: 39px;
+            border: 3px solid #352eac;
+            box-sizing: border-box;
+        }
+    }
+    &__check-dist:checked + label::before,
+    &__check-size:checked + label::before {
+        background: url(/image/svg/check.svg) no-repeat;
+        background-position: 2px;
+    }
+    &__submit {
+        width: 40.71%;
+        height: 88px;
+        background: #3831b7;
+        font-family: "Geometria";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 25px;
+        line-height: 147.5%;
+        text-align: center;
+        color: #ffffff;
+        margin: 2rem auto 0;
+    }
+}
+.column {
+    &__caption {
+        width: 100%;
+        font-family: "Geometria";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 147.5%;
+    }
+    &__wrapper {
+        width: 48%;
+    }
+}
+.dist-column {
+    &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+    }
+    &__caption {
+        grid-column: 1 / 3;
+    }
+}
+.size-column {
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+    &__caption {
+        height: 93.32px;
+        display: inline-block;
+    }
+}
+.request__date {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+.phone-label[for="request-phone"] {
+    height: auto;
+}

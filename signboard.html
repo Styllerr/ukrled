@@ -41,16 +41,16 @@
                                     class="product__item-link">Аптечные крест</a></li>
                         </ul>
                     </li>
-                    <li class="navigation__item"><a href="#" class="navigation__item-link">Сферы&nbsp;применения</a>
+                    <li class="navigation__item"><a href="./index.html#employment" class="navigation__item-link">Сферы&nbsp;применения</a>
                     </li>
                     <li class="navigation__item"><a href="./rent.html" class="navigation__item-link">Аренда</a></li>
                     <li class="navigation__item"><a href="./blog.html" class="navigation__item-link">Блог</a></li>
-                    <li class="navigation__item"><a href="./contacts.html" class="navigation__item-link">Контакты</a></li>
+                    <li class="navigation__item"><a href="#contacts" class="navigation__item-link">Контакты</a></li>
                 </ul>
             </nav>
-            <div class="header__phone">
+            <a href="tel:+380986422418" class="header__phone">
                 <i class="phone__icon"><span class="phone__number">+38 (098) 64-22-418</span></i>
-            </div>
+            </a>
         </div>
     </header>
     <main class="signboard-main">
@@ -206,13 +206,13 @@
                 </div>
                 <div class="feedback__form-block">
                     <form action="#" class="feedback__form">
-                        <label for="feedback-name" class="feedback__name-lable">Как к вам обращаться</label>
-                        <input type="text" class="feedback__name-input" id="feedback-name">
-                        <label for="feedback-phone" class="feedback__phone-lable">Ваш номер телефона</label>
-                        <input type="tel" class="feedback__phone-input" id="feedback-phone"
+                        <label for="feedback-name" class="form-label name-label">Как к вам обращаться</label>
+                        <input type="text" class="form-input name-input" id="feedback-name">
+                        <label for="feedback-phone" class="form-label phone-label">Ваш номер телефона</label>
+                        <input type="tel" class="form-input phone-input" id="feedback-phone"
                             placeholder="+380___ -___-___">
                         <div class="feedback__submit-wrapper">
-                            <input type="submit" class="feedback__submit" value="Оставить заявку">
+                            <input type="submit" class="feedback__submit form-submit" value="Оставить заявку">
                         </div>
                     </form>
                 </div>
@@ -243,12 +243,10 @@
             </a>
             <nav class="footer__navigation">
                 <ul class="navigation__list">
-                    <li class="navigation__item"><a href="" class="navigation__item-link">Главная</a></li>
-                    <li class="navigation__item"><a href="" class="navigation__item-link">Услуги</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__item-link">Сферы&nbsp;применения</a>
-                    </li>
-                    <li class="navigation__item"><a href="#" class="navigation__item-link">Блог</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__item-link">Контакты</a></li>
+                    <li class="navigation__item"><a href="./blog.html" class="navigation__item-link">Блог</a></li>
+                    <li class="navigation__item"><a href="./faq.html" class="navigation__item-link">Ответы на вопросы</a></li>
+                    <li class="navigation__item"><a href="./subscrible.html" class="navigation__item-link">Рассылка&nbsp;применения</a></li>
+                    <li class="navigation__item"><a href="./rent.html" class="navigation__item-link">Услуги</a></li>
                 </ul>
             </nav>
             <a href="tel:+380986422418" class="header__phone">
@@ -259,6 +257,48 @@
             <span class="designed-logo">designed by</span>
         </div>
     </footer>
+    <div class="modal__conteiner modal__conteiner_hidden">
+        <div class="modal__wrapper">
+            <form action="#" class="request__form">
+                <div class="modal__cross"></div>
+                <h1 class="request__title">Расчитайте стоимость LED-экрана</h1>
+                <div class="dist-column__wrapper column__wrapper">
+                    <h2 class="dist-column__caption column__caption">Комфортное расстояние просмотра</h2>
+                    <input id="check-dist-8m" type="radio" name="distance" class="request__check-dist" checked>
+                    <label for="check-dist-8m" class="request__label">от 8 м</label>
+                    <input id="check-dist-6m" type="radio" name="distance" class="request__check-dist">
+                    <label for="check-dist-6m" class="request__label">от 6 м</label>
+                    <input id="check-dist-5m" type="radio" name="distance" class="request__check-dist">
+                    <label for="check-dist-5m" class="request__label">от 5 м</label>
+                    <input id="check-dist-4m" type="radio" name="distance" class="request__check-dist">
+                    <label for="check-dist-4m" class="request__label">от 4 м</label>
+                    <input id="check-dist-3m" type="radio" name="distance" class="request__check-dist">
+                    <label for="check-dist-3m" class="request__label">от 3 м</label>
+                </div>
+                <div class="size-column__wrapper column__wrapper">
+                    <h2 class="size-column__caption column__caption">Размер</h2>
+                    <input id="large" type="radio" name="size" class="request__check-size" checked>
+                    <label for="large" class="request__label">320х160 мм</label>
+                    <input id="medium" type="radio" name="size" class="request__check-size">
+                    <label for="medium" class="request__label">256х128 мм</label>
+                    <input id="small" type="radio" name="size" class="request__check-size">
+                    <label for="small" class="request__label">192х192 мм</label>
+                </div>
+                <div class="request__date">
+                    <div class="input-wrapper">
+                        <label for="request-name" class="form-label name-label">Как к вам обращаться</label>
+                        <input id="request-name" class="form-input name-input" type="text" name="name">
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="request-phone" class="form-label phone-label">Ваш номер телефона</label>
+                        <input id="request-phone" class="form-input phone-input" type="tel" name="phone" placeholder="+380___ -___-___">
+                    </div>
+                </div>
+                <button type="submit" class="request__submit">Оставить заявку</button>
+            </form>
+        </div>
+    </div>
+    <script src="./script/modal-script.js"></script>
 </body>
 
 </html>

@@ -1,18 +1,17 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const requestPrice = document.querySelector('.modal__request-price');
-    const submitBlock = document.querySelector('.submit-block');
-    const modalSubmit = document.querySelector('.modal__submit');
-    const checkboxes = document.querySelectorAll('.check-wrapper > input');
+const request = document.querySelector('.purchase-block__btn');
+const cross = document.querySelector('.modal__cross');
+const modal = document.querySelector('.modal__conteiner');
 
-    requestPrice.addEventListener('click', (event) => {
-        event.preventDefault();
-        submitBlock.classList.remove('modal-hidden');
-        modalSubmit.classList.remove('modal-hidden');
-        requestPrice.classList.add('modal-hidden');
-        checkboxes.forEach(item => {
-            item.classList.add('check-disabled');
-            item.disabled= 'true'
-        })
-        console.log('Нажали!', checkboxes);
-    })
-})
+const modalShow = () => {
+    modal.classList.remove('modal__conteiner_hidden');
+    document.body.style.overflow = "hidden";
+    cross.addEventListener('click', modalHidden);
+}
+const modalHidden = () => {
+    document.querySelector('.request__form').reset();
+    modal.classList.add('modal__conteiner_hidden');
+    document.body.style.overflow = "auto";
+    cross.removeEventListener('click', modalHidden);
+}
+
+request.addEventListener('click', modalShow);

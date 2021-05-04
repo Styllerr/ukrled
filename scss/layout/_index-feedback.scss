@@ -51,6 +51,9 @@
     line-height: 147.5%;
     text-align: center;
     color: #ffffff;
+    &:hover {
+        opacity: 0.8;
+    }
 }
 .form-label {
     position: relative;
@@ -76,15 +79,14 @@
 .form-input {
     border: none;
     border-bottom: 1px solid #3831b7;
-    font-family: Geometria;
+    font-family: "Geometria";
     font-style: normal;
     font-weight: normal;
     font-size: 22px;
     line-height: 147.5%;
     color: rgba(0, 0, 0, 0.68);
-    padding: 1.5rem;
+    padding: 0.55rem 1.5rem;
     width: 100%;
-    margin-top: 0.3125rem;
 }
 
 .name-label {
@@ -93,8 +95,9 @@
     }
 }
 .phone-label {
-    margin-top: 2rem;
-    height: 72px;
+    &[for="feedback-phone"] {
+        margin-top: 2rem;
+    }
     &::before {
         background: url(/image/svg/form-phone-icon.svg) no-repeat;
     }

@@ -74,6 +74,9 @@ a.news__button {
     font-size: 32px;
     line-height: 147.5%;
     color: #ffffff;
+    &:hover {
+        opacity: 0.8;
+    }
 }
 .news__button-wrapper {
     width: 100%;

@@ -108,7 +108,8 @@
         line-height: 147.5%;
     }
     &__btn {
-        width: 364px;
+        cursor: pointer;
+        width: 77.5%;
         height: 90.59px;
         font-weight: normal;
         font-size: 32px;
@@ -117,6 +118,9 @@
         background: linear-gradient(0deg, #3831b7, #3831b7), #01013d;
         grid-column: 1 / 2;
         justify-self: center;
+        &:hover {
+            opacity: 0.8;
+        }
     }
     &__arrow-img {
         grid-column: 2 / 3;
