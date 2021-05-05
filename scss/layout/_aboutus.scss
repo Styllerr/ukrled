@@ -1,7 +1,9 @@
 .aboutus {
     max-width: 1385px;
     margin: 0 auto;
-    padding: 5.3125rem 0.5rem 0;
+    padding: 5.3125rem 0.5rem;
+    background: url(/image/svg/aboutus-background.svg) no-repeat;
+    background-position: right bottom;
     &__title {
         width: 100%;
         font-weight: 500;
@@ -17,6 +19,14 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+        align-items: center;
+        padding-bottom: 5.3125rem;
+    }
+    &__item {
+        font-weight: 500;
+        font-size: 25px;
+        line-height: 147.5%;
+        color: #000000;
     }
 }
 .main-block {
@@ -29,7 +39,72 @@
             width: 48%;
         }
     }
-    &__img-wrapper {
-        width: 48%;
+    &__img {
+        width: 100%;
+        height: auto;
+        &-wrapper {
+            width: 48%;
+        }
+    }
+}
+.chose-us {
+    &__wrapper {
+        max-width: 1150px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding-bottom: 5.3125rem;
+    }
+    &__title {
+        max-width: 595px;
+        margin: 0 auto;
+        font-weight: 500;
+        font-size: 39px;
+        line-height: 147.5%;
+        color: #000000;
+        &-wrapper {
+            width: 100%;
+        }
+    }
+    &__subtitle {
+        width: 100%;
+        text-align: center;
+        font-weight: 500;
+        font-size: 29px;
+        line-height: 147.5%;
+        color: #000000;
+        margin: 3.125rem 0;
+    }
+    &__list {
+        flex-basis: 48.5%;
+        margin: 0;
+    }
+}
+.made {
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    &__title {
+        font-weight: 500;
+        font-size: 39px;
+        line-height: 147.5%;
+        color: #000000;
+        margin: 0 0 5.3125rem;
+    }
+    &__text-block {
+        flex-basis: 48%;
+    }
+    &__list {
+        margin: 0;
+    }
+    &__img {
+        width: 100%;
+        max-width: 590px;
+        &-wrapper {
+            flex-basis: 48%;
+        }
     }
 }

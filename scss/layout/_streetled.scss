@@ -73,7 +73,7 @@
 .advantages {
     max-width: 931px;
     margin: 0 auto;
-    padding: 5.625rem 0.5rem 0;
+    padding: 5.625rem 0.5rem;
     &__caption {
         margin: 0 auto;
         max-width: 878px;
@@ -98,46 +98,4 @@
         font-size: 24px;
         line-height: 32px;
     }
-}
-.faq-block {
-    max-width: 1370px;
-    margin: 0 auto;
-    padding: 5.625rem 0.5rem 0;
-    &__caption {
-        margin: 0 auto;
-    }
-}
-#accordionExample {
-    margin: 5.625rem 0.5rem 3.125rem;
-}
-button.accordion-button {
-    font-family: "Geometria";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 39px;
-    line-height: 47px;
-    background-color: #f2f2f2;
-    &::after {
-        background-image: url(/image/svg/accordion-collapse.svg);
-        background-repeat: no-repeat;
-    }
-    &:focus {
-        box-shadow: none;
-    }
-    &:not(.collapsed) {
-        color: #000;
-        background-color: #f2f2f2;
-        &::after {
-            background-image: url(/image/svg/accordion-collapse.svg);
-            background-repeat: no-repeat;
-        }
-    }
-}
-div.accordion-body {
-    font-family: "Geometria";
-    font-style: normal;
-    font-weight: normal;
-    font-size: 24px;
-    line-height: 47px;
-    color: #000000;
 }

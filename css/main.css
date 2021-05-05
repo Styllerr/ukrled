@@ -1193,7 +1193,8 @@ a.news__button:hover {
 .rent-main,
 .blog-main,
 .article-main,
-.aboutus-main {
+.aboutus-main,
+.faq-main {
   background-color: white;
   font-family: "Geometria";
   font-style: normal;
@@ -1981,7 +1982,7 @@ div.signboard-subtitle__list-wrapper > ul {
 .advantages {
   max-width: 931px;
   margin: 0 auto;
-  padding: 5.625rem 0.5rem 0;
+  padding: 5.625rem 0.5rem;
 }
 
 .advantages__caption {
@@ -2011,57 +2012,6 @@ div.signboard-subtitle__list-wrapper > ul {
 .advantages__item {
   font-size: 24px;
   line-height: 32px;
-}
-
-.faq-block {
-  max-width: 1370px;
-  margin: 0 auto;
-  padding: 5.625rem 0.5rem 0;
-}
-
-.faq-block__caption {
-  margin: 0 auto;
-}
-
-#accordionExample {
-  margin: 5.625rem 0.5rem 3.125rem;
-}
-
-button.accordion-button {
-  font-family: "Geometria";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 39px;
-  line-height: 47px;
-  background-color: #f2f2f2;
-}
-
-button.accordion-button::after {
-  background-image: url(/image/svg/accordion-collapse.svg);
-  background-repeat: no-repeat;
-}
-
-button.accordion-button:focus {
-  box-shadow: none;
-}
-
-button.accordion-button:not(.collapsed) {
-  color: #000;
-  background-color: #f2f2f2;
-}
-
-button.accordion-button:not(.collapsed)::after {
-  background-image: url(/image/svg/accordion-collapse.svg);
-  background-repeat: no-repeat;
-}
-
-div.accordion-body {
-  font-family: "Geometria";
-  font-style: normal;
-  font-weight: normal;
-  font-size: 24px;
-  line-height: 47px;
-  color: #000000;
 }
 
 .modal__cross {
@@ -2451,7 +2401,9 @@ div.accordion-body {
 .aboutus {
   max-width: 1385px;
   margin: 0 auto;
-  padding: 5.3125rem 0.5rem 0;
+  padding: 5.3125rem 0.5rem;
+  background: url(/image/svg/aboutus-background.svg) no-repeat;
+  background-position: right bottom;
 }
 
 .aboutus__title {
@@ -2471,6 +2423,15 @@ div.accordion-body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
+  padding-bottom: 5.3125rem;
+}
+
+.aboutus__item {
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 147.5%;
+  color: #000000;
 }
 
 .main-block__text {
@@ -2484,7 +2445,131 @@ div.accordion-body {
   width: 48%;
 }
 
+.main-block__img {
+  width: 100%;
+  height: auto;
+}
+
 .main-block__img-wrapper {
   width: 48%;
+}
+
+.chose-us__wrapper {
+  max-width: 1150px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-bottom: 5.3125rem;
+}
+
+.chose-us__title {
+  max-width: 595px;
+  margin: 0 auto;
+  font-weight: 500;
+  font-size: 39px;
+  line-height: 147.5%;
+  color: #000000;
+}
+
+.chose-us__title-wrapper {
+  width: 100%;
+}
+
+.chose-us__subtitle {
+  width: 100%;
+  text-align: center;
+  font-weight: 500;
+  font-size: 29px;
+  line-height: 147.5%;
+  color: #000000;
+  margin: 3.125rem 0;
+}
+
+.chose-us__list {
+  flex-basis: 48.5%;
+  margin: 0;
+}
+
+.made__wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.made__title {
+  font-weight: 500;
+  font-size: 39px;
+  line-height: 147.5%;
+  color: #000000;
+  margin: 0 0 5.3125rem;
+}
+
+.made__text-block {
+  flex-basis: 48%;
+}
+
+.made__list {
+  margin: 0;
+}
+
+.made__img {
+  width: 100%;
+  max-width: 590px;
+}
+
+.made__img-wrapper {
+  flex-basis: 48%;
+}
+
+.faq-block {
+  max-width: 1370px;
+  margin: 0 auto;
+  padding: 5.625rem 0.5rem 0;
+}
+
+.faq-block__caption {
+  margin: 0 auto;
+}
+
+#accordionExample {
+  margin: 5.625rem 0.5rem 3.125rem;
+}
+
+button.accordion-button {
+  font-family: "Geometria";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 39px;
+  line-height: 47px;
+  background-color: #f2f2f2;
+}
+
+button.accordion-button::after {
+  background-image: url(/image/svg/accordion-collapse.svg);
+  background-repeat: no-repeat;
+}
+
+button.accordion-button:focus {
+  box-shadow: none;
+}
+
+button.accordion-button:not(.collapsed) {
+  color: #000;
+  background-color: #f2f2f2;
+}
+
+button.accordion-button:not(.collapsed)::after {
+  background-image: url(/image/svg/accordion-collapse.svg);
+  background-repeat: no-repeat;
+}
+
+div.accordion-body {
+  font-family: "Geometria";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 47px;
+  color: #000000;
 }
 /*# sourceMappingURL=main.css.map */
