@@ -1,0 +1,53 @@
+.article {
+    max-width: 67.6%;
+    padding-bottom: 5.625rem;
+    &-main {
+        padding: 5.625rem 0.5rem;
+        background: white url(/image/svg/blog-article-background.svg) no-repeat;
+        background-position-x: left;
+    }
+    &__wrapper {
+        max-width: 1367px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        & > .blog__caption {
+            text-align: center;
+        }
+    }
+    &__img {
+        width: 100%;
+        height: auto;
+    }
+    &__title {
+        font-weight: 500;
+        font-size: 39px;
+        line-height: 147.5%;
+        color: #000000;
+    }
+    &__subtitle {
+        font-weight: 500;
+        font-size: 29px;
+        line-height: 147.5%;
+        color: #000000;
+    }
+    &__text,
+    &__list-item {
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 147.5%;
+        color: #000000;
+        margin: 0;
+        &_mark {
+            font-size: 24px;
+            line-height: 147.5%;
+            color: #000000;
+            margin: 0;
+            font-weight: 500;
+        }
+    }
+    &__list {
+        margin: 0;
+    }
+}

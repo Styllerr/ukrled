@@ -1,17 +1,16 @@
-const body = document.querySelector('.blog-body');
 const subscrible = document.querySelector('.blog-aside__subscrible');
 const cross = document.querySelector('.modal__cross');
 const modal = document.querySelector('.modal__conteiner');
 
 const modalShow = () => {
     modal.classList.remove('modal__conteiner_hidden');
-    body.style.overflow = "hidden";
+    document.body.style.overflow = "hidden";
     cross.addEventListener('click', modalHidden);
 }
 const modalHidden = () => {
     document.querySelector('.subscrible__form').reset();
     modal.classList.add('modal__conteiner_hidden');
-    body.style.overflow = "auto";
+    document.body.style.overflow = "auto";
     cross.removeEventListener('click', modalHidden);
 }
 

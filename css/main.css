@@ -1191,7 +1191,8 @@ a.news__button:hover {
 .sports-main,
 .pharmacy-main,
 .rent-main,
-.blog-main {
+.blog-main,
+.article-main {
   background-color: white;
   font-family: "Geometria";
   font-style: normal;
@@ -2377,5 +2378,67 @@ div.accordion-body {
 
 .email-label::before {
   background: url(/image/svg/form-email-icon.svg) no-repeat;
+}
+
+.article {
+  max-width: 67.6%;
+  padding-bottom: 5.625rem;
+}
+
+.article-main {
+  padding: 5.625rem 0.5rem;
+  background: white url(/image/svg/blog-article-background.svg) no-repeat;
+  background-position-x: left;
+}
+
+.article__wrapper {
+  max-width: 1367px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.article__wrapper > .blog__caption {
+  text-align: center;
+}
+
+.article__img {
+  width: 100%;
+  height: auto;
+}
+
+.article__title {
+  font-weight: 500;
+  font-size: 39px;
+  line-height: 147.5%;
+  color: #000000;
+}
+
+.article__subtitle {
+  font-weight: 500;
+  font-size: 29px;
+  line-height: 147.5%;
+  color: #000000;
+}
+
+.article__text, .article__list-item {
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 147.5%;
+  color: #000000;
+  margin: 0;
+}
+
+.article__text_mark, .article__list-item_mark {
+  font-size: 24px;
+  line-height: 147.5%;
+  color: #000000;
+  margin: 0;
+  font-weight: 500;
+}
+
+.article__list {
+  margin: 0;
 }
 /*# sourceMappingURL=main.css.map */
