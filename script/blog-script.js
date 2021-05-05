@@ -1,4 +1,5 @@
-const subscrible = document.querySelector('.blog-aside__subscrible');
+const subscrible = document.querySelector('.blog-aside__subscrible') || null;
+const link = document.querySelector('.subscrible-link') || null;
 const cross = document.querySelector('.modal__cross');
 const modal = document.querySelector('.modal__conteiner');
 
@@ -14,4 +15,9 @@ const modalHidden = () => {
     cross.removeEventListener('click', modalHidden);
 }
 
-subscrible.addEventListener('click', modalShow);
+if (subscrible) {
+    subscrible.addEventListener('click', modalShow);
+}
+if (link) {
+    link.addEventListener('click', modalShow);
+}

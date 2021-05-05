@@ -1192,7 +1192,8 @@ a.news__button:hover {
 .pharmacy-main,
 .rent-main,
 .blog-main,
-.article-main {
+.article-main,
+.aboutus-main {
   background-color: white;
   font-family: "Geometria";
   font-style: normal;
@@ -2380,6 +2381,11 @@ div.accordion-body {
   background: url(/image/svg/form-email-icon.svg) no-repeat;
 }
 
+.phone-label[for="subscrible-phone"] {
+  margin-top: 2rem;
+  height: 72px;
+}
+
 .article {
   max-width: 67.6%;
   padding-bottom: 5.625rem;
@@ -2387,7 +2393,7 @@ div.accordion-body {
 
 .article-main {
   padding: 5.625rem 0.5rem;
-  background: white url(/image/svg/blog-article-background.svg) no-repeat;
+  background: white url(/image/svg/article-background.svg) no-repeat;
   background-position-x: left;
 }
 
@@ -2440,5 +2446,45 @@ div.accordion-body {
 
 .article__list {
   margin: 0;
+}
+
+.aboutus {
+  max-width: 1385px;
+  margin: 0 auto;
+  padding: 5.3125rem 0.5rem 0;
+}
+
+.aboutus__title {
+  width: 100%;
+  font-weight: 500;
+  font-size: 39px;
+  line-height: 147.5%;
+  text-align: center;
+  color: #000000;
+}
+
+.aboutus__title > span {
+  color: #3831b7;
+}
+
+.aboutus__main-block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.main-block__text {
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 147.5%;
+  color: #000000;
+}
+
+.main-block__text-wrapper {
+  width: 48%;
+}
+
+.main-block__img-wrapper {
+  width: 48%;
 }
 /*# sourceMappingURL=main.css.map */

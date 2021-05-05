@@ -1,0 +1,35 @@
+.aboutus {
+    max-width: 1385px;
+    margin: 0 auto;
+    padding: 5.3125rem 0.5rem 0;
+    &__title {
+        width: 100%;
+        font-weight: 500;
+        font-size: 39px;
+        line-height: 147.5%;
+        text-align: center;
+        color: #000000;
+        & > span {
+            color: #3831b7;
+        }
+    }
+    &__main-block {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+.main-block {
+    &__text {
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 147.5%;
+        color: #000000;
+        &-wrapper {
+            width: 48%;
+        }
+    }
+    &__img-wrapper {
+        width: 48%;
+    }
+}
