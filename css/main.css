@@ -441,6 +441,7 @@ template {
 
 .header-wrapper,
 .footer-wrapper {
+  position: relative;
   max-width: 1400px;
   margin: 0 auto;
   display: flex;
@@ -454,6 +455,15 @@ template {
   flex-grow: 2;
 }
 
+.logo-wrapper {
+  width: 11.3125rem;
+  z-index: 4;
+}
+
+.logo-wrapper > img {
+  width: 100%;
+}
+
 .navigation__list {
   display: flex;
   justify-content: space-around;
@@ -464,7 +474,7 @@ template {
   font-family: "Geometria";
   font-style: normal;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 25px;
   color: #ffffff;
 }
@@ -486,16 +496,23 @@ template {
   display: inline-block;
   font-family: "Geometria";
   font-style: normal;
-  font-style: normal;
   font-weight: 500;
-  font-size: 25px;
+  font-size: 1.5625rem;
   line-height: 31px;
   color: #ffffff;
   margin-left: 27px;
 }
 
+@media screen and (min-width: 1024px) {
+  .product:hover > ul {
+    padding: 0.5rem 4rem 0.5rem 1rem;
+    height: auto;
+  }
+}
+
 .product {
   position: relative;
+  padding-right: 1rem;
 }
 
 .product__navigation {
@@ -503,17 +520,17 @@ template {
   top: 2rem;
   left: -2.2rem;
   width: max-content;
-  padding: 0;
   background-color: #ffffff;
-  height: 0;
   overflow: hidden;
   transition: 0.5s;
   z-index: 1;
+  height: auto;
+  padding: 0.5rem 4rem 0.5rem 1rem;
 }
 
-.product:hover > ul {
-  padding: 0.5rem;
-  height: auto;
+.product__navigation_hidden {
+  height: 0;
+  padding: 0;
 }
 
 .product__item {
@@ -525,13 +542,132 @@ template {
   font-family: "Geometria";
   font-style: normal;
   font-weight: normal;
-  font-size: 17px;
+  font-size: 1.0625rem;
   line-height: 147.5%;
   text-align: center;
 }
 
 .product__item:hover {
   background-color: #f2f2f2;
+}
+
+.product::after {
+  position: absolute;
+  top: 20px;
+  right: 0;
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: url(/image/svg/list-icon.svg) no-repeat;
+}
+
+.burger-menu {
+  display: none;
+  position: relative;
+  z-index: 4;
+  width: 48px;
+  height: 28px;
+  right: -3px;
+}
+
+.burger-menu > span {
+  position: absolute;
+  top: 14px;
+  width: 100%;
+  height: 1px;
+  background-color: #ffffff;
+}
+
+.burger-menu::before {
+  top: 0;
+  width: 100%;
+}
+
+.burger-menu::after {
+  right: 0;
+  bottom: 0;
+  width: 50%;
+}
+
+.burger-menu::before, .burger-menu::after {
+  position: absolute;
+  content: "";
+  height: 1px;
+  background-color: #ffffff;
+  transition: 0.2s;
+}
+
+.burger-menu_checked > span {
+  height: 0;
+}
+
+.burger-menu_checked::before {
+  transform: rotate(45deg);
+  transform-origin: 10%;
+}
+
+.burger-menu_checked::after {
+  transform: rotate(-45deg);
+  transform-origin: 10%;
+}
+
+.burger-menu_checked::before, .burger-menu_checked::after {
+  background-color: #ffffff;
+  transition: 0.2s;
+  width: 100%;
+}
+
+@media screen and (max-width: 1199px) {
+  html {
+    font-size: 14px;
+  }
+  .header__phone {
+    min-width: 180px;
+  }
+  .phone__number {
+    font-size: 1rem;
+    line-height: 31px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .header-wrapper {
+    padding: 0.3125rem 2rem;
+  }
+  .header__navigation {
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: url(/image/png/background01.png) no-repeat;
+    background-size: cover;
+    transition: 0.5s;
+  }
+  .header__navigation_hidden {
+    height: 0;
+    overflow-y: hidden;
+  }
+  .header__navigation > .navigation__list {
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+  .product__navigation {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    color: white;
+    text-align: center;
+  }
+  .burger-menu {
+    display: block;
+    cursor: pointer;
+  }
 }
 
 .site-footer {
@@ -549,7 +685,7 @@ template {
   font-family: "Gilroy";
   font-style: normal;
   font-weight: normal;
-  font-size: 15px;
+  font-size: 0.9375rem;
   line-height: 17px;
   color: #ffffff;
 }
@@ -589,7 +725,7 @@ template {
   font-family: "Geometria";
   font-style: normal;
   font-weight: normal;
-  font-size: 32px;
+  font-size: 2rem;
   line-height: 127.49%;
   color: #ffffff;
 }
@@ -598,7 +734,7 @@ template {
   font-family: "Geometria";
   font-style: normal;
   font-weight: bold;
-  font-size: 59px;
+  font-size: 3.6875rem;
   line-height: 127.49%;
 }
 
@@ -607,6 +743,7 @@ template {
   width: 660px;
   background: url(/image/png/index-slide01-01.png) no-repeat;
   background-size: contain;
+  background-position: center center;
 }
 
 .index-carousel__image-02 {
@@ -614,6 +751,7 @@ template {
   width: 660px;
   background: url(/image/png/index-slide01-02.png) no-repeat;
   background-size: contain;
+  background-position: center center;
 }
 
 .index-carousel__image-03 {
@@ -621,6 +759,16 @@ template {
   width: 660px;
   background: url(/image/png/index-slide01-03.png) no-repeat;
   background-size: contain;
+  background-position: center center;
+}
+
+@media screen and (max-width: 1199px) {
+  .index-carousel__caption > h2 {
+    font-size: 2.8125rem;
+  }
+  .index-carousel__caption > p {
+    font-size: 1.5rem;
+  }
 }
 
 .proposition {
@@ -650,7 +798,7 @@ template {
   font-family: "Geometria";
   font-style: normal;
   font-weight: normal;
-  font-size: 32px;
+  font-size: 2rem;
   line-height: 147.5%;
   text-align: center;
   color: #000000;
@@ -662,7 +810,7 @@ template {
   font-family: "Geometria";
   font-style: normal;
   font-weight: normal;
-  font-size: 24px;
+  font-size: 1.5rem;
   line-height: 147.5%;
   text-align: center;
   color: #000000;
@@ -712,7 +860,7 @@ template {
   font-family: "Geometria";
   font-style: normal;
   font-weight: 500;
-  font-size: 34px;
+  font-size: 2.125rem;
   line-height: 147.5%;
   color: #ffffff;
 }
@@ -721,7 +869,7 @@ template {
   font-family: "Geometria";
   font-style: normal;
   font-weight: normal;
-  font-size: 21px;
+  font-size: 1.3125rem;
   line-height: 147.5%;
   color: #ffffff;
   margin: 0;
@@ -734,7 +882,7 @@ template {
   font-family: "Geometria";
   font-style: normal;
   font-weight: normal;
-  font-size: 32px;
+  font-size: 2rem;
   line-height: 147.5%;
   color: #ffffff;
 }
@@ -766,7 +914,7 @@ template {
   font-family: "Geometria";
   font-style: normal;
   font-weight: 500;
-  font-size: 39px;
+  font-size: 2.4375rem;
   line-height: 147.5%;
   color: #ffffff;
 }
@@ -786,7 +934,7 @@ template {
   font-family: "Geometria";
   font-style: normal;
   font-weight: 500;
-  font-size: 24px;
+  font-size: 1.5rem;
   line-height: 147.5%;
   color: #ffffff;
 }
@@ -805,7 +953,7 @@ template {
   font-family: "Geometria";
   font-style: normal;
   font-weight: 500;
-  font-size: 39px;
+  font-size: 2.4375rem;
   line-height: 147.5%;
   text-align: center;
   color: #000000;
@@ -813,7 +961,7 @@ template {
 
 .portfolio__slide-text-block {
   display: inline-block;
-  width: 40%;
+  width: 48%;
 }
 
 .portfolio__slide-caption {
@@ -821,7 +969,7 @@ template {
   font-family: "Geometria";
   font-style: normal;
   font-weight: bold;
-  font-size: 32px;
+  font-size: 2rem;
   line-height: 147.5%;
   text-transform: uppercase;
   color: #000000;
@@ -832,9 +980,33 @@ template {
   font-family: "Geometria";
   font-style: normal;
   font-weight: normal;
-  font-size: 24px;
+  font-size: 1.5rem;
   line-height: 147.5%;
   color: #000000;
+}
+
+.portfolio-carousel__image-01 {
+  width: 598px;
+  height: 483px;
+  background: url(/image/png/slide02-01.png) no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
+
+.portfolio-carousel__image-02 {
+  width: 598px;
+  height: 483px;
+  background: url(/image/png/slide02-02.png) no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
+
+.portfolio-carousel__image-03 {
+  width: 598px;
+  height: 483px;
+  background: url(/image/png/slide02-03.png) no-repeat;
+  background-size: contain;
+  background-position: center center;
 }
 
 div.carousel-item {
@@ -909,7 +1081,7 @@ section.news {
   font-family: "Geometria";
   font-style: normal;
   font-weight: 500;
-  font-size: 23px;
+  font-size: 1.4375rem;
   line-height: 147.5%;
   text-transform: uppercase;
   color: #000000;
@@ -919,7 +1091,7 @@ section.news {
   font-family: "Geometria";
   font-style: normal;
   font-weight: normal;
-  font-size: 24px;
+  font-size: 1.5rem;
   line-height: 147.5%;
   color: #000000;
 }
@@ -928,7 +1100,7 @@ a.news-card__link {
   font-family: "Geometria";
   font-style: normal;
   font-weight: 500;
-  font-size: 23px;
+  font-size: 1.4375rem;
   line-height: 147.5%;
   text-decoration-line: underline;
   color: #0a02a7;
@@ -945,7 +1117,7 @@ a.news__button {
   font-family: "Geometria";
   font-style: normal;
   font-weight: normal;
-  font-size: 32px;
+  font-size: 2rem;
   line-height: 147.5%;
   color: #ffffff;
 }
@@ -981,7 +1153,7 @@ a.news__button:hover {
   font-family: "Geometria";
   font-style: normal;
   font-weight: 500;
-  font-size: 32px;
+  font-size: 2rem;
   line-height: 147.5%;
   text-transform: uppercase;
   color: #ffffff;
@@ -1017,7 +1189,7 @@ a.news__button:hover {
   font-family: "Geometria";
   font-style: normal;
   font-weight: 500;
-  font-size: 25px;
+  font-size: 1.5625rem;
   line-height: 147.5%;
   text-align: center;
   color: #ffffff;
@@ -1034,7 +1206,7 @@ a.news__button:hover {
   font-family: "Geometria";
   font-style: normal;
   font-weight: 500;
-  font-size: 25px;
+  font-size: 1.5625rem;
   line-height: 147.5%;
   text-align: left;
   padding-left: 2.4rem;
@@ -1047,7 +1219,7 @@ a.news__button:hover {
   top: 0;
   left: 0;
   width: 2.5rem;
-  height: 2rem;
+  height: 2.2rem;
 }
 
 .form-input {
@@ -1056,7 +1228,7 @@ a.news__button:hover {
   font-family: "Geometria";
   font-style: normal;
   font-weight: normal;
-  font-size: 22px;
+  font-size: 1.375rem;
   line-height: 147.5%;
   color: rgba(0, 0, 0, 0.68);
   padding: 0.55rem 1.5rem;
@@ -1112,7 +1284,7 @@ a.news__button:hover {
   font-family: "Geometria";
   font-style: normal;
   font-weight: 500;
-  font-size: 39px;
+  font-size: 2.4375rem;
   line-height: 147.5%;
   color: #000000;
 }
@@ -1124,7 +1296,7 @@ a.news__button:hover {
   font-family: "Geometria";
   font-style: normal;
   font-weight: normal;
-  font-size: 27px;
+  font-size: 1.6875rem;
   line-height: 147.5%;
   color: #000000;
 }
@@ -1154,7 +1326,7 @@ a.news__button:hover {
   font-family: "Geometria";
   font-style: normal;
   font-weight: 500;
-  font-size: 27px;
+  font-size: 1.6875rem;
   line-height: 147.5%;
   color: #000000;
   margin-bottom: 1.8rem;
@@ -1166,7 +1338,7 @@ a.news__button:hover {
   font-family: "Geometria";
   font-style: normal;
   font-weight: normal;
-  font-size: 27px;
+  font-size: 1.6875rem;
   line-height: 147.5%;
   color: #000000;
   margin-bottom: 2rem;
@@ -1946,7 +2118,7 @@ div.signboard-subtitle__list-wrapper > ul {
   max-width: 959px;
   margin: 3.125rem auto 0;
   font-weight: 500;
-  font-size: 29px;
+  font-size: 1.8125rem;
 }
 
 .assembly {
@@ -1974,7 +2146,7 @@ div.signboard-subtitle__list-wrapper > ul {
 
 .assembly__type-item {
   font-weight: 500;
-  font-size: 24px;
+  font-size: 1.5rem;
   line-height: 147.5%;
   color: #000000;
 }
@@ -2010,8 +2182,8 @@ div.signboard-subtitle__list-wrapper > ul {
 }
 
 .advantages__item {
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 .modal__cross {
@@ -2063,7 +2235,7 @@ div.signboard-subtitle__list-wrapper > ul {
   font-family: "Geometria";
   font-style: normal;
   font-weight: 500;
-  font-size: 39px;
+  font-size: 2.4375rem;
   line-height: 147.5%;
 }
 
@@ -2076,7 +2248,7 @@ div.signboard-subtitle__list-wrapper > ul {
   font-family: "Geometria";
   font-style: normal;
   font-weight: normal;
-  font-size: 27px;
+  font-size: 1.6875rem;
   line-height: 147.5%;
   padding-left: 4.0625rem;
   margin-bottom: 2.3125rem;
@@ -2106,7 +2278,7 @@ div.signboard-subtitle__list-wrapper > ul {
   font-family: "Geometria";
   font-style: normal;
   font-weight: 500;
-  font-size: 25px;
+  font-size: 1.5625rem;
   line-height: 147.5%;
   text-align: center;
   color: #ffffff;
@@ -2118,7 +2290,7 @@ div.signboard-subtitle__list-wrapper > ul {
   font-family: "Geometria";
   font-style: normal;
   font-weight: 500;
-  font-size: 30px;
+  font-size: 1.875rem;
   line-height: 147.5%;
 }
 

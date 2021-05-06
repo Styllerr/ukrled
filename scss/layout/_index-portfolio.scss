@@ -9,21 +9,21 @@
         font-family: "Geometria";
         font-style: normal;
         font-weight: 500;
-        font-size: 39px;
+        font-size: 2.4375rem;
         line-height: 147.5%;
         text-align: center;
         color: #000000;
     }
     &__slide-text-block {
         display: inline-block;
-        width: 40%;
+        width: 48%;
     }
     &__slide-caption {
         max-width: 436px;
         font-family: "Geometria";
         font-style: normal;
         font-weight: bold;
-        font-size: 32px;
+        font-size: 2rem;
         line-height: 147.5%;
         text-transform: uppercase;
         color: #000000;
@@ -33,9 +33,32 @@
         font-family: "Geometria";
         font-style: normal;
         font-weight: normal;
-        font-size: 24px;
+        font-size: 1.5rem;
         line-height: 147.5%;
         color: #000000;
+    }
+    &-carousel__image {
+        &-01 {
+            width: 598px;
+            height: 483px;
+            background: url(/image/png/slide02-01.png) no-repeat;
+            background-size: contain;
+            background-position: center center;
+        }
+        &-02 {
+            width: 598px;
+            height: 483px;
+            background: url(/image/png/slide02-02.png) no-repeat;
+            background-size: contain;
+            background-position: center center;
+        }
+        &-03 {
+            width: 598px;
+            height: 483px;
+            background: url(/image/png/slide02-03.png) no-repeat;
+            background-size: contain;
+            background-position: center center;
+        }
     }
 }
 div.carousel-item {

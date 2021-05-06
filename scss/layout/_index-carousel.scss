@@ -5,7 +5,7 @@
 .carousel-section {
     background: url(/image/png/background01.png) no-repeat;
     background-size: cover;
-    padding-bottom: 40px;   
+    padding-bottom: 40px;
 }
 .index-carousel__slide {
     display: flex;
@@ -20,14 +20,14 @@
     font-family: "Geometria";
     font-style: normal;
     font-weight: normal;
-    font-size: 32px;
+    font-size: 2rem;
     line-height: 127.49%;
     color: #ffffff;
     & > h2 {
         font-family: "Geometria";
         font-style: normal;
         font-weight: bold;
-        font-size: 59px;
+        font-size: 3.6875rem;
         line-height: 127.49%;
     }
 }
@@ -37,17 +37,32 @@
         width: 660px;
         background: url(/image/png/index-slide01-01.png) no-repeat;
         background-size: contain;
+        background-position: center center;
     }
     &-02 {
         height: 500px;
         width: 660px;
         background: url(/image/png/index-slide01-02.png) no-repeat;
         background-size: contain;
+        background-position: center center;
     }
     &-03 {
         height: 500px;
         width: 660px;
         background: url(/image/png/index-slide01-03.png) no-repeat;
         background-size: contain;
+        background-position: center center;
+    }
+}
+@media screen and(max-width: $screen-xl) {
+    .index-carousel {
+        &__caption {
+            & > h2 {
+                font-size: 2.8125rem;
+            }
+            & > p {
+                font-size: 1.5rem;
+            }
+        }
     }
 }
