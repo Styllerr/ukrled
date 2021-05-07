@@ -106,3 +106,18 @@
 #subscrible-coment {
     padding-top: 0;
 }
+@media screen and (max-width: $screen-lg) {
+    .feedback__caption {
+        font-size: 1.6rem;
+    }
+    .feedback__form-block {
+        padding: 2rem 1.5rem;
+    }
+    .form-label {
+        font-size: 1.1625rem;
+    }
+    .form-submit {
+        font-size: 1.1625rem;
+
+    }
+}

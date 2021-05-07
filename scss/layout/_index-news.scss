@@ -65,8 +65,8 @@ a.news__button {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 442px;
-    height: 110px;
+    width: 27.625rem;
+    height: 6.875rem;
     background: linear-gradient(0deg, #3831b7, #3831b7), #01013d;
     font-family: "Geometria";
     font-style: normal;
@@ -81,4 +81,21 @@ a.news__button {
 .news__button-wrapper {
     width: 100%;
     margin: 3.125rem 0 7rem;
+}
+@media screen and (max-width: $screen-lg) {
+    a.news__button {
+        font-size: 1.7rem;
+    }
+    .news-card  {
+        &__wrapper {
+            gap: 0.5rem;
+            justify-content: space-evenly;
+        }
+        &__caption {
+            font-size: 1rem;
+        }
+        &__description {
+            font-size: 1rem;
+        }
+    }
 }

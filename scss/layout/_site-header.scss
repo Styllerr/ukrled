@@ -47,6 +47,7 @@
     &__item {
         display: inline-block;
         list-style: none;
+        text-align: center;
         padding: 0.5rem;
     }
 }
@@ -98,6 +99,7 @@
     &__item {
         list-style: none;
         padding: 0.25rem 0;
+        
         & > .product__item-link {
             font-family: "Geometria";
             font-style: normal;
@@ -198,6 +200,7 @@
             height: 100vh;
             background: url(/image/png/background01.png) no-repeat;
             background-size: cover;
+            overflow-y: auto;
             transition: 0.5s;
             &_hidden {
                 height: 0;
@@ -210,18 +213,27 @@
                     align-items: center;
                     justify-content: center;
                     padding: 0;
+                    
                 }
             }
         }
     }
     .product {
         &__navigation {
-            position: relative;
+            position: static;
+            height: 261px;
             margin: 0;
             padding: 0;
             background: transparent;
             color: white;
             text-align: center;
+            &_hidden {
+                height: 0;
+                transition: 0.5s;
+            }
+        }
+        &__item:hover {
+            background-color: #3b57b671;
         }
     }
     .burger-menu {

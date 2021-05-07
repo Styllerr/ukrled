@@ -64,5 +64,23 @@
                 font-size: 1.5rem;
             }
         }
+        &__slide {
+            gap: 1rem;
+        }
+    }
+}
+@media screen and(max-width: $screen-lg) {
+    .index-carousel {
+        &__caption {
+            & > h2 {
+                font-size: 1.8125rem;
+            }
+            & > p {
+                font-size: 1rem;
+            }
+        }
+        &__slide {
+            gap: 1rem;
+        }
     }
 }

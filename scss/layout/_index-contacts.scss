@@ -92,3 +92,23 @@
         }
     }
 }
+@media screen and (max-width: $screen-lg) {
+    .contacts {
+        &__address,
+        &__email {
+            margin-bottom: 2.125rem;
+            font-size: 1.15rem;
+        }
+        &__subtitle {
+            font-size: 1.35rem;
+        }
+        &__address::before {
+            width: 25px;
+            bottom: -10px;
+        }
+        &__email::before {
+            width: 25px;
+            top: 0;
+        }
+    }
+}

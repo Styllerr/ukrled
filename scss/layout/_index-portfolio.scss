@@ -82,3 +82,11 @@ span.carousel-control-prev-icon {
     background: url(/image/svg/index-prev-btn.svg) no-repeat;
     background-size: cover;
 }
+@media screen and (max-width: $screen-lg) {
+    .carousel {
+        padding: 0;
+    }
+    .portfolio__wrapper {
+        padding: 1rem; 
+    }
+}

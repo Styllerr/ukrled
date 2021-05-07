@@ -5,13 +5,13 @@ document.addEventListener('DOMContentLoaded', function () {
     const menuBody = document.querySelector('.header__navigation');
 
     const cardShowBtn = document.querySelector('.proposition__card-show-btn');
-    const hiddenCard = document.querySelectorAll('.hidden-card')
+    const hiddenCard = document.querySelectorAll('.hidden-card');
 
 
     const menuShow = () => {
         menuBody.classList.toggle('header__navigation_hidden');
         burgerMenu.classList.toggle('burger-menu_checked');
-
+        productList.classList.add('product__navigation_hidden');
     }
     cardShowBtn.addEventListener('click', () => {
         for (let i = 0; i < hiddenCard.length; i++) {
@@ -29,7 +29,6 @@ document.addEventListener('DOMContentLoaded', function () {
         if (window.innerWidth < 1024) {
             productList.classList.toggle('product__navigation_hidden')
         }
-        console.log(window.innerWidth)
     })
     
     burgerMenu.addEventListener('click', menuShow);
