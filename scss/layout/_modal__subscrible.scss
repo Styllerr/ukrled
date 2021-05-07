@@ -1,0 +1,107 @@
+.modal {
+    &__conteiner {
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: rgba(202, 202, 202, 0.5);
+        width: 100%;
+        height: 100%;
+        overflow-y: auto;
+        overflow-x: hidden;
+        z-index: 5;
+        &_hidden {
+            display: none;
+        }
+    }
+    &__wrapper {
+        min-height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem 1rem;
+    }
+}
+.subscrible {
+    &__form {
+        position: relative;
+        padding: 4rem 8.125rem 6.25rem;
+        background: white;
+        box-shadow: 0px 4px 94px rgba(0, 0, 0, 0.15);
+        max-width: 1218px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0 1.5rem;
+    }
+    &__title {
+        flex-basis: 100%;
+        text-align: center;
+        margin-bottom: 5rem;
+    }
+    &__btn-wrapper {
+        width: 100%;
+        text-align: center;
+        margin-top: 3.125rem;
+    }
+    &__submit {
+        width: 36.54%;
+        height: 88px;
+        cursor: pointer;
+        transition: 0.3s;
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}
+.input-wrapper {
+    flex-basis: 48%;
+}
+.coment-label {
+    margin-top: 2rem;
+    height: 72px;
+    &::before {
+        background: url(/image/svg/form-coment-icon.svg) no-repeat;
+        background-size: contain;
+    }
+}
+.email-label {
+    &::before {
+        background: url(/image/svg/form-email-icon.svg) no-repeat;
+        background-size: contain;
+    }
+}
+.phone-label[for="subscrible-phone"] {
+    margin-top: 2rem;
+    height: 72px;
+}
+@media screen and (max-width: $screen-lg) {
+    .subscrible {
+        &__form {
+            padding: 4rem 3rem 6.25rem;
+        }
+    }
+}
+@media screen and (max-width: $screen-md) {
+    .subscrible {
+        &__form {
+            padding: 2rem;
+        }
+        &__title {
+            margin: 5rem 0;
+        }
+    }
+    .input-wrapper {
+        flex-basis: 100%;
+        margin-top: 0.5rem;
+        & > label {
+            display: inline;
+            &::before {
+                width: 1.5rem;
+            }
+        }
+    }
+    button.subscrible__submit {
+        font-size: 1.6rem;
+    }
+}

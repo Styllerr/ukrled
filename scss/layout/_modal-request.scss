@@ -1,5 +1,9 @@
 .modal {
     &__cross {
+        @media screen and (max-width: $screen-md) {
+            top: 1.4rem;
+            right: 1.4rem;
+        }
         width: 29px;
         height: 29px;
         position: absolute;
@@ -31,6 +35,12 @@
 }
 .request {
     &__form {
+        @media screen and (max-width: $screen-md) {
+            width: 100%;
+            justify-content: center;
+            padding: 2.5rem 1.6rem;
+
+        }
         position: relative;
         display: flex;
         justify-content: space-between;
@@ -41,6 +51,9 @@
         background-color: white;
     }
     &__title {
+        @media screen and (max-width: $screen-md) {
+            font-size: 1.5rem;
+        }
         width: 100%;
         text-align: center;
         font-family: "Geometria";
@@ -54,6 +67,9 @@
         display: none;
     }
     &__label {
+        @media screen and (max-width: $screen-md) {
+            font-size: 1.3rem;
+        }
         position: relative;
         font-family: "Geometria";
         font-style: normal;
@@ -79,6 +95,10 @@
         background-position: 2px;
     }
     &__submit {
+        @media screen and (max-width: $screen-md) {
+            font-size: 1.2rem;
+            width: 100%;
+        }
         width: 40.71%;
         height: 88px;
         background: #3831b7;
@@ -102,6 +122,9 @@
         line-height: 147.5%;
     }
     &__wrapper {
+        @media screen and (max-width: $screen-md) {
+            width: 100%;
+        }
         width: 48%;
     }
 }

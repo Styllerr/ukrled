@@ -128,7 +128,21 @@
     }
 }
 @media screen and (max-width: $screen-sd) {
-    .proposition__wrapper {
-        padding: 0 1.4286rem;
+    .proposition {
+        &__wrapper {
+            padding: 0 1.4286rem;
+        }
+        &__card-caption {
+            font-size: 1.7rem;
+        }
+        &__card-description {
+            font-size: 1.2rem;
+        }
+        &__subcaption {
+            font-size: 1.1rem;
+        }
+        &__text {
+            font-size: 1rem;
+        }
     }
 }

@@ -1,6 +1,6 @@
 const request = document.querySelector('.purchase-block__btn');
-const cross = document.querySelector('.modal__cross');
-const modal = document.querySelector('.modal__conteiner');
+const cross = document.getElementById('price__cross');
+const modal = document.getElementById('price__modal');
 
 const modalShow = () => {
     modal.classList.remove('modal__conteiner_hidden');

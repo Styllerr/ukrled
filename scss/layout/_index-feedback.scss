@@ -92,6 +92,7 @@
 .name-label {
     &::before {
         background: url(/image/svg/form-name-icon.svg) no-repeat;
+        background-size: contain;
     }
 }
 .phone-label {
@@ -100,6 +101,7 @@
     }
     &::before {
         background: url(/image/svg/form-phone-icon.svg) no-repeat;
+        background-size: contain;
     }
 }
 #subscrible-phone,

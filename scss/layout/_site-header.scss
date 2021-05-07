@@ -70,6 +70,7 @@
     }
 }
 @media screen and (min-width: $screen-lg+1) {
+    
     .product {
         &:hover > ul {
             padding: 0.5rem 4rem 0.5rem 1rem;
@@ -99,7 +100,7 @@
     &__item {
         list-style: none;
         padding: 0.25rem 0;
-        
+
         & > .product__item-link {
             font-family: "Geometria";
             font-style: normal;
@@ -187,6 +188,9 @@
     }
 }
 @media screen and(max-width: $screen-lg) {
+    .site-header {
+        padding: 0;
+    }
     .header {
         &-wrapper {
             padding: 0.3125rem 2rem;
@@ -213,7 +217,6 @@
                     align-items: center;
                     justify-content: center;
                     padding: 0;
-                    
                 }
             }
         }
