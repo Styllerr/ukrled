@@ -7,7 +7,6 @@ html {
 html > body {
     max-width: 1920px;
     margin: 0 auto;
-    overflow: auto;
 }
 *,
 *::before,
@@ -20,4 +19,13 @@ a:active {
     text-decoration: none;
     color: inherit;
 }
-
+@media screen and(max-width: $screen-xl) {
+    html {
+        font-size: 15px;
+    }
+}
+@media screen and(max-width: $screen-sd) {
+    html {
+        font-size: 14px;
+    }
+}

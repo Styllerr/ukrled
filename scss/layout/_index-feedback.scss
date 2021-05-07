@@ -118,6 +118,49 @@
     }
     .form-submit {
         font-size: 1.1625rem;
-
+    }
+}
+@media screen and (max-width: $screen-md) {
+    .feedback {
+        &__wrapper {
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 5.8rem 5.4rem;
+        }
+        &__caption-block {
+            flex-basis: 100%;
+        }
+        &__img-wrapper {
+            display: none;
+        }
+        &__caption {
+            text-align: center;
+            font-size: 2.14rem;
+        }
+        &__form-block {
+            flex-basis: 100%;
+            margin-top: 2.6rem;
+            padding: 21.52% 13.27%;
+        }
+    }
+    .form-label {
+        font-size: 1.6667rem;
+    }
+    .form-submit {
+        font-size: 1.6667rem;
+    }
+}
+@media screen and (max-width: $screen-sd) {
+    .feedback {
+        &__wrapper {
+            padding: 2.5rem 1.4286rem;
+        }
+        &__form-block {
+            margin-top: 2.6rem;
+            padding: 4.6429rem 2.1429rem;
+        }
+    }
+    .form-label {
+        font-size: 1.1rem;
     }
 }

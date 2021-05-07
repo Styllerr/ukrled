@@ -241,3 +241,8 @@
         cursor: pointer;
     }
 }
+@media screen and(max-width: $screen-sd) {
+    .header__phone {
+        display: none;
+    }
+}

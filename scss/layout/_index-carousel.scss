@@ -84,3 +84,24 @@
         }
     }
 }
+@media screen and(max-width: $screen-md) {
+    .index-carousel {
+        &__slide {
+            flex-wrap: wrap;
+        }
+        &__caption {
+            width: 100%;
+            text-align: center;
+            & + div {
+                width: 100%;
+            }
+            & > h2 {
+                font-size: 2.5rem;
+                margin-top: 6.625rem;
+            }
+            & > p {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}

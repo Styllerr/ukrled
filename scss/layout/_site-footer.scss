@@ -32,3 +32,33 @@
         background-size: cover;
     }
 }
+.header__navigation > .header__phone {
+    display: none;
+}
+@media screen and (max-width: $screen-md) {
+
+    .footer__navigation {
+        display: none;
+    }
+    .phone__number {
+        font-size: 1.1667rem;
+    }
+    .header-wrapper,
+    .footer-wrapper {
+        padding: 2rem 2.6rem;
+    }
+}
+@media screen and (max-width: $screen-sd) {
+    .phone__number {
+        font-size: 1.6667rem;
+    }
+    .header__navigation > .header__phone {
+        position: absolute;
+        bottom: 2.643rem;
+        left: 0;
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        font-size: 1.7857rem;
+    }
+}
