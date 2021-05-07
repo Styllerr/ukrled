@@ -1551,6 +1551,10 @@ a.news__button:hover {
     margin-top: 2.6rem;
     padding: 4.6429rem 2.1429rem;
   }
+  .feedback__caption {
+    text-align: center;
+    font-size: 1.6429rem;
+  }
   .form-label {
     font-size: 1.1rem;
   }
@@ -1862,7 +1866,7 @@ a.news__button:hover {
   text-align: center;
   margin: 0 auto 1.5rem;
   font-weight: 500;
-  font-size: 2, 4375rem;
+  font-size: 2.4375rem;
   line-height: 147.5%;
   color: #000000;
 }
@@ -1881,7 +1885,7 @@ a.news__button:hover {
 
 .product__description {
   font-weight: normal;
-  font-size: 1,5rem;
+  font-size: 1.5rem;
   line-height: 127.49%;
   color: #000000;
 }
@@ -1948,6 +1952,7 @@ a.news__button:hover {
 .product__about-price {
   max-width: 1112px;
   margin: 5.625rem auto 0;
+  padding: 0 1.5rem;
 }
 
 .product__about-price-caption {
@@ -1995,7 +2000,7 @@ a.news__button:hover {
   width: 77.5%;
   height: 90.59px;
   font-weight: normal;
-  font-size: 32px;
+  font-size: 2rem;
   line-height: 147.5%;
   color: #ffffff;
   background: linear-gradient(0deg, #3831b7, #3831b7), #01013d;
@@ -2276,31 +2281,37 @@ td {
 
 .get-benefits__use-list > li {
   font-weight: normal;
-  font-size: 24px;
+  font-size: 1.5rem;
   line-height: 32px;
 }
 
 .use-comment-text-signboard {
   font-weight: normal;
-  font-size: 24px;
+  font-size: 1.5rem;
   line-height: 147.5%;
 }
 
 h3.signboard-subtitle {
   margin: 3.125rem auto 0;
   max-width: 554px;
-  font-size: 24px;
+  font-size: 1.5rem;
   line-height: 147.5%;
 }
 
 div.signboard-subtitle__list-wrapper {
   margin: 0 auto;
   max-width: 807px;
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 
 div.signboard-subtitle__list-wrapper > ul {
   width: 39%;
+}
+
+@media screen and (max-width: 479px) {
+  div.signboard-subtitle__list-wrapper > ul {
+    width: 80%;
+  }
 }
 
 .signboard__about {
@@ -2318,7 +2329,7 @@ div.signboard-subtitle__list-wrapper > ul {
   max-width: 601px;
   padding-top: 1.25rem;
   font-weight: normal;
-  font-size: 24px;
+  font-size: 1.5rem;
   line-height: 147.5%;
 }
 
@@ -2329,7 +2340,7 @@ div.signboard-subtitle__list-wrapper > ul {
 
 .about-price__comment-text {
   font-weight: normal;
-  font-size: 24px;
+  font-size: 1.5rem;
   line-height: 147.5%;
   text-align: center;
 }
@@ -2338,17 +2349,18 @@ div.signboard-subtitle__list-wrapper > ul {
   max-width: 977px;
   margin: 5.625rem auto;
   text-align: center;
+  padding: 0 1.5rem;
 }
 
 .order__caption {
   font-weight: 500;
-  font-size: 39px;
+  font-size: 2.4375rem;
   line-height: 147.5%;
 }
 
 .order__text {
   font-weight: normal;
-  font-size: 24px;
+  font-size: 1.5rem;
   line-height: 29px;
 }
 
@@ -2368,11 +2380,24 @@ div.signboard-subtitle__list-wrapper > ul {
   justify-content: space-between;
 }
 
+@media screen and (max-width: 767px) {
+  .stock-ticker__list {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
 .stock-ticker__list-item {
   width: 48%;
   font-weight: 500;
-  font-size: 25px;
+  font-size: 1.5625rem;
   line-height: 147.5%;
+}
+
+@media screen and (max-width: 767px) {
+  .stock-ticker__list-item {
+    width: 80%;
+  }
 }
 
 .ticker__about > .product__description {
@@ -2403,7 +2428,7 @@ div.signboard-subtitle__list-wrapper > ul {
 
 .ticker__table-description-text {
   font-weight: 500;
-  font-size: 24px;
+  font-size: 1.5rem;
   line-height: 130.5%;
   text-align: center;
   margin: 0;
@@ -2418,7 +2443,7 @@ div.signboard-subtitle__list-wrapper > ul {
 .ticker__block-list-caption {
   max-width: 622px;
   font-weight: 500;
-  font-size: 39px;
+  font-size: 2.4375rem;
   line-height: 147.5%;
   text-align: center;
   margin: 5.625rem auto 3.125rem;
@@ -2428,7 +2453,7 @@ div.signboard-subtitle__list-wrapper > ul {
   max-width: 700px;
   margin: 3.125rem auto;
   font-weight: 500;
-  font-size: 24px;
+  font-size: 1.5rem;
   line-height: 130.5%;
   text-align: center;
 }
@@ -2438,18 +2463,31 @@ div.signboard-subtitle__list-wrapper > ul {
   justify-content: space-between;
 }
 
+@media screen and (max-width: 767px) {
+  .ticker__block-list-wrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
 .ticker__block-list-column {
   margin: 0;
   flex-basis: 48%;
   font-weight: 500;
-  font-size: 25px;
+  font-size: 1.5325rem;
   line-height: 147.5%;
+}
+
+@media screen and (max-width: 767px) {
+  .ticker__block-list-column {
+    flex-basis: 90%;
+  }
 }
 
 .ticker__block-list-subtext {
   max-width: 1096px;
   font-weight: normal;
-  font-size: 24px;
+  font-size: 1.5rem;
   line-height: 147.5%;
   text-align: center;
 }
@@ -2462,7 +2500,7 @@ div.signboard-subtitle__list-wrapper > ul {
 
 .exchange__about-caption {
   font-weight: 500;
-  font-size: 24px;
+  font-size: 1.5rem;
   line-height: 130.5%;
   text-align: center;
 }
@@ -2478,15 +2516,29 @@ div.signboard-subtitle__list-wrapper > ul {
   margin: 3.125rem 0;
 }
 
+@media screen and (max-width: 1023px) {
+  .exchange__list {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+}
+
 .exchange__list-item {
   font-weight: 500;
-  font-size: 25px;
+  font-size: 1.5625rem;
   line-height: 147.5%;
   text-align: center;
 }
 
+@media screen and (max-width: 1023px) {
+  .exchange__list-item {
+    display: inline-block;
+    width: 80%;
+  }
+}
+
 .exchange__about-price {
-  padding-bottom: 5.625rem;
+  padding: 0 1.5rem 5.625rem;
 }
 
 .exchange__about-price > .about-price__description {
@@ -2516,7 +2568,7 @@ div.signboard-subtitle__list-wrapper > ul {
 }
 
 .sports__about-caption {
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 
 .sports__list {
@@ -2526,11 +2578,23 @@ div.signboard-subtitle__list-wrapper > ul {
   flex-wrap: wrap;
 }
 
+@media screen and (max-width: 1023px) {
+  .sports__list {
+    justify-content: flex-start;
+  }
+}
+
 .sports__list-item {
   width: 40%;
   font-weight: 500;
-  font-size: 25px;
+  font-size: 1.5625rem;
   line-height: 147.5%;
+}
+
+@media screen and (max-width: 1023px) {
+  .sports__list-item {
+    width: 90%;
+  }
 }
 
 .sports-advantages {
@@ -2542,10 +2606,23 @@ div.signboard-subtitle__list-wrapper > ul {
   margin: 0;
 }
 
+@media screen and (max-width: 1023px) {
+  .sports-advantages__list {
+    width: 90%;
+  }
+}
+
 .sports-advantages__list-wrapper {
   margin-top: 3.125rem;
   display: flex;
   justify-content: space-between;
+}
+
+@media screen and (max-width: 1023px) {
+  .sports-advantages__list-wrapper {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
 }
 
 .sports-advantages__item {
@@ -2587,7 +2664,7 @@ div.signboard-subtitle__list-wrapper > ul {
 .pharmacy-props__subtitle {
   max-width: 426px;
   margin: 3.125rem auto;
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 
 .pharmacy-props__list {
@@ -2599,7 +2676,7 @@ div.signboard-subtitle__list-wrapper > ul {
 .pharmacy-props__item {
   width: fit-content;
   font-weight: 500;
-  font-size: 25px;
+  font-size: 1.5625rem;
   line-height: 147.5%;
 }
 
@@ -2630,7 +2707,7 @@ div.signboard-subtitle__list-wrapper > ul {
   width: 45%;
   margin: 0;
   font-weight: 500;
-  font-size: 25px;
+  font-size: 1.5625rem;
   line-height: 147.5%;
 }
 
@@ -2648,7 +2725,7 @@ div.signboard-subtitle__list-wrapper > ul {
 }
 
 .rent-about__caption {
-  font-size: 24px;
+  font-size: 1.5rem;
   line-height: 130.5%;
 }
 
@@ -2661,7 +2738,7 @@ div.signboard-subtitle__list-wrapper > ul {
   width: 45%;
   margin: 3.125rem 0;
   font-weight: 500;
-  font-size: 25px;
+  font-size: 1.5625rem;
   line-height: 147.5%;
 }
 
@@ -2685,7 +2762,7 @@ div.signboard-subtitle__list-wrapper > ul {
   width: 45%;
   margin: 3.125rem 0;
   font-weight: 500;
-  font-size: 25px;
+  font-size: 1.5625rem;
   line-height: 147.5%;
 }
 
@@ -2715,6 +2792,7 @@ div.signboard-subtitle__list-wrapper > ul {
   .product__use-list {
     width: 70%;
     margin: 0;
+    padding-left: 1.8rem;
   }
 }
 

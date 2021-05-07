@@ -141,7 +141,7 @@
         text-align: center;
         margin: 0 auto 1.5rem;
         font-weight: 500;
-        font-size: 2, 4375rem;
+        font-size: 2.4375rem;
         line-height: 147.5%;
         color: #000000;
     }
@@ -150,7 +150,7 @@
             font-size: 1.4rem;
         }
         font-weight: normal;
-        font-size: 1,5rem;
+        font-size: 1.5rem;
         line-height: 127.49%;
         color: #000000;
     }
@@ -177,7 +177,6 @@
             margin: 0 auto;
             text-align: center;
             &-text {
-                
                 @media screen and (max-width: $screen-sd) {
                     font-size: 1.4rem;
                 }
@@ -198,6 +197,7 @@
     &__about-price {
         max-width: 1112px;
         margin: 5.625rem auto 0;
+        padding: 0 1.5rem;
         &-caption {
             max-width: 931px;
         }
@@ -235,7 +235,7 @@
         width: 77.5%;
         height: 90.59px;
         font-weight: normal;
-        font-size: 32px;
+        font-size: 2rem;
         line-height: 147.5%;
         color: #ffffff;
         background: linear-gradient(0deg, #3831b7, #3831b7), #01013d;
@@ -464,28 +464,31 @@ td {
         width: 100%;
         & > li {
             font-weight: normal;
-            font-size: 24px;
+            font-size: 1.5rem;
             line-height: 32px;
         }
     }
 }
 .use-comment-text-signboard {
     font-weight: normal;
-    font-size: 24px;
+    font-size: 1.5rem;
     line-height: 147.5%;
 }
 h3.signboard-subtitle {
     margin: 3.125rem auto 0;
     max-width: 554px;
-    font-size: 24px;
+    font-size: 1.5rem;
     line-height: 147.5%;
 }
 div.signboard-subtitle {
     &__list-wrapper {
         margin: 0 auto;
         max-width: 807px;
-        font-size: 24px;
+        font-size: 1.5rem;
         & > ul {
+            @media screen and (max-width: $screen-sd) {
+                width: 80%;
+            }
             width: 39%;
         }
     }
@@ -505,7 +508,7 @@ div.signboard-subtitle {
     max-width: 601px;
     padding-top: 1.25rem;
     font-weight: normal;
-    font-size: 24px;
+    font-size: 1.5rem;
     line-height: 147.5%;
 }
 .about-price__comment {
@@ -513,7 +516,7 @@ div.signboard-subtitle {
     max-width: 999px;
     &-text {
         font-weight: normal;
-        font-size: 24px;
+        font-size: 1.5rem;
         line-height: 147.5%;
         text-align: center;
     }
@@ -522,14 +525,15 @@ div.signboard-subtitle {
     max-width: 977px;
     margin: 5.625rem auto;
     text-align: center;
+    padding: 0 1.5rem;
     &__caption {
         font-weight: 500;
-        font-size: 39px;
+        font-size: 2.4375rem;
         line-height: 147.5%;
     }
     &__text {
         font-weight: normal;
-        font-size: 24px;
+        font-size: 1.5rem;
         line-height: 29px;
     }
 }
@@ -542,13 +546,20 @@ div.signboard-subtitle {
         margin: 3.125rem 0;
     }
     &__list {
+        @media screen and (max-width: $screen-md) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
         display: flex;
         justify-content: space-between;
     }
     &__list-item {
+        @media screen and (max-width: $screen-md) {
+            width: 80%;
+        }
         width: 48%;
         font-weight: 500;
-        font-size: 25px;
+        font-size: 1.5625rem;
         line-height: 147.5%;
     }
 }
@@ -577,7 +588,7 @@ div.signboard-subtitle {
         max-width: 702px;
         &-text {
             font-weight: 500;
-            font-size: 24px;
+            font-size: 1.5rem;
             line-height: 130.5%;
             text-align: center;
             margin: 0;
@@ -591,7 +602,7 @@ div.signboard-subtitle {
     &-caption {
         max-width: 622px;
         font-weight: 500;
-        font-size: 39px;
+        font-size: 2.4375rem;
         line-height: 147.5%;
         text-align: center;
         margin: 5.625rem auto 3.125rem;
@@ -600,25 +611,32 @@ div.signboard-subtitle {
         max-width: 700px;
         margin: 3.125rem auto;
         font-weight: 500;
-        font-size: 24px;
+        font-size: 1.5rem;
         line-height: 130.5%;
         text-align: center;
     }
     &-wrapper {
+        @media screen and (max-width: $screen-md) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
         display: flex;
         justify-content: space-between;
     }
     &-column {
+        @media screen and (max-width: $screen-md) {
+            flex-basis: 90%;
+        }
         margin: 0;
         flex-basis: 48%;
         font-weight: 500;
-        font-size: 25px;
+        font-size: 1.5325rem;
         line-height: 147.5%;
     }
     &-subtext {
         max-width: 1096px;
         font-weight: normal;
-        font-size: 24px;
+        font-size: 1.5rem;
         line-height: 147.5%;
         text-align: center;
     }
@@ -631,7 +649,7 @@ div.signboard-subtitle {
     }
     &__about-caption {
         font-weight: 500;
-        font-size: 24px;
+        font-size: 1.5rem;
         line-height: 130.5%;
         text-align: center;
     }
@@ -640,18 +658,26 @@ div.signboard-subtitle {
         margin: 0 auto;
     }
     &__list {
+        @media screen and (max-width: $screen-lg) {
+            flex-wrap: wrap;
+            justify-content: flex-start;
+        }
         display: flex;
         justify-content: space-between;
         margin: 3.125rem 0;
         &-item {
+            @media screen and (max-width: $screen-lg) {
+                display: inline-block;
+                width: 80%;
+            }
             font-weight: 500;
-            font-size: 25px;
+            font-size: 1.5625rem;
             line-height: 147.5%;
             text-align: center;
         }
     }
     &__about-price {
-        padding-bottom: 5.625rem;
+        padding: 0 1.5rem 5.625rem;
         & > .about-price__description {
             max-width: 763px;
             margin: 0 auto;
@@ -678,27 +704,40 @@ div.signboard-subtitle {
         margin: 0 auto;
         max-width: 1140px;
         &-caption {
-            font-size: 24px;
+            font-size: 1.5rem;
         }
     }
     &__list {
+        @media screen and(max-width: $screen-lg) {
+            justify-content: flex-start;
+        }
         margin: 3.125rem 0 0;
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
         &-item {
+            @media screen and(max-width: $screen-lg) {
+                width: 90%;
+            }
             width: 40%;
             font-weight: 500;
-            font-size: 25px;
+            font-size: 1.5625rem;
             line-height: 147.5%;
         }
     }
     &-advantages {
         padding: 5.625rem 0.5rem 0;
         &__list {
+            @media screen and(max-width: $screen-lg) {
+                width: 90%;
+            }
             width: 45%;
             margin: 0;
             &-wrapper {
+                @media screen and(max-width: $screen-lg) {
+                    justify-content: flex-start;
+                    flex-wrap: wrap;
+                }
                 margin-top: 3.125rem;
                 display: flex;
                 justify-content: space-between;
@@ -736,7 +775,7 @@ div.signboard-subtitle {
     &__subtitle {
         max-width: 426px;
         margin: 3.125rem auto;
-        font-size: 24px;
+        font-size: 1.5rem;
     }
     &__list {
         display: flex;
@@ -746,7 +785,7 @@ div.signboard-subtitle {
     &__item {
         width: fit-content;
         font-weight: 500;
-        font-size: 25px;
+        font-size: 1.5625rem;
         line-height: 147.5%;
     }
     &__description {
@@ -772,7 +811,7 @@ div.signboard-subtitle {
         width: 45%;
         margin: 0;
         font-weight: 500;
-        font-size: 25px;
+        font-size: 1.5625rem;
         line-height: 147.5%;
     }
     &__description {
@@ -788,7 +827,7 @@ div.signboard-subtitle {
         margin: 0 auto;
         padding: 5.625rem 0.5rem 0;
         &__caption {
-            font-size: 24px;
+            font-size: 1.5rem;
             line-height: 130.5%;
         }
         &__list-wrapper {
@@ -799,7 +838,7 @@ div.signboard-subtitle {
             width: 45%;
             margin: 3.125rem 0;
             font-weight: 500;
-            font-size: 25px;
+            font-size: 1.5625rem;
             line-height: 147.5%;
         }
     }
@@ -819,7 +858,7 @@ div.signboard-subtitle {
             width: 45%;
             margin: 3.125rem 0;
             font-weight: 500;
-            font-size: 25px;
+            font-size: 1.5625rem;
             line-height: 147.5%;
         }
         &__text {
@@ -853,6 +892,7 @@ div.signboard-subtitle {
             }
             width: 70%;
             margin: 0;
+            padding-left: 1.8rem;
         }
     }
 }
