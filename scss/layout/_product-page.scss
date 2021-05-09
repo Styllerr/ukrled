@@ -300,7 +300,7 @@ ol > li:before {
         height: auto;
     }
     &__video-wrapper {
-        margin: 0 auto;
+        margin: 2rem auto 0;
         max-width: 1160px;
         height: 497px;
     }
@@ -719,6 +719,10 @@ div.signboard-subtitle {
             @media screen and(max-width: $screen-lg) {
                 width: 90%;
             }
+            @media screen and (max-width: $screen-md) {
+            
+                font-size: 1.1625rem;
+            }
             width: 40%;
             font-weight: 500;
             font-size: 1.5625rem;
@@ -753,7 +757,7 @@ div.signboard-subtitle {
         }
     }
     &__conclusion {
-        padding: 5.625rem 0.5rem;
+        padding: 5.625rem 2.33rem;
         max-width: 1220px;
         margin: 0 auto;
         &-caption {
@@ -771,13 +775,17 @@ div.signboard-subtitle {
 .pharmacy-props {
     max-width: 958px;
     margin: 0 auto;
-    padding: 5.625rem 0.5rem 0;
+    padding: 5.625rem 2.33rem 0;
     &__subtitle {
         max-width: 426px;
         margin: 3.125rem auto;
         font-size: 1.5rem;
     }
     &__list {
+        @media screen and (max-width: $screen-md) {
+        
+            display: block;
+        }
         display: flex;
         justify-content: space-between;
         margin: 0;
@@ -797,18 +805,26 @@ div.signboard-subtitle {
 .pharmacy-advantages {
     max-width: 1171px;
     margin: 0 auto;
-    padding: 5.625rem 0.5rem;
+    padding: 5.625rem 2.33rem;
     &__caption {
         margin: 0;
     }
     &__list-wrapper {
+        @media screen and (max-width: $screen-md) {
+            justify-content: center;
+        }
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
         padding: 3.125rem 0 0;
     }
     &__list {
-        width: 45%;
+        @media screen and (max-width: $screen-md) {
+            flex-basis: 100%;
+            padding-left: 1rem;
+            max-width: 525px;
+        }
+        flex-basis: 45%;
         margin: 0;
         font-weight: 500;
         font-size: 1.5625rem;

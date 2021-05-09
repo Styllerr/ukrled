@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./script/index-script.js"></script>
     <link rel="stylesheet" href="./css/main.css">
     <title>Блог</title>
 </head>
@@ -15,12 +16,14 @@
             <a href="./" class="logo-wrapper">
                 <img src="./image/svg/site-logo.svg" alt="Logo">
             </a>
-            <nav class="header__navigation">
+            <nav class="header__navigation header__navigation_hidden">
                 <ul class="navigation__list">
-                    <li class="navigation__item"><a href="./aboutus.html" class="navigation__item-link">О нас</a></li>
-                    <li class="navigation__item product">
-                        <a href="" class="navigation__item-link">Продукция</a>
-                        <ul class="product__navigation">
+                    <li class="navigation__item">
+                        <a href="./aboutus.html" class="navigation__item-link">О нас</a>
+                    </li>
+                    <li id="product-list" class="navigation__item product">
+                        <a href="#" class="navigation__item-link">Продукция</a>
+                        <ul class="product__navigation product__navigation_hidden">
                             <li class="product__item"><a href="./street-LED.html" class="product__item-link">Уличные
                                     LED-екраны</a></li>
                             <li class="product__item"><a href="./indoor.html" class="product__item-link">Led для
@@ -48,10 +51,16 @@
                     <li class="navigation__item"><a href="./blog.html" class="navigation__item-link">Блог</a></li>
                     <li class="navigation__item"><a href="#contacts" class="navigation__item-link">Контакты</a></li>
                 </ul>
+                <a href="tel:+380986422418" class="header__phone">
+                    <i class="phone__icon"><span class="phone__number">+38 (098) 64-22-418</span></i>
+                </a>
             </nav>
             <a href="tel:+380986422418" class="header__phone">
                 <i class="phone__icon"><span class="phone__number">+38 (098) 64-22-418</span></i>
             </a>
+            <div class="burger-menu">
+                <span></span>
+            </div>
         </div>
     </header>
     <main class="blog-main">
@@ -176,12 +185,11 @@
                             </div>
                         </div>
                     </a>
-                    <p class="blog-aside__subtext">Хотите быть в курсе новостей и акций? Жмите "Подписаться"</p>
-                    <button class="blog-aside__subscrible">Подписаться</button>
                 </div>
+                <p class="blog-aside__subtext">Хотите быть в курсе новостей и акций? Жмите "Подписаться"</p>
+                <button class="blog-aside__subscrible">Подписаться</button>
             </aside>
         </div>
-
     </main>
     <footer class="site-footer">
         <div class="footer-wrapper">
@@ -191,8 +199,10 @@
             <nav class="footer__navigation">
                 <ul class="navigation__list">
                     <li class="navigation__item"><a href="./blog.html" class="navigation__item-link">Блог</a></li>
-                    <li class="navigation__item"><a href="./faq.html" class="navigation__item-link">Ответы на вопросы</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__item-link subscrible-link">Рассылка</a></li>
+                    <li class="navigation__item"><a href="./faq.html" class="navigation__item-link">Ответы на
+                            вопросы</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__item-link subscrible-link">Рассылка</a>
+                    </li>
                     <li class="navigation__item"><a href="./rent.html" class="navigation__item-link">Услуги</a></li>
                 </ul>
             </nav>
@@ -203,7 +213,7 @@
         <div class="footer__designed-logo-wrapper">
             <span class="designed-logo">designed by</span>
         </div>
-    </footer>   
+    </footer> 
     <div id="subscrible-modal" class="modal__conteiner modal__conteiner_hidden">
         <div class="modal__wrapper">
             <form action="#" class="subscrible__form">
@@ -231,7 +241,7 @@
             </form>
         </div>
     </div>
-    <script src="./script/blog-script.js"></script>
+    <script src="./script/subscrible-script.js"></script>
 </body>
 
 </html>
