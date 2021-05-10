@@ -1,8 +1,15 @@
 .article {
+    @media screen and (max-width: $screen-md) {
+        max-width: none;
+        width: 100%;
+    }
     max-width: 67.6%;
     padding-bottom: 5.625rem;
     &-main {
-        padding: 5.625rem 0.5rem;
+        @media screen and (max-width: $screen-sd) {
+            padding-top: 2.3333rem;
+        }
+        padding: 5.625rem 2.3333rem;
         background: white url(/image/svg/article-background.svg) no-repeat;
         background-position-x: left;
     }
@@ -21,26 +28,38 @@
         height: auto;
     }
     &__title {
+        @media screen and (max-width: $screen-sd) {
+            font-size: 1.5rem;
+        }
         font-weight: 500;
-        font-size: 39px;
+        font-size: 2.4375rem;
         line-height: 147.5%;
         color: #000000;
     }
     &__subtitle {
+        @media screen and (max-width: $screen-sd) {
+            font-size: 1.5rem;
+        }
         font-weight: 500;
-        font-size: 29px;
+        font-size: 1.8125rem;
         line-height: 147.5%;
         color: #000000;
     }
     &__text,
     &__list-item {
+        @media screen and (max-width: $screen-sd) {
+            font-size: 1.2rem;
+        }
         font-weight: normal;
-        font-size: 24px;
+        font-size: 1.5rem;
         line-height: 147.5%;
         color: #000000;
         margin: 0;
         &_mark {
-            font-size: 24px;
+            @media screen and (max-width: $screen-sd) {
+                font-size: 1.2rem;
+            }
+            font-size: 1.5rem;
             line-height: 147.5%;
             color: #000000;
             margin: 0;
@@ -48,6 +67,9 @@
         }
     }
     &__list {
+        @media screen and (max-width: $screen-sd) {
+            padding-left: 1rem;
+        }
         margin: 0;
     }
 }

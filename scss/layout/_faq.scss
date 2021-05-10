@@ -10,11 +10,16 @@
     margin: 5.625rem 0.5rem 3.125rem;
 }
 button.accordion-button {
+    @media screen and (max-width: $screen-md) {
+    font-size: 1.6rem;
+    }
+    @media screen and (max-width: $screen-sd) {
+    font-size: 1.3rem;
+    }
     font-family: "Geometria";
     font-style: normal;
     font-weight: 500;
-    font-size: 39px;
-    line-height: 47px;
+    font-size: 2.4375rem;
     background-color: #f2f2f2;
     &::after {
         background-image: url(/image/svg/accordion-collapse.svg);
@@ -33,10 +38,15 @@ button.accordion-button {
     }
 }
 div.accordion-body {
+    @media screen and (max-width: $screen-md) {
+    font-size: 1.4rem;
+    }
+    @media screen and (max-width: $screen-sd) {
+    font-size: 1.1rem;
+    }
     font-family: "Geometria";
     font-style: normal;
     font-weight: normal;
-    font-size: 24px;
-    line-height: 47px;
+    font-size: 1.5rem;
     color: #000000;
 }
