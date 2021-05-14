@@ -13,6 +13,9 @@
 .footer__designed-logo-wrapper {
     text-align: center;
 }
+.subscrible-link {
+    cursor: pointer;
+}
 .designed-logo {
     position: relative;
     font-family: "Gilroy";
@@ -28,7 +31,7 @@
         height: 23px;
         top: -0.5rem;
         right: -3rem;
-        background: url(/image/svg/designed-logo.svg) no-repeat;
+        background: url(../image/svg/designed-logo.svg) no-repeat;
         background-size: cover;
     }
 }

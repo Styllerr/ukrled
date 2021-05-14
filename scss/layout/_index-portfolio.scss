@@ -1,5 +1,5 @@
 .portfolio {
-    background: white url(/image/png/background04.png) no-repeat;
+    background: white url(../image/png/background04.png) no-repeat;
     &__wrapper {
         max-width: 1370px;
         margin: 0 auto;
@@ -43,13 +43,13 @@
         background-size: contain;
         background-position: center center;
         &-01 {
-            background: url(/image/png/slide02-01.png) no-repeat;
+            background: url(../image/png/slide02-01.png) no-repeat;
         }
         &-02 {
-            background: url(/image/png/slide02-02.png) no-repeat;
+            background: url(../image/png/slide02-02.png) no-repeat;
         }
         &-03 {
-            background: url(/image/png/slide02-03.png) no-repeat;
+            background: url(../image/png/slide02-03.png) no-repeat;
         }
     }
 }
@@ -62,7 +62,7 @@ button.carousel-control-next {
 span.carousel-control-next-icon {
     width: 2.3rem;
     height: 4.5rem;
-    background: url(/image/svg/index-next-btn.svg) no-repeat;
+    background: url(../image/svg/index-next-btn.svg) no-repeat;
     background-size: contain;
 }
 button.carousel-control-prev {
@@ -71,7 +71,7 @@ button.carousel-control-prev {
 span.carousel-control-prev-icon {
     width: 2.3rem;
     height: 4.5rem;
-    background: url(/image/svg/index-prev-btn.svg) no-repeat;
+    background: url(../image/svg/index-prev-btn.svg) no-repeat;
     background-size: contain;
 }
 @media screen and (max-width: $screen-lg) {

@@ -13,5 +13,6 @@ const modalHidden = () => {
     document.body.style.overflow = "auto";
     cross.removeEventListener('click', modalHidden);
 }
-
-request.addEventListener('click', modalShow);
+if (request) {
+    request.addEventListener('click', modalShow);
+}

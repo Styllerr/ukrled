@@ -1,5 +1,5 @@
 .proposition {
-    background: url(/image/svg/background02.svg) no-repeat;
+    background: url(../image/svg/background02.svg) no-repeat;
     background-size: cover;
     background-position: bottom;
     &__wrapper {
@@ -38,7 +38,7 @@
         color: #000000;
     }
     &__card {
-        background: url(/image/svg/index-card-bg.svg) no-repeat;
+        background: url(../image/svg/index-card-bg.svg) no-repeat;
         background-size: contain;
         background-position-y: bottom;
         display: flex;

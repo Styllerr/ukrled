@@ -3,7 +3,7 @@
 }
 
 .carousel-section {
-    background: url(/image/png/background01.png) no-repeat;
+    background: url(../image/png/background01.png) no-repeat;
     background-size: cover;
     padding-bottom: 40px;
 }
@@ -35,21 +35,21 @@
     &-01 {
         height: 500px;
         width: 660px;
-        background: url(/image/png/index-slide01-01.png) no-repeat;
+        background: url(../image/png/index-slide01-01.png) no-repeat;
         background-size: contain;
         background-position: center center;
     }
     &-02 {
         height: 500px;
         width: 660px;
-        background: url(/image/png/index-slide01-02.png) no-repeat;
+        background: url(../image/png/index-slide01-02.png) no-repeat;
         background-size: contain;
         background-position: center center;
     }
     &-03 {
         height: 500px;
         width: 660px;
-        background: url(/image/png/index-slide01-03.png) no-repeat;
+        background: url(../image/png/index-slide01-03.png) no-repeat;
         background-size: contain;
         background-position: center center;
     }

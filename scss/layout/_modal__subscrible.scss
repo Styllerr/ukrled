@@ -61,13 +61,13 @@
     margin-top: 2rem;
     height: 72px;
     &::before {
-        background: url(/image/svg/form-coment-icon.svg) no-repeat;
+        background: url(../image/svg/form-coment-icon.svg) no-repeat;
         background-size: contain;
     }
 }
 .email-label {
     &::before {
-        background: url(/image/svg/form-email-icon.svg) no-repeat;
+        background: url(../image/svg/form-email-icon.svg) no-repeat;
         background-size: contain;
     }
 }

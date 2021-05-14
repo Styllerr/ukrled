@@ -91,7 +91,7 @@
     }
     &__check-dist:checked + label::before,
     &__check-size:checked + label::before {
-        background: url(/image/svg/check.svg) no-repeat;
+        background: url(../image/svg/check.svg) no-repeat;
         background-position: 2px;
     }
     &__submit {

@@ -1,5 +1,5 @@
 .feedback {
-    background: url(/image/png/background05.png) no-repeat;
+    background: url(../image/png/background05.png) no-repeat;
     background-size: cover;
     &__wrapper {
         max-width: 1370px;
@@ -91,7 +91,7 @@
 
 .name-label {
     &::before {
-        background: url(/image/svg/form-name-icon.svg) no-repeat;
+        background: url(../image/svg/form-name-icon.svg) no-repeat;
         background-size: contain;
     }
 }
@@ -100,7 +100,7 @@
         margin-top: 2rem;
     }
     &::before {
-        background: url(/image/svg/form-phone-icon.svg) no-repeat;
+        background: url(../image/svg/form-phone-icon.svg) no-repeat;
         background-size: contain;
     }
 }
