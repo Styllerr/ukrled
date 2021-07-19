@@ -424,27 +424,38 @@
             <form action="#" class="request__form">
                 <div id="price__cross" class="price__cross modal__cross"></div>
                 <h1 class="request__title">Расчитайте стоимость LED-экрана</h1>
-                <div class="dist-column__wrapper column__wrapper">
-                    <h2 class="dist-column__caption column__caption">Комфортное расстояние просмотра</h2>
-                    <input id="check-dist-8m" type="radio" name="distance" class="request__check-dist" checked>
-                    <label for="check-dist-8m" class="request__label">от 8 м</label>
-                    <input id="check-dist-6m" type="radio" name="distance" class="request__check-dist">
-                    <label for="check-dist-6m" class="request__label">от 6 м</label>
-                    <input id="check-dist-5m" type="radio" name="distance" class="request__check-dist">
-                    <label for="check-dist-5m" class="request__label">от 5 м</label>
-                    <input id="check-dist-4m" type="radio" name="distance" class="request__check-dist">
-                    <label for="check-dist-4m" class="request__label">от 4 м</label>
-                    <input id="check-dist-3m" type="radio" name="distance" class="request__check-dist">
-                    <label for="check-dist-3m" class="request__label">от 3 м</label>
-                </div>
-                <div class="size-column__wrapper column__wrapper">
-                    <h2 class="size-column__caption column__caption">Размер</h2>
-                    <input id="large" type="radio" name="size" class="request__check-size" checked>
-                    <label for="large" class="request__label">320х160 мм</label>
-                    <input id="medium" type="radio" name="size" class="request__check-size">
-                    <label for="medium" class="request__label">256х128 мм</label>
-                    <input id="small" type="radio" name="size" class="request__check-size">
-                    <label for="small" class="request__label">192х192 мм</label>
+                <div class="request__wrapper">
+                    <div class="request_metric-select-group">
+                        <label for="metric-mm" class="request_metric-label">мм</label>
+                        <input id="metric-mm" name="metric" type="radio" class="request_metric-item" checked>
+                        <label for="metric-sm" class="request_metric-label">см</label>
+                        <input id="metric-sm" name="metric" type="radio" class="request_metric-item">
+                        <label for="metric-m" class="request_metric-label">метр</label>
+                        <input id="metric-m" name="metric" type="radio" class="request_metric-item">
+                    </div>
+                    <div class="range__width-wrapper">
+                        <label for="" class="range__width-label">Длина экрана</label>
+                        <input type="range" value="0" min="0" max="10000" step="320" class="range__width-range">
+                        <span class="range__width">0</span><span class="range__units">&nbsp;mm</span>
+                    </div>
+                    <div class="range__height-wrapper">
+                        <label for="" class="range__height-label">Высота экрана</label>
+                        <input type="range" value="0" min="0" max="10000" step="160" class="range__height-range">
+                        <span class="range__height">0</span><span class="range__units">&nbsp;mm</span>
+                    </div>
+                    <div class="pixel-size-wrrapper">
+                        <label for="pixel-size" class="range__height-label">
+                            Комфортное расстояние для просмотра:
+                        </label>
+                        <select name="pixelSize" id="pixel-size" class="request__pixel">
+                            <option value="р10">р10 от 8 метров</option>
+                            <option value="р8">р8 от 6 метров</option>
+                            <option value="р6">р6 от 5 метров</option>
+                            <option value="р5">р5 от 4 метров</option>
+                            <option value="р4">р4 от 3 метров</option>
+                            <option value="р3">р3 от 2.5 метров</option>
+                        </select>
+                    </div>
                 </div>
                 <div class="request__date">
                     <div class="input-wrapper">
@@ -453,7 +464,8 @@
                     </div>
                     <div class="input-wrapper">
                         <label for="request-phone" class="form-label phone-label">Ваш номер телефона</label>
-                        <input id="request-phone" class="form-input phone-input" type="tel" name="phone" placeholder="+380___ -___-___">
+                        <input id="request-phone" class="form-input phone-input" type="tel" name="phone"
+                            placeholder="+380___ -___-___">
                     </div>
                 </div>
                 <button type="submit" class="request__submit">Оставить заявку</button>

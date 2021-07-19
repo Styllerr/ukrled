@@ -1,4 +1,3 @@
-document.addEventListener('DOMContentLoaded', () => {
     const width = document.querySelector('.range__width'),
         height = document.querySelector('.range__height'),
         rangeUnits = document.querySelectorAll('.range__units'),
@@ -97,11 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     metric = 'metric-sm';
                 }
                 break;
-
             default:
                 break;
         }
-
     }
-
-})
