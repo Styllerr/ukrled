@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="./script/new-modal-script.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="price__modal" class="modal__conteiner ">
+        <div class="modal__wrapper">
+            <form action="#" class="request__form">
+                <div id="price__cross" class="price__cross modal__cross"></div>
+                <h1 class="request__title">Расчитайте стоимость LED-экрана</h1>
+                <div class="request__wrapper">
+                    <div class="request_metric-select-group">
+                        <label for="metric-mm" class="request_metric-label">мм</label>
+                        <input id="metric-mm" name="metric" type="radio" class="request_metric-item" checked>
+                        <label for="metric-sm" class="request_metric-label">см</label>
+                        <input id="metric-sm" name="metric" type="radio" class="request_metric-item">
+                        <label for="metric-m" class="request_metric-label">метр</label>
+                        <input id="metric-m" name="metric" type="radio" class="request_metric-item">
+                    </div>
+                    <div class="range__width-wrapper">
+                        <label for="" class="range__width-label">Длина экрана</label>
+                        <input type="range" value="0" min="0" max="10000" step="320" class="range__width-range">
+                        <span class="range__width">0</span><span class="range__units">&nbsp;mm</span>
+                    </div>
+                    <div class="range__height-wrapper">
+                        <label for="" class="range__height-label">Высота экрана</label>
+                        <input type="range" value="0" min="0" max="10000" step="160" class="range__height-range">
+                        <span class="range__height">0</span><span class="range__units">&nbsp;mm</span>
+                    </div>
+                    <div class="pixel-size-wrrapper">
+                        <label for="pixel-size" class="range__height-label">
+                            Комфортное расстояние для просмотра:
+                        </label>
+                        <select name="pixelSize" id="pixel-size" class="request__pixel">
+                            <option value="р10">р10 от 8 метров</option>
+                            <option value="р8">р8 от 6 метров</option>
+                            <option value="р6">р6 от 5 метров</option>
+                            <option value="р5">р5 от 4 метров</option>
+                            <option value="р4">р4 от 3 метров</option>
+                            <option value="р3">р3 от 2.5 метров</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="request__date">
+                    <div class="input-wrapper">
+                        <label for="request-name" class="form-label name-label">Как к вам обращаться</label>
+                        <input id="request-name" class="form-input name-input" type="text" name="name">
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="request-phone" class="form-label phone-label">Ваш номер телефона</label>
+                        <input id="request-phone" class="form-input phone-input" type="tel" name="phone"
+                            placeholder="+380___ -___-___">
+                    </div>
+                </div>
+                <button type="submit" class="request__submit">Оставить заявку</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -4122,37 +4122,12 @@ div.accordion-body {
 }
 
 .request__wrapper {
-  max-width: 600px;
-  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  flex-wrap: wrap;
 }
 
 .request_metric-select-group {
-  max-width: 200px;
   margin-left: auto;
-}
-
-input[name="metric"] {
-  margin-right: 10px;
-}
-
-.range__width-wrapper,
-.range__height-wrapper,
-.pixel-size-wrrapper {
-  flex-basis: 100%;
-  margin: 40px 0;
-}
-
-input[type="range"] {
-  width: 60%;
-}
-
-.pixel-size-wrrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 /*# sourceMappingURL=main.css.map */
