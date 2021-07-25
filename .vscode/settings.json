@@ -1,0 +1,28 @@
+{"liveSassCompile.settings.formats": [
+
+    {
+        "format": "expanded",
+        "extensionName": ".css",
+        "savePath": "/css/"
+    },
+    {
+        "format": "compressed",
+        "extensionName": ".min.css",
+        "savePath": "/css/"
+    }
+],
+"[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+},
+"[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+},
+"liveSassCompile.settings.autoprefix": [],
+"liveSassCompile.settings.excludeList": [
+
+
+
+    "**/node_modules/**",
+    ".vscode/**"
+]
+}
