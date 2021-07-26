@@ -425,6 +425,19 @@
                 <div id="price__cross" class="price__cross modal__cross"></div>
                 <h1 class="request__title">Расчитайте стоимость LED-экрана</h1>
                 <div class="request__wrapper">
+                    <div class="pixel-size-wrrapper">
+                        <label for="pixel-size" class="range__height-label">
+                            Комфортное расстояние для просмотра:
+                        </label>
+                        <select name="pixelSize" id="pixel-size" class="request__pixel">
+                            <option value="р10">р10 от 8 метров</option>
+                            <option value="р8">р8 от 6 метров</option>
+                            <option value="р6">р6 от 5 метров</option>
+                            <option value="р5">р5 от 4 метров</option>
+                            <option value="р4">р4 от 3 метров</option>
+                            <option value="р3">р3 от 2.5 метров</option>
+                        </select>
+                    </div>
                     <div class="request_metric-select-group">
                         <label for="metric-mm" class="request_metric-label">мм</label>
                         <input id="metric-mm" name="metric" type="radio" class="request_metric-item" checked>
@@ -443,19 +456,7 @@
                         <input type="range" value="0" min="0" max="10000" step="160" class="range__height-range">
                         <span class="range__height">0</span><span class="range__units">&nbsp;mm</span>
                     </div>
-                    <div class="pixel-size-wrrapper">
-                        <label for="pixel-size" class="range__height-label">
-                            Комфортное расстояние для просмотра:
-                        </label>
-                        <select name="pixelSize" id="pixel-size" class="request__pixel">
-                            <option value="р10">р10 от 8 метров</option>
-                            <option value="р8">р8 от 6 метров</option>
-                            <option value="р6">р6 от 5 метров</option>
-                            <option value="р5">р5 от 4 метров</option>
-                            <option value="р4">р4 от 3 метров</option>
-                            <option value="р3">р3 от 2.5 метров</option>
-                        </select>
-                    </div>
+                    
                 </div>
                 <div class="request__date">
                     <div class="input-wrapper">
