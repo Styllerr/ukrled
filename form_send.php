@@ -2,7 +2,7 @@
 
 <?php
 
-$to = 'wijani8508@activesniper.com';
+$to = 'cork@ukr.net';
 
 $pixelSize = htmlspecialchars($_POST["pixelSize"]);
 $widthScreen = htmlspecialchars($_POST["widthScreen"]);
@@ -22,6 +22,24 @@ $message_to_myemail = "Здравствуйте!
 Ширина  экрана: $widthScreen $metric
 ";
 
+if (mail($to, "Обратная связь", $message_to_myemail, "Content-type:text/plain; charset = UTF-8\r\n")) 
+{ 
+        ?>
+		<script>
+				alert('Сообщение успешно отправлено');
+				
+				document.location.href='/';
+				
+				</script>
+				<?php
+    }
+    else {
+        ?>
+		<script>
+            alert('Ошибка. Сообщение не отправлено!');
+			document.location.href='/';
+        </script>
+		<?php
+    }
 
-mail($to, "Обратная связь", $message_to_myemail, "Content-type:text/plain; charset = UTF-8");
-alert("Ваше сообщение отправлено")
+?>
