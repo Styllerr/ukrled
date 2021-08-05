@@ -154,18 +154,13 @@
                 <img src="./image/png/media-indoor06.png" alt="Indoor LED picture" class="media__slide">
             </div>
             <button id="next" aria-label="next" class="media__arrow-next media__arrow_hidden">&gt;</button>
-            <div class="media__video-wrapper">
+            <!-- <div class="media__video-wrapper">
                 <iframe src="https://www.youtube.com/embed/SrheZcyZqPM"
                     style="width: 100%; height: 100%; border: none;" title="YouTube video player"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
-                <!-- <video class="media__video" loop muted autoplay="autoplay" poster="./images/png/media-video01.png">
-                    <source src="#" type="video/mp4">
-                </video>
-                <video class="media__video-mobile" loop muted poster="./images/png/media-video01.png">
-                    <source src="#" type="video/mp4">
-                </video> -->
-            </div>
+                
+            </div> -->
         </div>
         <div class="table-characteristics">
             <table>
@@ -368,11 +363,11 @@
                     </div>
                 </div>
                 <div class="feedback__form-block">
-                    <form action="#" class="feedback__form">
+                    <form action="#" class="feedback__form" name="Уличные LED-екраны">
                         <label for="feedback-name" class="form-label name-label">Как к вам обращаться</label>
-                        <input type="text" class="form-input name-input" id="feedback-name">
+                        <input type="text" class="form-input name-input" name="your_name" id="feedback-name">
                         <label for="feedback-phone" class="form-label phone-label">Ваш номер телефона</label>
-                        <input type="tel" class="form-input phone-input" id="feedback-phone"
+                        <input type="tel" class="form-input phone-input" name="your_phone" id="feedback-phone"
                             placeholder="+380___ -___-___">
                         <div class="feedback__submit-wrapper">
                             <input type="submit" class="feedback__submit form-submit" value="Оставить заявку">
@@ -424,42 +419,57 @@
     </footer>
     <div id="price__modal" class="modal__conteiner modal__conteiner_hidden">
         <div class="modal__wrapper">
-            <form action="#" class="request__form">
+            <form action="#" method="POST" class="request__form" name="Уличные LED-екраны">
                 <div id="price__cross" class="price__cross modal__cross"></div>
                 <h1 class="request__title">Расчитайте стоимость LED-экрана</h1>
-                <div class="dist-column__wrapper column__wrapper">
-                    <h2 class="dist-column__caption column__caption">Комфортное расстояние просмотра</h2>
-                    <input id="check-dist-8m" type="radio" name="distance" class="request__check-dist" checked>
-                    <label for="check-dist-8m" class="request__label">от 8 м</label>
-                    <input id="check-dist-6m" type="radio" name="distance" class="request__check-dist">
-                    <label for="check-dist-6m" class="request__label">от 6 м</label>
-                    <input id="check-dist-5m" type="radio" name="distance" class="request__check-dist">
-                    <label for="check-dist-5m" class="request__label">от 5 м</label>
-                    <input id="check-dist-4m" type="radio" name="distance" class="request__check-dist">
-                    <label for="check-dist-4m" class="request__label">от 4 м</label>
-                    <input id="check-dist-3m" type="radio" name="distance" class="request__check-dist">
-                    <label for="check-dist-3m" class="request__label">от 3 м</label>
+                <div class="request__wrapper">
+                    <div class="pixel-size-wrrapper">
+                        <label for="pixel-size" class="range__height-label">
+                            Комфортное расстояние для просмотра:
+                        </label>
+                        <select name="pixelSize" id="pixel-size" class="request__pixel">
+                            <option value="р10">р10 от 8 метров</option>
+                            <option value="р8">р8 от 6 метров</option>
+                            <option value="р6">р6 от 5 метров</option>
+                            <option value="р5">р5 от 4 метров</option>
+                            <option value="р4">р4 от 3 метров</option>
+                            <option value="р3">р3 от 2.5 метров</option>
+                        </select>
+                    </div>
+                    <div class="request_metric-select-group">
+                        <label for="metric-mm" class="request_metric-label">мм</label>
+                        <input id="metric-mm" name="metric" value="mm" type="radio" class="request_metric-item" checked>
+                        <label for="metric-sm" class="request_metric-label">см</label>
+                        <input id="metric-sm" name="metric" value="sm" type="radio" class="request_metric-item">
+                        <label for="metric-m" class="request_metric-label">метр</label>
+                        <input id="metric-m" name="metric" value="m" type="radio" class="request_metric-item">
+                    </div>
+                    <div class="range__width-wrapper">
+                        <label for="" class="range__width-label">Длина экрана</label>
+                        <input type="range" name="widthScreen" value="0" min="0" max="10000" step="320"
+                            class="range__width-range">
+                        <span class="range__width">0</span><span class="range__units">&nbsp;mm</span>
+                    </div>
+                    <div class="range__height-wrapper">
+                        <label for="" class="range__height-label">Высота экрана</label>
+                        <input type="range" name="heightScreen" value="0" min="0" max="10000" step="160"
+                            class="range__height-range">
+                        <span class="range__height">0</span><span class="range__units">&nbsp;mm</span>
+                    </div>
+
                 </div>
-                <div class="size-column__wrapper column__wrapper">
-                    <h2 class="size-column__caption column__caption">Размер</h2>
-                    <input id="large" type="radio" name="size" class="request__check-size" checked>
-                    <label for="large" class="request__label">320х160 мм</label>
-                    <input id="medium" type="radio" name="size" class="request__check-size">
-                    <label for="medium" class="request__label">256х128 мм</label>
-                    <input id="small" type="radio" name="size" class="request__check-size">
-                    <label for="small" class="request__label">192х192 мм</label>
-                </div>
-                <div class="request__date">
+                <div class="request__data">
                     <div class="input-wrapper">
                         <label for="request-name" class="form-label name-label">Как к вам обращаться</label>
-                        <input id="request-name" class="form-input name-input" type="text" name="name">
+                        <input id="request-name" class="form-input name-input" type="text" name="your_name">
                     </div>
                     <div class="input-wrapper">
                         <label for="request-phone" class="form-label phone-label">Ваш номер телефона</label>
-                        <input id="request-phone" class="form-input phone-input" type="tel" name="phone" placeholder="+380___ -___-___">
+                        <input id="request-phone" class="form-input phone-input" type="tel" name="your_phone"
+                            placeholder="+380___ -___-___">
                     </div>
                 </div>
-                <button type="submit" class="request__submit">Оставить заявку</button>
+                <button type="submit" class="request__submit" name="page">Оставить заявку</button>
             </form>
         </div>
     </div>
@@ -469,20 +479,22 @@
                 <div id="subscrible-cross" class="modal__cross"></div>
                 <h1 class="subscrible__title">Подписаться на новости и акции сайта</h1>
                 <div class="input-wrapper">
-                    <label for="subscrible-name" class="form-label name-label">Как к вам обращаться</label>
-                    <input id="subscrible-name" class="form-input name-input" type="text" name="name">
+                    <label for="subscrible-name" class="form-label name-label">Как к вам обращаться&nbsp;*</label>
+                    <input id="subscrible-name" class="form-input name-input" type="text" name="name" required>
                 </div>
                 <div class="input-wrapper">
-                    <label for="subscrible-email" class="form-label email-label">E-mail</label>
-                    <input id="subscrible-email" class="form-input email-input" type="email" name="email">
+                    <label for="subscrible-email" class="form-label email-label">E-mail&nbsp;*</label>
+                    <input id="subscrible-email" class="form-input email-input" type="email" name="email" required>
                 </div>
                 <div class="input-wrapper">
                     <label for="subscrible-phone" class="form-label phone-label">Ваш номер телефона</label>
-                    <input id="subscrible-phone" class="form-input phone-input" type="tel" name="phone" placeholder="+380___ -___-___">
+                    <input id="subscrible-phone" class="form-input phone-input" type="tel" name="phone"
+                        placeholder="+380___ -___-___">
                 </div>
                 <div class="input-wrapper">
-                    <label for="subscrible-coment" class="form-label coment-label">Комментарий или сообщение&nbsp;*</label>
-                    <input id="subscrible-coment" class="form-input coment-input" type="text" name="coment">
+                    <label for="subscrible-coment" class="form-label coment-label">Комментарий или
+                        сообщение&nbsp;*</label>
+                    <input id="subscrible-coment" class="form-input coment-input" type="text" name="comment">
                 </div>
                 <div class="subscrible__btn-wrapper">
                     <button type="submit" class="subscrible__submit form-submit">Отправить</button>
@@ -490,8 +502,28 @@
             </form>
         </div>
     </div>
+    <div id="price__success" class="modal__conteiner modal__conteiner_hidden">
+        <div class="modal__wrapper">
+            <div class="response">
+                <h1 class="response__header">Спасибо!</h1>
+                <h2 class="response__header">Ваше сообщение успешно отправлено.</h2>
+                <p class="response__text">Наши специалисты с вами свяжутся в ближайшее время.</p>
+                <button class="response__button">Ок</button>
+            </div>
+        </div>
+    </div>
+    <div id="price__error" class="modal__conteiner modal__conteiner_hidden">
+        <div class="modal__wrapper">
+            <div class="response">
+                <h1 class="response__header">Сожалеем!</h1>
+                <h2 class="response__header">Но Ваше сообщение НЕ было отправлено!</h2>
+                <p class="response__text">Проверте корректность заполнений полей и повторите попытку.</p>
+                <button class="response__button">Ок</button>
+            </div>
+        </div>
+    </div>
     <script src="./script/price-script.js"></script>
-    <script src="./script/subscrible-script.js"></script>    
+    <script src="./script/subscrible-script.js"></script>
 </body>
 
 </html>
