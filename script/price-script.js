@@ -1,6 +1,9 @@
 const request = document.querySelector(".purchase-block__btn");
 const cross = document.getElementById("price__cross");
 const modal = document.getElementById("price__modal");
+const modalSuccess = document.getElementById("price__success");
+const modalError = document.getElementById("price__error");
+
 
 const modalShow = () => {
     modal.classList.remove("modal__conteiner_hidden");
@@ -13,8 +16,30 @@ const modalHidden = () => {
     document.body.style.overflow = "auto";
     cross.removeEventListener("click", modalHidden);
 };
+
+const modalSuccessShow = () => {
+        modalSuccess.classList.remove("modal__conteiner_hidden");
+        document.body.style.overflow = "hidden";
+        modalSuccess.querySelector(".response__button").addEventListener("click", modalResponseHidden);
+        
+    
+};
+const modalErrorShow = () => {
+        modalError.classList.remove("modal__conteiner_hidden");
+        document.body.style.overflow = "hidden";
+        modalError.querySelector(".response__button").addEventListener("click", modalResponseHidden);
+};
+
+const modalResponseHidden = () => {
+    modalSuccess.classList.add("modal__conteiner_hidden");
+    modalError.classList.add("modal__conteiner_hidden");
+    document.body.style.overflow = "auto";
+    cross.click()
+};
 if (request) {
-    request.addEventListener("click", modalShow);
+    request.addEventListener("click", () => {
+        modalShow();
+    });
 }
 
 // Изменение значения и ед измерения ползунков
@@ -171,9 +196,40 @@ const changeResolution = () => {
 };
 const resetRenge = (kof) => {
     widthRange.setAttribute("step", resolution.h / kof);
-    heightRange.setAttribute("step", resolution.v / kof) ;
+    heightRange.setAttribute("step", resolution.v / kof);
     widthRange.value = 0;
     heightRange.value = 0;
     width.innerText = widthRange.value;
     height.innerText = heightRange.value;
 };
+
+// AJAX
+const ajaxSend = async (formData) => {
+    const fetchResp = await fetch("./php/form_mail-mod.php", {
+        method: "POST",
+        body: formData,
+    });
+    if (!fetchResp.ok) {
+        throw new Error(
+            `Ошибка по адресу ${url}, статус ошибки ${fetchResp.status}`
+        );
+    }
+    return await fetchResp.text();
+};
+
+const form = document.querySelector("form.request__form");
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        const formData = new FormData(this);
+        formData.append( "page", form.name);
+        ajaxSend(formData)
+            .then((response) => {
+                    form.reset(); // очищаем поля формы
+                    modalSuccessShow();
+                })
+            .catch((err) => {
+                console.error(err);
+                modalErrorShow();
+            });
+            
+});
