@@ -1,37 +1,61 @@
 // Запрос на цену изделий
-const buyBatton = document.querySelector(".purchase-block__btn"); // Кнопка -=Купить=-
+const buyButton = document.querySelector(".purchase-block__btn") || null, // Кнопка -=Купить=-
+    link = document.querySelector(".subscrible-link"), // Подписка в футере
+    subscrible = document.querySelector(".blog-aside__subscrible") || null; // Подписка в блогах
+
+if (buyButton) {
+    buyButton.addEventListener("click", () => {
+        modalShow("price__modal");
+    });
+}
+if (subscrible) {
+    subscrible.addEventListener("click", () => {
+        modalShow("subscrible-modal");
+    });
+}
+if (link) {
+    link.addEventListener("click", (e) => {
+        e.preventDefault();
+        modalShow("subscrible-modal");
+    });
+}
+const modalShow = (modalId) => {
+    let parent = document.getElementById(modalId),
+        cross = parent.querySelector(".modal__cross");
+    parent.classList.remove("modal__conteiner_hidden");
+    document.body.style.overflow = "hidden";
+    cross.addEventListener("click", () =>  modalHidden(parent, cross));
+};
+
+const modalHidden = (parent, cross) => {
+    parent.querySelector("form").reset();
+    parent.classList.add("modal__conteiner_hidden");
+    document.body.style.overflow = "auto";
+    cross.removeEventListener("click", () =>  modalHidden(parent, cross));
+};
 
 
-const cross = document.getElementById("price__cross"); 
-const modal = document.getElementById("price__modal");
 const modalSuccess = document.getElementById("price__success");
 const modalError = document.getElementById("price__error");
 
+/////
+const formSubModal = subModal.querySelector(".subscrible__form");
+const feedbackForm = document.querySelector("form.feedback__form");
+const success = document.getElementById("price__success");
+const error = document.getElementById("price__error");
 
-const modalShow = () => {
-    modal.classList.remove("modal__conteiner_hidden");
-    document.body.style.overflow = "hidden";
-    cross.addEventListener("click", modalHidden);
-};
-const modalHidden = () => {
-    document.querySelector(".request__form").reset();
-    modal.classList.add("modal__conteiner_hidden");
-    document.body.style.overflow = "auto";
-    cross.removeEventListener("click", modalHidden);
-};
 
 const modalSuccessShow = () => {
-        modalSuccess.classList.remove("modal__conteiner_hidden");
-        document.body.style.overflow = "hidden";
-        modalSuccess.querySelector(".response__button").addEventListener("click", modalResponseHidden);
-        
-    
+    modalSuccess.classList.remove("modal__conteiner_hidden");
+    document.body.style.overflow = "hidden";
+    modalSuccess.querySelector(".response__button").addEventListener("click", modalResponseHidden);
 };
 const modalErrorShow = () => {
-        modalError.classList.remove("modal__conteiner_hidden");
-        document.body.style.overflow = "hidden";
-        modalError.querySelector(".response__button").addEventListener("click", modalResponseHidden);
+    modalError.classList.remove("modal__conteiner_hidden");
+    document.body.style.overflow = "hidden";
+    modalError.querySelector(".response__button").addEventListener("click", modalResponseHidden);
 };
+
 
 const modalResponseHidden = () => {
     modalSuccess.classList.add("modal__conteiner_hidden");
@@ -39,11 +63,109 @@ const modalResponseHidden = () => {
     document.body.style.overflow = "auto";
     cross.click()
 };
-if (buyBatton) {
-    buyBatton.addEventListener("click", () => {
-        modalShow();
+
+
+
+const successShow = (type) => {
+    success.classList.remove("modal__conteiner_hidden");
+    if (type === "news") {
+        success
+            .querySelector("div.responce")
+            .removeChild(success.querySelector("p.response__text"));
+    }
+    success.querySelector(".response__button").addEventListener("click", () => {
+        success.classList.add("modal__conteiner_hidden");
+        subModalHidden();
     });
-}
+};
+
+
+
+const errorShow = () => {
+    error.classList.remove("modal__conteiner_hidden");
+    error.querySelector(".response__button").addEventListener("click", () => {
+        error.classList.add("modal__conteiner_hidden");
+        formSubModal.reset();
+    });
+};
+
+// AJAX
+const ajaxSend = async (formData) => {
+    const fetchResp = await fetch("./php/form_mail-price.php", {
+        method: "POST",
+        body: formData,
+    });
+    if (!fetchResp.ok) {
+        throw new Error(
+            `Ошибка по адресу ${url}, статус ошибки ${fetchResp.status}`
+        );
+    }
+    return await fetchResp.text();
+};
+
+const form = document.querySelector("form.request__form");
+form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    const formData = new FormData(this);
+    formData.append("page", form.name);
+    ajaxSend(formData)
+        .then((response) => {
+            form.reset(); // очищаем поля формы
+            modalSuccessShow();
+        })
+        .catch((err) => {
+            console.error(err);
+            modalErrorShow();
+        });
+
+});
+// Подписаться на новости
+formSubModal.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const formData = new FormData(formSubModal);
+    fetch("./php/form_mail-subscrible.php", {
+        method: "POST",
+        body: formData,
+    })
+        .then((response) => {
+            if (response.ok) {
+                successShow("news");
+            } else {
+                console.error("Ошибка HTTP: " + response.status);
+                errorShow();
+            }
+        })
+        .catch((err) => {
+            console.error(err);
+            errorShow();
+        });
+});
+
+// Перезвоните мне
+feedbackForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const formData = new FormData(feedbackForm);
+    let page = feedbackForm.name;
+
+    formData.append("page", page);
+    fetch("./php/form_mail-callback.php", {
+        method: "POST",
+        body: formData,
+    })
+        .then((response) => {
+            if (response.ok) {
+                feedbackForm.reset();
+                successShow("feedback");
+            } else {
+                console.error("Ошибка HTTP: " + response.status);
+                errorShow();
+            }
+        })
+        .catch((err) => {
+            console.error(err);
+            errorShow();
+        });
+});
 
 // Изменение значения и ед измерения ползунков
 
@@ -206,126 +328,13 @@ const resetRenge = (kof) => {
     height.innerText = heightRange.value;
 };
 
-// AJAX
-const ajaxSend = async (formData) => {
-    const fetchResp = await fetch("./php/form_mail-price.php", {
-        method: "POST",
-        body: formData,
-    });
-    if (!fetchResp.ok) {
-        throw new Error(
-            `Ошибка по адресу ${url}, статус ошибки ${fetchResp.status}`
-        );
-    }
-    return await fetchResp.text();
-};
 
-const form = document.querySelector("form.request__form");
-    form.addEventListener("submit", function (e) {
-        e.preventDefault();
-        const formData = new FormData(this);
-        formData.append( "page", form.name);
-        ajaxSend(formData)
-            .then((response) => {
-                    form.reset(); // очищаем поля формы
-                    modalSuccessShow();
-                })
-            .catch((err) => {
-                console.error(err);
-                modalErrorShow();
-            });
-            
-});
 
-const subscrible = document.querySelector(".blog-aside__subscrible") || null;
-const link = document.querySelector(".subscrible-link") || null;
-const subCross = document.getElementById("subscrible-cross");
-const subModal = document.getElementById("subscrible-modal");
-const formSubModal = subModal.querySelector(".subscrible__form");
-const feedbackForm = document.querySelector("form.feedback__form");
-const success = document.getElementById("price__success");
-const error = document.getElementById("price__error");
 
-const subModalShow = () => {
-    subModal.classList.remove("modal__conteiner_hidden");
-    document.body.style.overflow = "hidden";
-    subCross.addEventListener("click", subModalHidden);
-};
-const subModalHidden = () => {
-    formSubModal.reset();
-    subModal.classList.add("modal__conteiner_hidden");
-    document.body.style.overflow = "auto";
-    subCross.removeEventListener("click", subModalHidden);
-};
 
-if (subscrible) {
-    subscrible.addEventListener("click", subModalShow);
-}
-if (link) {
-    link.addEventListener("click", subModalShow);
-}
 
-const successShow = (type) => {
-    success.classList.remove("modal__conteiner_hidden");
-    if (type === "news") {
-        success
-            .querySelector("div.responce")
-            .removeChild(success.querySelector("p.response__text"));
-    }
-    success.querySelector(".response__button").addEventListener("click", () => {
-        success.classList.add("modal__conteiner_hidden");
-        subModalHidden();
-    });
-};
-const errorShow = () => {
-    error.classList.remove("modal__conteiner_hidden");
-    error.querySelector(".response__button").addEventListener("click", () => {
-        error.classList.add("modal__conteiner_hidden");
-        formSubModal.reset();
-    });
-};
 
-formSubModal.addEventListener("submit", (event) => {
-    event.preventDefault();
-    const formData = new FormData(formSubModal);
-    fetch("./php/form_mail-subscrible.php", {
-        method: "POST",
-        body: formData,
-    })
-        .then((response) => {
-            if (response.ok) {
-                successShow("news");
-            } else {
-                console.error("Ошибка HTTP: " + response.status);
-                errorShow();
-            }
-        })
-        .catch((err) => {
-            console.error(err);
-            errorShow();
-        });
-});
-feedbackForm.addEventListener("submit", (event) => {
-    event.preventDefault();
-    const formData = new FormData(feedbackForm);
-    let page = feedbackForm.name;
-    
-    formData.append("page", page);
-    fetch("./php/form_mail-callback.php", {
-        method: "POST",
-        body: formData,
-    })
-        .then((response) => {
-            if (response.ok) {
-                feedbackForm.reset();
-                successShow("feedback");
-            } else {
-                console.error("Ошибка HTTP: " + response.status);
-                errorShow();
-            }
-        })
-        .catch((err) => {
-            console.error(err);
-            errorShow();
-        });
-});
+
+
+
+

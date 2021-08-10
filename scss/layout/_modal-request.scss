@@ -62,38 +62,6 @@
         font-size: 2.4375rem;
         line-height: 147.5%;
     }
-    // &__check-dist,
-    // &__check-size {
-    //     display: none;
-    // }
-    // &__label {
-    //     @media screen and (max-width: $screen-md) {
-    //         font-size: 1.3rem;
-    //     }
-    //     position: relative;
-    //     font-family: "Geometria";
-    //     font-style: normal;
-    //     font-weight: normal;
-    //     font-size: 1.6875rem;
-    //     line-height: 147.5%;
-    //     padding-left: 4.0625rem;
-    //     margin-bottom: 2.3125rem;
-    //     &::before {
-    //         position: absolute;
-    //         content: "";
-    //         top: 0;
-    //         left: 0;
-    //         width: 39px;
-    //         height: 39px;
-    //         border: 3px solid #352eac;
-    //         box-sizing: border-box;
-    //     }
-    // }
-    // &__check-dist:checked + label::before,
-    // &__check-size:checked + label::before {
-    //     background: url(../image/svg/check.svg) no-repeat;
-    //     background-position: 2px;
-    // }
     &__submit {
         @media screen and (max-width: $screen-md) {
             font-size: 1.2rem;
@@ -112,43 +80,6 @@
         margin: 2rem auto 0;
     }
 }
-// .column {
-//     &__caption {
-//         width: 100%;
-//         font-family: "Geometria";
-//         font-style: normal;
-//         font-weight: 500;
-//         font-size: 1.875rem;
-//         line-height: 147.5%;
-//     }
-//     &__wrapper {
-//         @media screen and (max-width: $screen-md) {
-//             width: 100%;
-//         }
-//         width: 48%;
-//     }
-// }
-// .dist-column {
-//     &__wrapper {
-//         display: grid;
-//         grid-template-columns: repeat(2, 1fr);
-//         grid-template-rows: auto;
-//     }
-//     &__caption {
-//         grid-column: 1 / 3;
-//     }
-// }
-// .size-column {
-//     &__wrapper {
-//         display: grid;
-//         grid-template-columns: 1fr;
-//         grid-template-rows: auto;
-//     }
-//     &__caption {
-//         height: 93.32px;
-//         display: inline-block;
-//     }
-// }
 .request__data {
     display: flex;
     justify-content: space-between;
