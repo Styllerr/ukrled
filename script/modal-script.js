@@ -1,30 +1,58 @@
 // Запрос на цену изделий
 const buyButton = document.querySelector(".purchase-block__btn") || null, // Кнопка -=Купить=-
     link = document.querySelector(".subscrible-link"), // Подписка в футере
-    subscrible = document.querySelector(".blog-aside__subscrible") || null; // Подписка в блогах
+    subscrible = document.querySelector(".blog-aside__subscrible") || null, // Подписка в блогах
+    callBack = document.querySelector("form.feedback__form") || null; //Обратный звонок
 
 if (buyButton) {
     buyButton.addEventListener("click", () => {
-        modalShow("price__modal");
+        modalShow("price__modal", "./php/form_mail-price.php");
     });
 }
 if (subscrible) {
     subscrible.addEventListener("click", () => {
-        modalShow("subscrible-modal");
+        modalShow("subscrible-modal", "./php/form_mail-subscrible.php");
     });
 }
 if (link) {
     link.addEventListener("click", (e) => {
         e.preventDefault();
-        modalShow("subscrible-modal");
+        modalShow("subscrible-modal", "./php/form_mail-subscrible.php");
     });
 }
-const modalShow = (modalId) => {
+
+
+const modalShow = (modalId, url) => {
     let parent = document.getElementById(modalId),
-        cross = parent.querySelector(".modal__cross");
+        cross = parent.querySelector(".modal__cross"),
+        form = parent.querySelector("form");
     parent.classList.remove("modal__conteiner_hidden");
     document.body.style.overflow = "hidden";
+
     cross.addEventListener("click", () =>  modalHidden(parent, cross));
+
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        let pageName;
+        (modalId === "subscrible-modal") ? pageName = "" : pageName = form.name;
+        const formData = new FormData(form);
+        formData.append("page", pageName);
+        ajaxSend(formData, url)
+            .then((response) => {
+                if (response.ok) {
+                    form.reset(); // очищаем поля формы
+                    modalSuccessShow(cross);
+                } else {
+                    console.error("Ошибка HTTP: " + response.status);
+                    modalErrorShow(cross);
+                }
+            })
+            .catch((err) => {
+                console.error(err);
+                modalErrorShow(cross);
+            });
+    
+    });
 };
 
 const modalHidden = (parent, cross) => {
@@ -34,64 +62,53 @@ const modalHidden = (parent, cross) => {
     cross.removeEventListener("click", () =>  modalHidden(parent, cross));
 };
 
-
 const modalSuccess = document.getElementById("price__success");
 const modalError = document.getElementById("price__error");
 
-/////
-const formSubModal = subModal.querySelector(".subscrible__form");
-const feedbackForm = document.querySelector("form.feedback__form");
-const success = document.getElementById("price__success");
-const error = document.getElementById("price__error");
-
-
-const modalSuccessShow = () => {
+const modalSuccessShow = (cross) => {
     modalSuccess.classList.remove("modal__conteiner_hidden");
     document.body.style.overflow = "hidden";
-    modalSuccess.querySelector(".response__button").addEventListener("click", modalResponseHidden);
+    modalSuccess.querySelector(".response__button").addEventListener("click", () => modalResponseHidden(cross));
 };
-const modalErrorShow = () => {
+const modalErrorShow = (cross) => {
     modalError.classList.remove("modal__conteiner_hidden");
     document.body.style.overflow = "hidden";
-    modalError.querySelector(".response__button").addEventListener("click", modalResponseHidden);
+    modalError.querySelector(".response__button").addEventListener("click", () => modalResponseHidden(cross));
 };
 
-
-const modalResponseHidden = () => {
+const modalResponseHidden = (cross) => {
     modalSuccess.classList.add("modal__conteiner_hidden");
     modalError.classList.add("modal__conteiner_hidden");
     document.body.style.overflow = "auto";
-    cross.click()
+    cross ? cross.click() : null;
+    modalError.querySelector(".response__button").removeEventListener("click", (cross) => modalResponseHidden(cross));
 };
 
-
-
-const successShow = (type) => {
-    success.classList.remove("modal__conteiner_hidden");
-    if (type === "news") {
-        success
-            .querySelector("div.responce")
-            .removeChild(success.querySelector("p.response__text"));
-    }
-    success.querySelector(".response__button").addEventListener("click", () => {
-        success.classList.add("modal__conteiner_hidden");
-        subModalHidden();
-    });
-};
-
-
-
-const errorShow = () => {
-    error.classList.remove("modal__conteiner_hidden");
-    error.querySelector(".response__button").addEventListener("click", () => {
-        error.classList.add("modal__conteiner_hidden");
-        formSubModal.reset();
-    });
-};
-
+// Перезвоните мне
+callBack.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const formData = new FormData(callBack);
+    let page = callBack.name;
+    
+    formData.append("page", page);
+    ajaxSend(formData, "./php/form_mail-callback.php")
+            .then((response) => {
+                if (response.ok) {
+                    form.reset(); // очищаем поля формы
+                    modalSuccessShow();
+                } else {
+                    console.error("Ошибка HTTP: " + response.status);
+                    modalErrorShow();
+                }
+            })
+            .catch((err) => {
+                console.error(err);
+                modalErrorShow();
+            });
+});
 // AJAX
-const ajaxSend = async (formData) => {
-    const fetchResp = await fetch("./php/form_mail-price.php", {
+const ajaxSend = async (formData, url) => {
+    const fetchResp = await fetch(url, {
         method: "POST",
         body: formData,
     });
@@ -102,70 +119,6 @@ const ajaxSend = async (formData) => {
     }
     return await fetchResp.text();
 };
-
-const form = document.querySelector("form.request__form");
-form.addEventListener("submit", function (e) {
-    e.preventDefault();
-    const formData = new FormData(this);
-    formData.append("page", form.name);
-    ajaxSend(formData)
-        .then((response) => {
-            form.reset(); // очищаем поля формы
-            modalSuccessShow();
-        })
-        .catch((err) => {
-            console.error(err);
-            modalErrorShow();
-        });
-
-});
-// Подписаться на новости
-formSubModal.addEventListener("submit", (event) => {
-    event.preventDefault();
-    const formData = new FormData(formSubModal);
-    fetch("./php/form_mail-subscrible.php", {
-        method: "POST",
-        body: formData,
-    })
-        .then((response) => {
-            if (response.ok) {
-                successShow("news");
-            } else {
-                console.error("Ошибка HTTP: " + response.status);
-                errorShow();
-            }
-        })
-        .catch((err) => {
-            console.error(err);
-            errorShow();
-        });
-});
-
-// Перезвоните мне
-feedbackForm.addEventListener("submit", (event) => {
-    event.preventDefault();
-    const formData = new FormData(feedbackForm);
-    let page = feedbackForm.name;
-
-    formData.append("page", page);
-    fetch("./php/form_mail-callback.php", {
-        method: "POST",
-        body: formData,
-    })
-        .then((response) => {
-            if (response.ok) {
-                feedbackForm.reset();
-                successShow("feedback");
-            } else {
-                console.error("Ошибка HTTP: " + response.status);
-                errorShow();
-            }
-        })
-        .catch((err) => {
-            console.error(err);
-            errorShow();
-        });
-});
 
 // Изменение значения и ед измерения ползунков
 
